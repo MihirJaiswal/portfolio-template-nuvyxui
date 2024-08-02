@@ -110,4 +110,118 @@ export const projectsList = [
   },
 ];
 
-  
+
+export const skills = [
+  {
+    name: "Next.js",
+    description: "Web development",
+    link: "https://nextjs.org/", // Updated link
+    type: "development",
+    image: '/skills/nextjs.png'
+  },
+  {
+    name: "React",
+    description: "Web development",
+    link: "https://reactjs.org/",
+    type: "development",
+    image: '/skills/react.png'
+  },
+  {
+    name: "Tailwind",
+    description: "Web development",
+    link: "https://tailwindcss.com/",
+    type: "design",
+    image: '/skills/tailwind.svg'
+  },
+  {
+    name: "Sass",
+    description: "Web development, styling",
+    link: "https://sass-lang.com/",
+    type: "design",
+    image: '/skills/sass.svg'
+  },
+  {
+    name: "Javascript",
+    description: "Web development",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    type: "development",
+    image: '/skills/javascript.png'
+  },
+  {
+    name: "Typescript",
+    description: "Web development",
+    link: "https://www.typescriptlang.org/",
+    type: "development",
+    image: '/skills/typescript.png'
+  },
+  {
+    name: "Html5",
+    description: "Web layouts",
+    link: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
+    type: "development",
+    image: '/skills/html-5.png'
+  },
+  {
+    name: "Css3",
+    description: "Web design",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+    type: "design",
+    image: '/skills/css3.png'
+  },
+  {
+    name: "MongoDB",
+    description: "Database",
+    link: "https://www.mongodb.com/",
+    type: "database",
+    image: '/skills/mongodb.svg'
+  },
+  {
+    name: "Mysql",
+    description: "Database",
+    link: "https://www.mysql.com/",
+    type: "database",
+    image: '/skills/mysql.png'
+  },
+  {
+    name: "Vercel",
+    description: "Deployment platform",
+    link: "https://vercel.com/",
+    type: "devops",
+    image: '/skills/vercel.png'
+  },
+  {
+    name: "AWS",
+    description: "Cloud computing",
+    link: "https://aws.amazon.com/",
+    type: "devops",
+    image: '/skills/aws.png'
+  },
+  {
+    name: "Express",
+    description: "Web application framework",
+    link: "https://expressjs.com/",
+    type: "development",
+    image: '/skills/express.png'
+  },
+  {
+    name: "Visual Studio Code",
+    description: "Code editor of choice",
+    link: "https://code.visualstudio.com/",
+    type: "development",
+    image: '/skills/vscode.png'
+  },
+  {
+    name: "Canva",
+    description: "Designing and editing",
+    link: "https://www.canva.com/",
+    type: "design",
+    image: '/skills/canva.svg'
+  },
+  {
+    name: "Figma",
+    description: "Collaborative Design",
+    link: "https://www.figma.com/",
+    type: "design",
+    image: '/skills/figma.png'
+  }
+];
