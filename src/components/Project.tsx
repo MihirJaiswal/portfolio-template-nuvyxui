@@ -38,7 +38,7 @@ const Projects: React.FC = () => {
           <div className="flex justify-center items-center w-full">
             <button
               onClick={handleLoadMore}
-              className=" p-2 bg-gray-700 dark:bg-cyan-700 text-white rounded hover:bg-cyan-600 dark:hover:bg-cyan-800 transition-colors duration-300"
+              className=" p-2 bg-cyan-500 dark:bg-cyan-700 text-white rounded hover:bg-cyan-600 dark:hover:bg-cyan-600 transition-colors duration-300"
             >
               Load More
             </button>

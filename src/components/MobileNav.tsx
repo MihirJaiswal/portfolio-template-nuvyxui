@@ -31,7 +31,7 @@ function HomeMobileNav() {
               <GiHamburgerMenu size={24} />
             </button>
           </SheetTrigger>
-          <SheetContent side='top' className='dark:bg-gray-700/20 bg-pink-100/80'>
+          <SheetContent side='top' className='dark:bg-gray-900/80 bg-pink-100/80'>
             <div className='flex items-center gap-1'>
               {/* Any header content here */}
             </div>
