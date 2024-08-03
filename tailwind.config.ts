@@ -63,6 +63,15 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        wobble: {
+          '0%': { transform: 'rotate(0deg)' },
+          '15%': { transform: 'rotate(-10deg)' },
+          '30%': { transform: 'rotate(10deg)' },
+          '45%': { transform: 'rotate(-10deg)' },
+          '60%': { transform: 'rotate(10deg)' },
+          '75%': { transform: 'rotate(-5deg)' },
+          '100%': { transform: 'rotate(0deg)' },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -73,6 +82,7 @@ const config = {
         },
       },
       animation: {
+        wobble: 'wobble 1s ease-in-out',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

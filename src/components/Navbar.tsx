@@ -63,7 +63,7 @@ const TopNav = () => {
                   <Link href="/open-source" passHref>
                     <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/open-source' ? 'bg-gray-100 dark:bg-gray-700' : ''}`}>
                       <BsBook size={18} className="mr-2" />
-                      Open Source
+                      Education
                     </p>
                   </Link>
                   <Link href="/story-timeline" passHref>
