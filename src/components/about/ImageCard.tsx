@@ -8,14 +8,16 @@ interface ImageCardProps {
 const ImageCard: React.FC<ImageCardProps> = ({ imageUrl, rotation }) => {
   return (
     <div 
-      className="relative transition-transform duration-300 ease-in-out hover:animate-wobble"
+      className="relative"
       style={{ transform: `rotate(${rotation}deg)` }}
     >
-      <img 
-        className="md:w-48 md:h-48 w-24 h-24 object-cover rounded shadow-lg hover:scale-105"
-        src={imageUrl}
-        alt="Project Image"
-      />
+      <div className="transition-transform duration-300 ease-in-out hover:animate-heartbeat">
+        <img 
+          className="md:w-48 md:h-48 w-24 h-24 object-cover rounded shadow-lg"
+          src={imageUrl}
+          alt="Project Image"
+        />
+      </div>
     </div>
   );
 };
