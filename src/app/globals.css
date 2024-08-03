@@ -67,3 +67,82 @@
     @apply bg-background text-foreground;
   }
 }
+
+::-webkit-scrollbar{
+  width: 7px;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #1c1f2e;
+}
+
+::-webkit-scrollbar-thumb{
+  background: linear-gradient(to bottom, #302430, #ffffff);;
+  border-radius: 10px;
+  border: 2px solid #1c1f2e;
+}
+
+.no-visible-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+}
+ 
+.no-visible-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* ChatBox.module.css */
+.chatbox {
+  ::-webkit-scrollbar{
+    width: 1px;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background-color: #3554ef;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #3b41e8, #ffffff);;
+    border-radius: 10px;
+    border: 2px solid #506bed;
+  }
+  
+  .no-visible-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+   
+  .no-visible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.github {
+  ::-webkit-scrollbar{
+    width: 0px;
+    height: 2px;
+  }
+  
+  ::-webkit-scrollbar-track{
+    background-color: #07792b;
+  }
+  
+  ::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #3b41e8, #ffffff);;
+    border-radius: 10px;
+    border: 2px solid #148b45;
+  }
+  
+  .no-visible-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+   
+  .no-visible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}

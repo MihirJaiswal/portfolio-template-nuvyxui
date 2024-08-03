@@ -3,7 +3,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaInstagram,
-  FaTwitter
+  FaYoutube
 } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 
@@ -19,10 +19,10 @@ const siteConfig = {
         icon: <FaGithub />
       },
       {
-        url: "https://twitter.com/mihirja73370412",
-        label: "Twitter Account",
-        type: "twitter",
-        icon: <FaTwitter />
+        url: "https://www.youtube.com/channel/UCANl98VUjfCZW7P2Tac1c6Q",
+        label: "Youtube Channel",
+        type: "youtube",
+        icon: <FaYoutube />
       },
       {
         url: "https://www.linkedin.com/in/mihir-jaiswal-322898287/",

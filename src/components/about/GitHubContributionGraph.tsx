@@ -6,21 +6,21 @@ const GitHubContributionGraph: React.FC = () => {
   return (
     <div className="">
       {/* Light Theme Graph */}
-      <div className="dark:hidden block">
+      <div className="dark:hidden block github">
         <GitHubCalendar 
           username="MihirJaiswal" 
-          blockSize={12} 
-          blockMargin={3} 
+          blockSize={15} 
+          blockMargin={5} 
           colorScheme="light"
         />
       </div>
 
       {/* Dark Theme Graph */}
-      <div className="hidden dark:block">
+      <div className="hidden dark:block github">
         <GitHubCalendar 
           username="MihirJaiswal" 
-          blockSize={12} 
-          blockMargin={3} 
+          blockSize={15} 
+          blockMargin={5} 
           colorScheme="dark"
         />
       </div>

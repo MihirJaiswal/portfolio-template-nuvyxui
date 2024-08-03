@@ -1,3 +1,4 @@
+import ChatButton from "@/components/ChatButton";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import TopNav from "@/components/Navbar";

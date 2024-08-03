@@ -64,10 +64,10 @@ const config = {
       },
       keyframes: {
         heartbeat: {
-          '0%, 100%': { transform: 'scale(1)' },
-          '25%': { transform: 'scale(1.1)' },
-          '50%': { transform: 'scale(1)' },
-          '75%': { transform: 'scale(1.1)' },
+          '0%, 100%': { transform: 'scale(1)', width: '100%' },
+          '25%': { transform: 'scale(1.1)', width: '90%' },
+          '50%': { transform: 'scale(1)', width: '100%' },
+          '75%': { transform: 'scale(1.06)', width: '95%' },
         },
         "accordion-down": {
           from: { height: "0" },

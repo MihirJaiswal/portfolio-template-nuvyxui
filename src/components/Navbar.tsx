@@ -1,5 +1,5 @@
-'use client'
-import { useState } from 'react';
+'use client';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
 import { AiTwotoneThunderbolt, AiOutlineClose } from 'react-icons/ai';
@@ -8,7 +8,7 @@ import { BsBook, BsCheckCircle } from 'react-icons/bs';
 import { MdTimeline } from 'react-icons/md';
 import { ModeToggle } from './Toggle';
 import { usePathname } from 'next/navigation';
-import HomeMobileNav from './MobileNav';  // Import the HomeMobileNav component
+import HomeMobileNav from './MobileNav';
 
 const webLinks = [
   { name: "About", path: "/about" },
@@ -18,8 +18,23 @@ const webLinks = [
 const TopNav = () => {
   const [isLinksOpen, setIsLinksOpen] = useState(false);
   const pathname = usePathname();
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const toggleLinks = () => setIsLinksOpen(!isLinksOpen);
+
+  // Close the dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsLinksOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="bg-white shadow-lg dark:bg-gray-700 px-4 py-2">
@@ -27,7 +42,7 @@ const TopNav = () => {
         <div className="flex items-center justify-between w-full">
           {/* Mobile Navigation */}
           <div className='md:hidden'>
-          <HomeMobileNav />
+            <HomeMobileNav />
           </div>
           <Link href="/" passHref>
             <div className="flex items-center justify-center ">
@@ -44,7 +59,7 @@ const TopNav = () => {
                 </p>
               </Link>
             ))}
-            <div className="relative">
+            <div className="relative" ref={dropdownRef}>
               <button
                 onClick={toggleLinks}
                 className="flex items-center px-3 py-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
@@ -60,8 +75,8 @@ const TopNav = () => {
                       Tech Stack
                     </p>
                   </Link>
-                  <Link href="/open-source" passHref>
-                    <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/open-source' ? 'bg-gray-100 dark:bg-gray-700' : ''}`}>
+                  <Link href="/education" passHref>
+                    <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/education' ? 'bg-gray-100 dark:bg-gray-700' : ''}`}>
                       <BsBook size={18} className="mr-2" />
                       Education
                     </p>

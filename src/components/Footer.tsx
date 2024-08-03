@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const getIconColorClass = (type: string) => {
   switch (type) {
-    case "twitter":
-      return "text-blue-500"; // Example color for Twitter
+    case "youtube":
+      return "text-red-500"; // Example color for Twitter
     case "linkedin":
       return "text-blue-700"; // Example color for LinkedIn
     case "purple":
