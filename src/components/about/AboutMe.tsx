@@ -25,7 +25,7 @@ const AboutMe: React.FC = () => {
           <span className="block md:inline mb-2">Since I was young, I've loved computers.</span> 
           <span className="block md:inline mb-2">I've also been pretty creative, spending my free time drawing and painting.</span> 
           <span className="block md:inline">This creativity comes in handy when I'm working on web applications. ✨</span>
-        </p>
+        </p> 
       </div>
       <div className="hidden md:block">
       <ScatteredLine images={images}  />
