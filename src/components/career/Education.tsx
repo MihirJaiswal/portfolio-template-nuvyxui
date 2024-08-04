@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import Header from './Header';
+import Header from '../Header';
 
 const institutes = [
   {
@@ -36,9 +36,9 @@ const Education = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="flex flex-col items-center space-y-12 px-6 max-w-4xl mx-auto mb-12 md:mb-32"
+      className="flex flex-col space-y-4 px-6 max-w-4xl mx-auto mb-12 md:mb-32"
     >
-      <div className="text-center max-w-4xl mx-auto">
+      <div className="max-w-4xl">
         <Header underlineColor={TURQUOISE} emoji='🎓'>
           Education
         </Header>
@@ -49,7 +49,7 @@ const Education = () => {
           <motion.div
             whileHover={{ y: -5 }}
             key={index}
-            className="flex flex-col md:flex-row gap-8 items-center bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md w-full"
+            className="flex flex-col md:flex-row gap-8 items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-md p-4 shadow-md w-full"
           >
             <img
               src={institute.logo}

@@ -1,4 +1,4 @@
-import Education from '@/components/Education'
+import Education from '@/components/career/Education'
 import Footer from '@/components/Footer'
 import TopNav from '@/components/Navbar'
 import React from 'react'

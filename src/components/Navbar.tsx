@@ -75,10 +75,10 @@ const TopNav = () => {
                       Tech Stack
                     </p>
                   </Link>
-                  <Link href="/education" passHref>
+                  <Link href="/career" passHref>
                     <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/education' ? 'bg-gray-100 dark:bg-gray-700' : ''}`}>
                       <BsBook size={18} className="mr-2" />
-                      Education
+                        Career
                     </p>
                   </Link>
                   <Link href="/story-timeline" passHref>
