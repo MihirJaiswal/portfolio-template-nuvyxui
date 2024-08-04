@@ -2,7 +2,7 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
-import { AiTwotoneThunderbolt, AiOutlineClose } from 'react-icons/ai';
+import { AiTwotoneThunderbolt, AiOutlineContacts } from 'react-icons/ai';
 import { BiChevronDown } from 'react-icons/bi';
 import { BsBook, BsCheckCircle } from 'react-icons/bs';
 import { MdTimeline } from 'react-icons/md';
@@ -77,16 +77,10 @@ const TopNav = () => {
                         Career
                     </p>
                   </Link>
-                  <Link href="/story-timeline" passHref>
+                  <Link href="/contact" passHref>
                     <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/story-timeline' ? 'bg-gray-100 dark:bg-gray-700' : ''}`}>
-                      <MdTimeline size={18} className="mr-2" />
-                      Developer Story
-                    </p>
-                  </Link>
-                  <Link href="/achievements" passHref>
-                    <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/achievements' ? 'bg-gray-100 dark:bg-gray-700' : ''}`}>
-                      <BsCheckCircle size={18} className="mr-2" />
-                      Achievements
+                      <AiOutlineContacts size={18} className="mr-2" />
+                      Contact
                     </p>
                   </Link>
                 </div>

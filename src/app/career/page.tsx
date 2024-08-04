@@ -8,7 +8,7 @@ const page = () => {
   return (
     <div className="bg-bg1 dark:bg-bg2">
         <TopNav/>
-        <div className='mb-12'>
+        <div className='mb-4 min-h-screen'>
          <Work/>
         <Education/>
         </div>

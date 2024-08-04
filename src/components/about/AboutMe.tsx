@@ -5,6 +5,7 @@ import { FaDownload } from 'react-icons/fa';
 import Header from '../Header';
 import { ScatteredLine, ScatteredLine2 } from './ScatteredGrid';
 import GitHubContributionGraph from './GitHubContributionGraph';
+import { Favourite } from './Favorite';
 
 const AboutMe: React.FC = () => {
   const images = [
@@ -19,7 +20,7 @@ const AboutMe: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="flex flex-col items-center space-y-12 px-6 pb-6"
+      className="flex flex-col items-center space-y-12 px-6 pb-6 overflow-x-hidden"
     >
       <div className="max-w-4xl space-y-6">
         <Header underlineColor="#ff9400" emoji='❤️' className="text-3xl font-bold text-gray-900 dark:text-gray-100">About Me</Header>
@@ -50,14 +51,17 @@ const AboutMe: React.FC = () => {
         <a
           href="/resume.pdf" 
           download
-          className="bg-pink-500 dark:bg-teal-600 text-white py-2 px-4 rounded-lg text-center hover:bg-pink-600 dark:hover:bg-teal-700 flex items-center justify-center space-x-2"
+          className="bg-pink-500 dark:bg-teal-500 text-white py-2 px-4 rounded-lg text-center hover:bg-pink-600 dark:hover:bg-teal-700 flex items-center justify-center space-x-2"
         >
           <FaDownload size={16} />
           <span>Download My Resume</span>
         </a>
       </div>
-      <div>
-      </div>
+      
+        <div className='w-full max-w-4xl'>
+        <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100 pb-3">My Best Projects</Header>
+        <Favourite/>
+        </div>
     </motion.div>
   );
 };

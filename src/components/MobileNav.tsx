@@ -19,6 +19,7 @@ function HomeMobileNav() {
     { name: "Blog", path: "/blog" },
     { name: "Tech Stack", path: "/tech-stack" },
     { name: "Career", path: "/career" },
+    { name: "Contact", path: "/contact" },
   ];
 
   const pathname = usePathname();
@@ -37,7 +38,7 @@ function HomeMobileNav() {
             </div>
             <div className='flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto border border-gray-400 dark:border-gray-700 rounded-md bg-bg1 dark:bg-bg2'>
               <section className='flex h-full flex-col gap-6 text-gray-950 dark:text-white text-center'>
-                <div className='flex items-center justify-center flex-1 flex-col gap-6 text-center'>
+                <div className='flex items-center justify-center flex-1 flex-col gap-2 text-center'>
                   {mobileLinks.map((link) => {
                     const isActive = pathname === link.path;
                     return (
