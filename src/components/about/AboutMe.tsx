@@ -51,7 +51,7 @@ const AboutMe: React.FC = () => {
         <a
           href="/assests/resume.pdf" 
           download
-          className="bg-pink-500 dark:bg-teal-500 text-white py-2 px-4 rounded-lg text-center hover:bg-pink-600 dark:hover:bg-teal-700 flex items-center justify-center space-x-2"
+          className="bg-pink-500 dark:bg-green-500 text-white py-2 px-4 rounded-lg text-center hover:bg-pink-600 dark:hover:bg-teal-700 flex items-center justify-center space-x-2"
         >
           <FaDownload size={16} />
           <span>Download My Resume</span>

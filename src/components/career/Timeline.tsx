@@ -59,7 +59,7 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ title, role, skills, period
           </div>
         )}
       </div>
-      <p className="text-sm text-gray-500 dark:text-gray-400 md:text-right hidden md:block">
+      <p className="text-sm text-gray-500 dark:text-gray-100 md:text-right hidden md:block">
         {period}
       </p>
     </div>
