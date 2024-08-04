@@ -65,7 +65,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
          </div>
       <motion.form
         onSubmit={handleSubmit}
-        className="relative max-w-lg w-full p-8 md:rounded-xl md:shadow-lg bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:bg-gradient-to-r dark:from-blue-600 dark:via-purple-600 dark:to-pink-600 overflow-hidden pb-28 md:pb-8"
+        className="relative max-w-lg w-full p-8 md:rounded-xl md:shadow-lg bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 dark:bg-gradient-to-r dark:from-blue-600 dark:via-purple-600 dark:to-pink-600 overflow-hidden pb-28 md:pb-8"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
