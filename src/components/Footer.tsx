@@ -5,13 +5,13 @@ import Link from "next/link";
 const getIconColorClass = (type: string) => {
   switch (type) {
     case "youtube":
-      return "text-red-500"; // Example color for Twitter
+      return "text-red-500"; 
     case "linkedin":
-      return "text-blue-700"; // Example color for LinkedIn
+      return "text-blue-700"; 
     case "purple":
-      return "text-purple-500"; // Example color for Quora
+      return "text-purple-500"; 
     default:
-      return "text-gray-600"; // Default color for other icons
+      return "text-gray-600"; 
   }
 };
 

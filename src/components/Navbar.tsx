@@ -22,7 +22,6 @@ const TopNav = () => {
 
   const toggleLinks = () => setIsLinksOpen(!isLinksOpen);
 
-  // Close the dropdown when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
@@ -40,7 +39,6 @@ const TopNav = () => {
     <nav className="bg-white shadow-lg dark:bg-gray-700 px-4 py-2">
       <div className="flex items-center justify-between max-w-screen-lg mx-auto">
         <div className="flex items-center justify-between w-full">
-          {/* Mobile Navigation */}
           <div className='md:hidden'>
             <HomeMobileNav />
           </div>
@@ -49,8 +47,6 @@ const TopNav = () => {
               <img src='/pfp.webp' alt="User Icon" className="w-10 h-10 rounded-full object-cover" />
             </div>
           </Link>
-
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-4">
             {webLinks.map((link) => (
               <Link key={link.path} href={link.path} passHref>

@@ -10,12 +10,12 @@ const ANIMATION_DURATION = 0.5;
 const ORANGE = "#ff9400";
 const shakeVariants = {
   shake: {
-    x: [0, -10, 10, -10, 10, 0, 0], // Adjust the shake intensity and duration
+    x: [0, -10, 10, -10, 10, 0, 0],
     transition: {
       x: {
-        repeat: Infinity, // Repeat indefinitely
-        repeatType: "loop", // Repeat in a loop
-        duration: 1.8, // Duration of one shake cycle
+        repeat: Infinity, 
+        repeatType: "loop", 
+        duration: 1.8, 
         ease: "easeInOut",
       },
     },

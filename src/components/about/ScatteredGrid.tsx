@@ -6,7 +6,7 @@ interface ScatteredLineProps {
 }
 
 export const ScatteredLine: React.FC<ScatteredLineProps> = ({ images }) => {
-  const rotations: number[] = [-5, 3, -7, 4]; // Custom rotation values for each card
+  const rotations: number[] = [-5, 3, -7, 4]; 
 
   return (
     <div className="flex justify-center gap-4">
@@ -23,7 +23,7 @@ export const ScatteredLine: React.FC<ScatteredLineProps> = ({ images }) => {
 };
 
 export const ScatteredLine2: React.FC<ScatteredLineProps> = ({ images }) => {
-    const rotations: number[] = [-5, 3, -7, 4]; // Custom rotation values for each card
+    const rotations: number[] = [-5, 3, -7, 4]; 
   
     return (
       <div className="flex justify-center gap-4">

@@ -2,7 +2,6 @@
 import React from 'react';
 import GitHubCalendar from 'react-github-calendar';
 
-// Define the type manually
 type ThemeInput = {
   light: any;
 };
@@ -14,8 +13,7 @@ const GitHubContributionGraph: React.FC = () => {
   };
 
   return (
-    <div className="">
-      {/* Light Theme Graph */}
+    <div>
       <div className="dark:hidden block github">
         <GitHubCalendar 
           username="MihirJaiswal" 
@@ -26,8 +24,6 @@ const GitHubContributionGraph: React.FC = () => {
           hideColorLegend
         />
       </div>
-
-      {/* Dark Theme Graph */}
       <div className="hidden dark:block github">
         <GitHubCalendar 
           username="MihirJaiswal" 

@@ -7,7 +7,7 @@ interface SkillCardProps {
   image: string;
   link: string;
   description: string;
-  platform?: string; // Optional platform property
+  platform?: string; 
 }
 
 const SkillCard: React.FC<SkillCardProps> = ({ name, image, link, description, platform }) => {
@@ -24,7 +24,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ name, image, link, description, p
       animate="visible"
       variants={item}
       transition={{ duration: 0.3 }}
-      className="w-72 md:w-80" // Reduced width for different screen sizes
+      className="w-72 md:w-80" 
     >
       <motion.div whileHover={{ y: -5 }}>
         <a href={link} target="_blank" rel="noopener noreferrer" className="block">
@@ -43,7 +43,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ name, image, link, description, p
             <div className="ml-4 flex flex-col justify-center">
               <h3 className="font-bold text-md text-gray-900 dark:text-white">{name}</h3>
               <p className="text-sm text-gray-500 dark:text-gray-200">{description}</p>
-              {platform && <p className="text-xs text-gray-400">{platform}</p>} {/* Optionally display platform */}
+              {platform && <p className="text-xs text-gray-400">{platform}</p>} 
             </div>
           </div>
         </a>

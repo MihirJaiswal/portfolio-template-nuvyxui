@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaDownload } from 'react-icons/fa'; // Import the download icon
+import { FaDownload } from 'react-icons/fa'; 
 import Header from '../Header';
 import { ScatteredLine, ScatteredLine2 } from './ScatteredGrid';
 import GitHubContributionGraph from './GitHubContributionGraph';
@@ -46,17 +46,17 @@ const AboutMe: React.FC = () => {
        <GitHubContributionGraph/>
        </div>
       </div>
-      
-      {/* Resume Download Button */}
       <div className="mt-8">
         <a
-          href="/resume.pdf" // Path to your resume file
+          href="/resume.pdf" 
           download
           className="bg-pink-500 dark:bg-teal-600 text-white py-2 px-4 rounded-lg text-center hover:bg-pink-600 dark:hover:bg-teal-700 flex items-center justify-center space-x-2"
         >
-          <FaDownload size={16} /> {/* Add the download icon */}
+          <FaDownload size={16} />
           <span>Download My Resume</span>
         </a>
+      </div>
+      <div>
       </div>
     </motion.div>
   );

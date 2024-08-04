@@ -24,7 +24,6 @@ const Education = () => {
           period: "2005-2017",
           logo: "/education/sjs.png",
         },
-        // Add more institutes as needed
       ];
       
       const TURQUOISE = "#06b6d4";
