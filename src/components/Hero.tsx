@@ -33,7 +33,7 @@ const Hero = () => {
     className="flex items-center justify-center mt-12"
   >
     <Image
-      src='/pfp.webp'
+      src='/assests/pfp.webp'
       alt="Mihir's photo"
       width={220}
       height={220}

@@ -44,7 +44,7 @@ const TopNav = () => {
           </div>
           <Link href="/" passHref>
             <div className="flex items-center justify-center ">
-              <img src='/pfp.webp' alt="User Icon" className="w-10 h-10 rounded-full object-cover" />
+              <img src='/assests/pfp.webp' alt="User Icon" className="w-10 h-10 rounded-full object-cover" />
             </div>
           </Link>
           <div className="hidden md:flex items-center space-x-4">

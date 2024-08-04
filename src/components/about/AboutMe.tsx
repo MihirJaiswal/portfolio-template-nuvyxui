@@ -10,7 +10,7 @@ import { Favourite } from './Favorite';
 const AboutMe: React.FC = () => {
   const images = [
     "https://thepaperkind.com/wp-content/uploads/2023/10/8219b-sketchbook-handwriting.webp",
-    "/pfp.webp",
+    "/assests/pfp.webp",
     "https://images.pexels.com/photos/3640930/pexels-photo-3640930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     "https://wallpapers.com/images/hd/aesthetic-food-pictures-907-x-900-fv9mjo37wrkjzjda.jpg",
   ];
@@ -49,7 +49,7 @@ const AboutMe: React.FC = () => {
       </div>
       <div className="mt-8">
         <a
-          href="/resume.pdf" 
+          href="/assests/resume.pdf" 
           download
           className="bg-pink-500 dark:bg-teal-500 text-white py-2 px-4 rounded-lg text-center hover:bg-pink-600 dark:hover:bg-teal-700 flex items-center justify-center space-x-2"
         >
