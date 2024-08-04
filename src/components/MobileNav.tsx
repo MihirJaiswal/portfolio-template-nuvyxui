@@ -18,7 +18,7 @@ function HomeMobileNav() {
     { name: "About", path: "/about" },
     { name: "Blog", path: "/blog" },
     { name: "Tech Stack", path: "/tech-stack" },
-    { name: "Education", path: "/education" },
+    { name: "Career", path: "/career" },
   ];
 
   const pathname = usePathname();

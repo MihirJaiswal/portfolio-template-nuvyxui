@@ -21,8 +21,8 @@ const AboutMe: React.FC = () => {
       exit={{ opacity: 0 }}
       className="flex flex-col items-center space-y-12 px-6 pb-6"
     >
-      <div className="max-w-4xl mx-auto md:text-center space-y-6">
-        <Header underlineColor="#ff9400" emoji='❤️' className="text-3xl font-bold text-gray-900 dark:text-gray-100 md:text-center">About Me</Header>
+      <div className="max-w-4xl space-y-6">
+        <Header underlineColor="#ff9400" emoji='❤️' className="text-3xl font-bold text-gray-900 dark:text-gray-100">About Me</Header>
         <p className="md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
           <span className="block md:inline mb-2">Since I was young, I've loved computers.</span> 
           <span className="block md:inline mb-2">I've also been pretty creative, spending my free time drawing and painting.</span> 
@@ -40,19 +40,19 @@ const AboutMe: React.FC = () => {
       <span className="block md:inline md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto ">
         Beyond software development, I enjoy anime, drawing, cooking reading books and writing stories. ✨
       </span>
-   {/*    <div className='max-w-4xl mx-auto md:text-center'>
-      <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100 md:text-center" emoji='💻'>Days I code</Header>
+      <div className='max-w-4xl mx-auto'>
+      <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100 pb-6" >Days I code</Header>
        <div className='md:w-full w-80'>
        <GitHubContributionGraph/>
        </div>
-      </div> */}
+      </div>
       
       {/* Resume Download Button */}
       <div className="mt-8">
         <a
           href="/resume.pdf" // Path to your resume file
           download
-          className="bg-blue-500 text-white py-2 px-4 rounded-lg text-center inline-block hover:bg-blue-600 flex items-center justify-center space-x-2"
+          className="bg-pink-500 dark:bg-teal-600 text-white py-2 px-4 rounded-lg text-center hover:bg-pink-600 dark:hover:bg-teal-700 flex items-center justify-center space-x-2"
         >
           <FaDownload size={16} /> {/* Add the download icon */}
           <span>Download My Resume</span>
