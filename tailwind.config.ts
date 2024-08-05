@@ -55,7 +55,9 @@ const config = {
       },
       backgroundImage: {
         "bg1": "linear-gradient(to left bottom, #ffffff, #fcf8ff, #fbf1ff, #fce9ff, #ffe1ff);",
-        "bg2": "linear-gradient(to right bottom, #171923, #171923, #171923, #171923, #171923);"
+        "bg2": "linear-gradient(to right bottom, #171923, #171923, #171923, #171923, #171923);",
+        "bg3": "linear-gradient(to right bottom, #17b2e8, #41a2ef, #748eeb, #a175d8, #c457b6, #cd4dac, #d542a1, #dc3594, #d942aa, #d350bf, #c95ed4, #bb6ce8);",
+        "bg4": "linear-gradient(to right bottom, #040820, #060d25, #07112a, #071530, #061835, #031a36, #011c36, #001e36, #001e30, #001d28, #001c20, #001a19);",
       },
       borderRadius: {
         lg: "var(--radius)",

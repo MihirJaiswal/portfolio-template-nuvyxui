@@ -1,44 +1,89 @@
-import React from 'react'
-import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
-import Header from '../Header';
+"use client";
+import Image from "next/image";
+import React from "react";
+import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 
-const ImageCard = () => {
+export function AppleCardsCarouselDemo() {
+  const cards = data.map((card, index) => (
+    <Card key={card.src} card={card} index={index} />
+  ));
+
   return (
-    <div>
-        <div className='hidden md:flex flex-col items-center justify-between gap-12 space-y-9 relative'>
-         <AnimatePresence>
-            <motion.div
-              key="robot-div"
-              initial={{ y: ontoggle ? 0 : 10 }}
-              animate={{ y: ontoggle ? 10 : 0 }}
-              transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
-              className='flex flex-col items-center justify-center'
-            >
-              <Image
-                src='/assests/astronaut.svg'
-                alt="space"
-                width={500}
-                height={500}
-                loading='lazy'
-                className="w-1/2 hidden dark:block"
-              />
-              <Image
-                src='/assests/robot.png'
-                alt="space"
-                width={500}
-                height={500}
-                quality={100}
-                loading='lazy'
-                className="w-1/2 dark:hidden rounded-full bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300"
-              />
-           
-            </motion.div>
-          </AnimatePresence>
-          <Header underlineColor="#ff9400" emoji='✨' className="text-xl font-bold text-gray-900 dark:text-gray-100 uppercase">let&apos;s work together</Header>
-         </div>
+    <div className="w-full max-w-3xl h-screen flex items-center bg-bg3 dark:bg-bg4">
+       <div className="absolute inset-0 bg-white opacity-50 dark:opacity-0"></div>
+      <Carousel items={cards} />
     </div>
-  )
+  );
 }
 
-export default ImageCard
+const DummyContent = () => {
+  return (
+    <>
+      {[...new Array(3).fill(1)].map((_, index) => {
+        return (
+          <div
+            key={"dummy-content" + index}
+            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4"
+          >
+            <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
+              <span className="font-bold text-neutral-700 dark:text-neutral-200">
+                The first rule of Apple club is that you boast about Apple club.
+              </span>{" "}
+              Keep a journal, quickly jot down a grocery list, and take amazing
+              class notes. Want to convert those notes to text? No problem.
+              Langotiya jeetu ka mara hua yaar is ready to capture every
+              thought.
+            </p>
+            <Image
+              src="https://assets.aceternity.com/macbook.png"
+              alt="Macbook mockup from Aceternity UI"
+              height="500"
+              width="500"
+              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain"
+            />
+          </div>
+        );
+      })}
+    </>
+  );
+};
+
+const data = [
+  {
+    category: "",
+    title: "",
+    src: "/contact/hero.webp",
+    content: <DummyContent />,
+  },
+  {
+    category: "",
+    title: "",
+    src: "/contact/ghibli.webp",
+    content: <DummyContent />,
+  },
+  {
+    category: "",
+    title: "",
+    src: "/contact/cybersphere.webp",
+    content: <DummyContent />,
+  },
+
+  {
+    category: "",
+    title: "",
+    src: "/contact/monsterpedia.webp",
+    content: <DummyContent />,
+  },
+  {
+    category: "iOS",
+    title: "Photography just got better.",
+    src: "https://images.unsplash.com/photo-1602081957921-9137a5d6eaee?q=80&w=2793&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    content: <DummyContent />,
+  },
+  {
+    category: "Hiring",
+    title: "Hiring for a Staff Software Engineer",
+    src: "https://images.unsplash.com/photo-1511984804822-e16ba72f5848?q=80&w=2048&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    content: <DummyContent />,
+  },
+];
