@@ -30,6 +30,9 @@ const Projects: React.FC = () => {
                 link={project.link}
                 github={project.github}
                 technologies={project.technologies}
+                alertImage={project.alertImage}
+                alertDescription={project.alertDescription}
+                youtube={project.youtube}
               />
             </motion.div>
           ))}

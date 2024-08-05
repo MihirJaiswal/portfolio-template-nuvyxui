@@ -8,6 +8,9 @@ export const projectsList = [
     link: "https://monsterpedia-orcin.vercel.app/",
     github: "https://github.com/MihirJaiswal/monsterpedia",
     technologies: ["Next.js", "Tailwind", "TypeScript"],
+    alertDescription: "Monster Pedia is an interactive web application designed for Pokémon fans. It includes a comprehensive Pokédex, a type weakness calculator, a team builder, and a Pokémon card maker. The project is built using Next.js, Tailwind CSS, and Framer Motion to deliver an engaging and visually appealing user experience.",
+    alertImage: '/projects/details/monsterpedia.png',
+    youtube: 'https://www.youtube.com/watch?v=hi3fNjSSy4c&t=38s',
   },
   {
     id: 2,
