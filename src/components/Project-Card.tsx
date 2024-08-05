@@ -12,7 +12,7 @@ interface ProjectCardProps {
   alertImage?: string;
   alertDescription?: string;
   blurHash?: string;
-  link: string;
+  link?: string;
   github: string;
   technologies: string[];
   youtube? : string;
@@ -102,9 +102,11 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, ale
           </div>
           <div className="flex items-center gap-4 mt-4 md:mt-0">
             <button>
-              <a href={link} target="_blank" rel="noopener noreferrer" className="md:px-4 py-2 text-sm rounded-lg font-bold text-black dark:text-white underline decoration-double">
+              {link && (
+                <a href={link} target="_blank" rel="noopener noreferrer" className="md:px-4 py-2 text-sm rounded-lg font-bold text-black dark:text-white underline decoration-double">
                 Live Demo
               </a>
+              )}
             </button>
             <button>
               <a href={github} target="_blank" rel="noopener noreferrer">
