@@ -207,7 +207,7 @@ export const skills = [
     name: "Visual Studio Code",
     description: "Code editor of choice",
     link: "https://code.visualstudio.com/",
-    type: "development",
+    type: "",
     image: '/skills/vscode.png'
   },
   {

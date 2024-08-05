@@ -55,7 +55,7 @@ const config = {
       },
       backgroundImage: {
         "bg1": "linear-gradient(to left bottom, #ffffff, #fcf8ff, #fbf1ff, #fce9ff, #ffe1ff);",
-        "bg2": "linear-gradient(to right bottom, #161927, #161926, #171925, #171924, #171923);"
+        "bg2": "linear-gradient(to right bottom, #171923, #171923, #171923, #171923, #171923);"
       },
       borderRadius: {
         lg: "var(--radius)",

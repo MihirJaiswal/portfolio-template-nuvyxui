@@ -39,7 +39,7 @@ const AboutMe: React.FC = () => {
         </div>
       </div>
       <span className="block md:inline md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto ">
-        Beyond software development, I enjoy anime, drawing, cooking reading books and writing stories. ✨
+        Beyond software development, I enjoy anime, drawing, cooking, reading books and writing stories. ✨
       </span>
       <div className='max-w-4xl mx-auto'>
       <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100 pb-6" >Days I code</Header>

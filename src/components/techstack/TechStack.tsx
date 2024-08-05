@@ -38,7 +38,7 @@ const TechStack: React.FC = () => {
       <div className="text-center mb-8 flex flex-col items-center justify-center">
         <Header underlineColor="#ff9400">Tech Stack</Header>
         <p className="text-xl text-gray-500 dark:text-gray-200 max-w-lg mx-auto">
-          A list of my favorite tools and technologies that I use on a regular basis.
+          A list of my favorite tools and technologies that I use.
         </p>
       </div>
 

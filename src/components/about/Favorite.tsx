@@ -131,7 +131,7 @@ export function Favourite() {
             layoutId={`card-${card.title}-${id}`}
             key={`card-${card.title}-${id}`}
             onClick={() => setActive(card)}
-            className="p-4 flex  justify-between items-center mb-6 bg-neutral-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl cursor-pointer"
+            className="p-4 flex  justify-between items-center mb-6 bg-neutral-50 dark:bg-[#1E2533] border border-gray-200 dark:border-gray-700 rounded-xl cursor-pointer"
           >
             <div className="flex gap-4  ">
               <motion.div layoutId={`image-${card.title}-${id}`}>

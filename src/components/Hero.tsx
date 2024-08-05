@@ -77,7 +77,7 @@ const Hero = () => {
         className="w-full mt-8 max-w-4xl"
       >
         <div className="max-w-3xl mx-auto">
-        <div className="mt-8 p-3 border-l-4 border-teal-500 bg-gray-100 dark:bg-gray-800 rounded-sm font-medium ">
+        <div className="mt-8 p-3 border-l-4 border-teal-500 bg-gray-100 dark:bg-[#1E2533] rounded-sm font-medium ">
           <p className="text-teal-500 font-bold">Highlights</p>
           <ul className="text-left pl-4 list-disc mt-2 font-normal">
             <li className="mb-1">

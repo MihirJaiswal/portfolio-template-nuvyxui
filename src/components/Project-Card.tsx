@@ -55,7 +55,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, git
   return (
     <motion.div layout className="cursor-pointer w-full">
       <a href={link} target="_blank" rel="noopener noreferrer" className="block">
-        <div onClick={toggleOpen} className="flex items-start p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg transition-shadow duration-300">
+        <div onClick={toggleOpen} className="flex items-start p-4 bg-white dark:bg-[#1E2533] rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg transition-shadow duration-300">
           <img
             src={logo}
             alt={`${title} logo`}
