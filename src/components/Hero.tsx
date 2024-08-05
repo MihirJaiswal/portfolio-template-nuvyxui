@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Header from "./Header"; 
 import Projects from "./Project";
+import { HIGHLIGHTS } from '../../constant/index';
 
 const ANIMATION_DURATION = 0.5;
 const ORANGE = "#ff9400";
@@ -61,8 +62,7 @@ const Hero = () => {
   from <span className="whitespace-nowrap">India</span>
 </h2>
 <h2 className="md:text-2xl font-normal mt-4 leading-relaxed font-sans tracking-wide px-4 md:px-2">
-  <span className="">This is my digital garden, where I write about the things I'm
-  working on and share what I've learned. 😊</span>
+  <span className="">This is my portfolio, where I showcase my projects and share the skills I've mastered along the way. 🚀</span>
 </h2>
 
 
@@ -76,33 +76,27 @@ const Hero = () => {
         animate={{ translateY: 0, opacity: 1, transition: { delay: ANIMATION_DURATION - 0.1, duration: ANIMATION_DURATION } }}
         className="w-full mt-8 max-w-4xl"
       >
-        <div className="max-w-3xl mx-auto">
-        <div className="mt-8 p-3 border-l-4 border-teal-500 bg-gray-100 dark:bg-[#1E2533] rounded-sm font-medium ">
-          <p className="text-teal-500 font-bold">Highlights</p>
-          <ul className="text-left pl-4 list-disc mt-2 font-normal">
-            <li className="mb-1">
-              <Link href="/open-source">
-                <div className="text-green-600">Live/Local Github Repos <span className="ml-1 inline-block bg-green-200 text-green-800 text-xs px-2 py-1 rounded">New</span></div>
+         <div className="max-w-3xl mx-auto">
+      <div className="mt-8 p-3 border-l-4 border-teal-500 bg-gray-100 dark:bg-[#1E2533] rounded-sm font-medium ">
+        <p className="text-teal-500 font-bold">Highlights</p>
+        <ul className="text-left pl-4 list-disc mt-2 font-normal">
+          {HIGHLIGHTS.map((highlight, index) => (
+            <li key={index} className="mb-1">
+              <Link href={highlight.href}>
+                <div className="text-green-600">
+                  {highlight.title}
+                  {highlight.isNew && (
+                    <span className="ml-1 inline-block bg-green-200 text-green-800 text-xs px-2 py-1 rounded">
+                      New
+                    </span>
+                  )}
+                </div>
               </Link>
             </li>
-            <li className="mb-1">
-              <Link href="/story-timeline">
-                <p>Story page</p>
-              </Link>
-            </li>
-            <li className="mb-1">
-              <Link href="/tech-stack">
-                <p>Tech Stack</p>
-              </Link>
-            </li>
-            <li className="mb-1">
-              <Link href="/achievements">
-                <p>Achievements</p>
-              </Link>
-            </li>
-          </ul>
-        </div>
-        </div>
+          ))}
+        </ul>
+      </div>
+    </div>
         <div className="mt-6 mb-12">
           <Projects />
         </div>

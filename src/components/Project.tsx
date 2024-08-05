@@ -8,10 +8,10 @@ import { projectsList } from "../../constant/index";
 const ORANGE = "#ff9400";
 
 const Projects: React.FC = () => {
-  const [visibleProjects, setVisibleProjects] = useState(4);
+  const [visibleProjects, setVisibleProjects] = useState(5);
 
   const handleLoadMore = () => {
-    setVisibleProjects((prev) => prev + 4);
+    setVisibleProjects((prev) => prev + 5);
   };
 
   return (

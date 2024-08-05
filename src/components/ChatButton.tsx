@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { FaCommentDots, FaTimes } from 'react-icons/fa';
 import ChatBox from './ChatBox';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const ChatButton: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,14 +44,20 @@ const ChatButton: React.FC = () => {
         )}
       </button>
 
-      {isOpen && (
-        <div
-          ref={chatBoxRef}
-          className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-lg rounded-lg p-4 w-72 h-96 mt-4"
-        >
-          <ChatBox />
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            ref={chatBoxRef}
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: '24rem', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-700 shadow-lg rounded-lg p-4 w-72 mt-4 overflow-hidden"
+          >
+            <ChatBox />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

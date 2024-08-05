@@ -1,7 +1,28 @@
-// constants/index.ts
+// highlights
+export const HIGHLIGHTS = [
+  {
+    title: "Hero-Headquater",
+    href: "https://hero-hq-five.vercel.app/",
+    isNew: true,
+  },
+  {
+    title: "Ghibli Verse",
+    href: "https://ghibli-verse.vercel.app/",
+  },
+  {
+    title: "MonsterPedia",
+    href: "https://monsterpedia-orcin.vercel.app/",
+  },
+  {
+    title: "Windows 95 theme portfolio",
+    href: "https://mihirjaiswalportfolio-wmtn.vercel.app/",
+  },
+];
+
+//projects
 export const projectsList = [
   {
-    id: 1,
+    id: 0,
     title: "Monster Pedia",
     description: "Website containing a pokedex, a type calculator, a team builder, and a card generator.",
     logo: "/projects/monsterpedia.ico",
@@ -9,8 +30,19 @@ export const projectsList = [
     github: "https://github.com/MihirJaiswal/monsterpedia",
     technologies: ["Next.js", "Tailwind", "TypeScript"],
     alertDescription: "Monster Pedia is an interactive web application designed for Pokémon fans. It includes a comprehensive Pokédex, a type weakness calculator, a team builder, and a Pokémon card maker. The project is built using Next.js, Tailwind CSS, and Framer Motion to deliver an engaging and visually appealing user experience.",
-    alertImage: '/projects/details/monsterpedia.png',
+    alertImage: '/projects/details/monsterpedia.webp',
     youtube: 'https://www.youtube.com/watch?v=hi3fNjSSy4c&t=38s',
+  },
+  {
+    id: 1,
+    title: "Windows-95 Portfolio",
+    description: "Website containing a pokedex, a type calculator, a team builder, and a card generator.",
+    logo: "/projects/portfolio.png",
+    link: "https://mihirjaiswalportfolio-wmtn.vercel.app/",
+    github: "https://github.com/MihirJaiswal/windows-95-theme-portfolio",
+    technologies: ["HTML", "CSS", "Javascript"],
+    alertDescription: "A portfolio website in windows 95 theme, This project is a nostalgic journey back to the era of Windows 95, with a modern twist. Explore my work, play games, view my drawings, and much more!, also there is an easter egg in the website if you find it do let me know.",
+    alertImage: '/projects/details/portfolio.webp',
   },
   {
     id: 2,
@@ -20,7 +52,7 @@ export const projectsList = [
     github: "https://github.com/MihirJaiswal/InkScroll",
     technologies: ["Next.js", "Node.js", "TypeScript"],
     alertDescription: "Inkscroll is a versatile platform designed for manga enthusiasts to host and read manga. Users can easily upload their manga creations and share them with a broader audience, as well as explore and read manga uploaded by others. The website is built using Next.js and Node.js, ensuring a fast, seamless, and dynamic user experience.",
-    alertImage: '/projects/details/inkscroll.png',
+    alertImage: '/projects/details/inkscroll.webp',
     youtube: 'https://www.youtube.com/watch?v=uP-OGbNdiZI&t=3s',
   },
   {
@@ -32,7 +64,7 @@ export const projectsList = [
     github: "https://github.com/MihirJaiswal/hero-hq",
     technologies: ["Next.js", "Tailwind", "TypeScript"],
     alertDescription: 'Hero HQ is a dynamic web application where users can explore details about various superheroes and compare them side by side. The comparison feature includes visual graphs of power stats, height, and a win probability indicator to help users determine the likely winner in a hypothetical match-up.',
-    alertImage: '/projects/details/herohq.png',
+    alertImage: '/projects/details/herohq.webp',
     youtube: 'https://www.youtube.com/watch?v=w3m6HlIUoLw&t=46s',
   },
   {
@@ -44,7 +76,7 @@ export const projectsList = [
     github: "https://github.com/MihirJaiswal/ghibli-verse",
     technologies: ["Next.js", "Tailwind", "TypeScript"],
     alertDescription: "Ghibli Verse is a comprehensive web application dedicated to exploring the enchanting world of Studio Ghibli. This project provides detailed information about characters, movies, and locations from the beloved Studio Ghibli films. Used Studio Ghibli API for fetching the information about the characters, movies and locations.",
-    alertImage: '/projects/details/ghibliverse.png',
+    alertImage: '/projects/details/ghibliverse.webp',
     youtube: 'https://www.youtube.com/watch?v=QrFH8RzUTiw&list=LL&index=3',
   },
   {
@@ -56,29 +88,27 @@ export const projectsList = [
     github: "https://github.com/MihirJaiswal/CyberSphere-Minor-Project",
     technologies: ["React", "Tailwind", "M.L."],
     alertDescription: "CyberSphere is a browser extension and website designed to detect phishing attacks using machine learning techniques. The machine learning model is trained using XGBoost, Random Forest, Decision Tree, and SVM algorithms.The machine learning models are trained on a dataset consisting of over 30,000 samples.It provides Browser extension for real-time phishing detection while browsing.",
-    alertImage: '/projects/details/cybersphere.png',
+    alertImage: '/projects/details/cybersphere.webp',
   },
   {
     id: 6,
     title: "GDSC CDGI Website",
     description: "The official website of GDSC CDGI.",
     logo: "/projects/gdsc.svg",
-    link: "https://github.com/gdscwebsite",
     github: "https://github.com/MihirJaiswal/gdscwebsite",
     technologies: ["Next.js", "Tailwind", "TypeScript"],
     alertDescription: "The official website of GDSC CDGI. The website is made using Next.js, Tailwind, and TypeScript. The website is designed and developed by Mihir Jaiswal.",
-    alertImage: '/projects/details/gdsc.png',
+    alertImage: '/projects/details/gdsc.webp',
   },
   {
     id: 7,
     title: "Toy Sandook",
     description: "Toy Sandook is a website that I made for a client.",
     logo: "/projects/toy.png",
-    link: "https://github.com/MihirJaiswal/toyshopweb",
     github: "https://github.com/MihirJaiswal/toyshopweb",
     technologies: ["Next.js", "MongoDB", "Express",],
     alertDescription: "Toy Sandook is a website that I made for a client. The website is made using Next.js, MongoDB, and Express. The website is designed and developed by Mihir Jaiswal.",
-    alertImage: '/projects/details/toy.png',
+    alertImage: '/projects/details/toy.webp',
   },
   {
     id: 9,
@@ -89,7 +119,7 @@ export const projectsList = [
     github: "https://github.com/MihirJaiswal/Citronics-website2024",
     technologies: ["HTML", "Tailwind", "JavaScript"],
     alertDescription: "Citronics is an annual techno-management fest of CDGI, Indore. The website is made using HTML, Tailwind, and JavaScript. The website is designed and developed by Mihir Jaiswal.",
-    alertImage: '/projects/details/citronics.png',
+    alertImage: '/projects/details/citronics.webp',
   },
   {
     id: 10,
@@ -100,7 +130,7 @@ export const projectsList = [
     github: "https://github.com/MihirJaiswal/certificate-generator",
     technologies: ["React", "SCSS", "Material-UI"],
     alertDescription: "A certificate generator for the participants who successfully completed the Google cloud study jams all the task, It contains a name and a QR code generator that generates the QR for validating the certificates.",
-    alertImage: '/projects/details/certificategenerator.png',
+    alertImage: '/projects/details/certificategenerator.webp',
   },
   {
     id: 11,
@@ -111,7 +141,7 @@ export const projectsList = [
     github: "https://github.com/MihirJaiswal/DreamMist",
     technologies: ["HTML","JavaScript", "CSS"],
     alertDescription: "Dream Mist is an immersive Pokémon game built using HTML canvas, offering players a rich and dynamic experience.Explore vibrant towns and cities filled with shops, and hidden secrets. Dream Mist provides a captivating adventure filled with visual flair and interactive gameplay.",
-    alertImage: '/projects/details/dreammist.png',
+    alertImage: '/projects/details/dreammist.webp',
   },
   {
     id: 12,
@@ -122,16 +152,16 @@ export const projectsList = [
     github: "https://github.com/MihirJaiswal/Cosmic-Onslaught",
     technologies: ["HTML","JavaScript", "CSS"],
     alertDescription: "Cosmic Onslaught is a classic space invader game brought to life with HTML, CSS, and JavaScript. Get ready to defend Earth from an intergalactic invasion!",
-    alertImage: '/projects/details/cosmic.png',
+    alertImage: '/projects/details/cosmic.webp',
   },
 ];
 
-
+//skills
 export const skills = [
   {
     name: "Next.js",
     description: "Web development",
-    link: "https://nextjs.org/", // Updated link
+    link: "https://nextjs.org/", 
     type: "development",
     image: '/skills/nextjs.png'
   },
@@ -242,7 +272,7 @@ export const skills = [
   }
 ];
 
-
+//questions
 export const PREDEFINED_QA = [
   { question: "What is your name?", answer: "My name is Mihir." },
   { question: "What do you do?", answer: "I'm a Full Stack Developer and UI/UX Designer." },
