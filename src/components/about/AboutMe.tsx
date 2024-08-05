@@ -53,7 +53,7 @@ const AboutMe: React.FC = () => {
       </div>
       
         <div className='w-full max-w-4xl'>
-        <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100 pb-3">My Best Projects</Header>
+        <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100 pb-3">Hobbies</Header>
         <Favourite/>
         </div>
     </motion.div>

@@ -72,11 +72,12 @@ export function Favourite() {
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
-                  priority
-                  width={200}
-                  height={200}
+                  width={500}
+                  height={500}
                   src={active.src}
                   alt={active.title}
+                  loading="lazy"
+                  quality={100}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
               </motion.div>
@@ -98,14 +99,16 @@ export function Favourite() {
                     </motion.p>
                   </div>
 
-                  <motion.a
+                  {active.ctaLink && (
+                    <motion.a
                     layoutId={`button-${active.title}-${id}`}
                     href={active.ctaLink}
                     target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
+                    className="px-4 py-3 text-sm rounded-full font-bold bg-pink-500 dark:bg-cyan-500 text-white"
                   >
                     {active.ctaText}
                   </motion.a>
+                  )}
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.div
@@ -138,32 +141,27 @@ export function Favourite() {
                 <Image
                   width={100}
                   height={100}
-                  src={card.src}
+                  src={card.src1}
                   alt={card.title}
+                  loading="lazy"
                   className="h-14 w-14 rounded-lg object-cover object-top"
                 />
               </motion.div>
               <div className="">
                 <motion.h3
                   layoutId={`title-${card.title}-${id}`}
-                  className="font-medium text-neutral-800 dark:text-neutral-200 text-left"
+                  className="font-medium text-neutral-800 dark:text-white text-left"
                 >
                   {card.title}
                 </motion.h3>
                 <motion.p
                   layoutId={`description-${card.description}-${id}`}
-                  className="text-neutral-600 dark:text-neutral-400 text-left"
+                  className="text-neutral-600 dark:text-gray-300 text-left"
                 >
                   {card.description}
                 </motion.p>
               </div>
             </div>
-            <motion.button
-              layoutId={`button-${card.title}-${id}`}
-              className="px-4 py-2 text-sm rounded-full font-bold bg-pink-500 dark:bg-cyan-500 hover:bg-pink-600 dark:hover:bg-cyan-600 hover:text-white text-white mt-4 md:mt-0"
-            >
-              {card.ctaText}
-            </motion.button>
           </motion.div>
         ))}
       </ul>
@@ -206,72 +204,67 @@ export const CloseIcon = () => {
 
 const cards = [
   {
-    description: "Lana Del Ry",
-    title: "Summertime",
-    src: "https://assets.aceternity.com/demos/lana-del-rey.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: "Expressing emotions through art",
+    title: "Drawing",
+    src: "/hobby/drawing.webp",
+    src1:"/hobby/drawingicon.webp",
+    ctaText:"see more",
+    ctaLink:"https://www.instagram.com/monty_draws_/",
     content: () => {
       return (
         <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for
-          her melancholic and cinematic music style. Born Elizabeth Woolridge
-          Grant in New York City, she has captivated audiences worldwide with
-          her haunting voice and introspective lyrics. <br /> <br /> Her songs
-          often explore themes of tragic romance, glamour, and melancholia,
-          drawing inspiration from both contemporary and vintage pop culture.
-          With a career that has seen numerous critically acclaimed albums, Lana
-          Del Rey has established herself as a unique and influential figure in
-          the music industry, earning a dedicated fan base and numerous
-          accolades.
+          Drawing is a creative process where you express emotions and ideas
+          through various forms of art. It involves using different mediums
+          like pencils, pens, and digital tools to create visual representations
+          that convey thoughts and feelings.
         </p>
       );
     },
   },
   {
-    description: "Metallica",
-    title: "For Whom The Bell Tolls",
-    src: "https://assets.aceternity.com/demos/metallica.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: "Experimenting with flavors and techniques",
+    title: "Cooking",
+    src: "/hobby/cooking.webp",
+    src1:"/hobby/cookingicon.webp",
     content: () => {
       return (
         <p>
-          Metallica, an iconic American heavy metal band, is renowned for their
-          powerful sound and intense performances that resonate deeply with
-          their audience. Formed in Los Angeles, California, they have become a
-          cultural icon in the heavy metal music industry. <br /> <br /> Their
-          songs often reflect themes of aggression, social issues, and personal
-          struggles, capturing the essence of the heavy metal genre. With a
-          career spanning over four decades, Metallica has released numerous hit
-          albums and singles that have garnered them a massive fan following
-          both in the United States and abroad.
+          Cooking is the art of preparing food by combining ingredients and
+          following recipes. It allows you to experiment with flavors and
+          techniques, creating delicious and nutritious meals that can bring
+          joy to yourself and others.
         </p>
       );
     },
   },
   {
-    description: "Babbu Maan",
-    title: "Mitran Di Chhatri",
-    src: "https://assets.aceternity.com/demos/babbu-maan.jpeg",
-    ctaText: "Play",
-    ctaLink: "https://ui.aceternity.com/templates",
+    description: "Immersing in different worlds and ideas",
+    title: "Reading Books",
+    src: "/hobby/reading.webp",
+    src1:"/hobby/readingicon.webp",
     content: () => {
       return (
         <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful
-          voice and profound lyrics that resonate deeply with his audience. Born
-          in the village of Khant Maanpur in Punjab, India, he has become a
-          cultural icon in the Punjabi music industry. <br /> <br /> His songs
-          often reflect the struggles and triumphs of everyday life, capturing
-          the essence of Punjabi culture and traditions. With a career spanning
-          over two decades, Babu Maan has released numerous hit albums and
-          singles that have garnered him a massive fan following both in India
-          and abroad.
+          Reading books is a gateway to exploring new worlds, ideas, and
+          perspectives. It allows you to immerse yourself in stories, gain
+          knowledge, and expand your understanding of the world around you.
         </p>
       );
     },
   },
-
-
+  {
+    description: "Crafting stories that captivate the mind",
+    title: "Writing Stories",
+    src: "/hobby/writing.webp",
+    src1:"/hobby/writingicon.webp",
+    content: () => {
+      return (
+        <p>
+          Writing stories is a creative outlet where you can craft narratives
+          that captivate the mind and evoke emotions. It involves developing
+          characters, plots, and settings, weaving together a tale that resonates with readers.
+        </p>
+      );
+    },
+  },
 ];
