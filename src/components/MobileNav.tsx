@@ -16,8 +16,7 @@ function HomeMobileNav() {
   const mobileLinks = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
-    { name: "Blog", path: "/blog" },
-    { name: "Tech Stack", path: "/tech-stack" },
+    { name: "Skills", path: "/tech-stack" },
     { name: "Career", path: "/career" },
     { name: "Contact", path: "/contact" },
   ];

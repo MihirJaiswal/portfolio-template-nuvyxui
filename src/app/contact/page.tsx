@@ -12,7 +12,9 @@ const page = () => {
   return (
     <div className="bg-bg1 dark:bg-bg2">
         <TopNav/>
+         <div className='min-h-[83vh] overflow-hidden'>
          <ContactForm onSubmit={handleFormSubmit} />
+         </div>
          <Footer/>
     </div>
   )

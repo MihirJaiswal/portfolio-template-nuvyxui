@@ -33,44 +33,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   };
 
   return (
-    <div className="flex items-center justify-between h-full md:min-h-[83vh] max-w-6xl mx-auto">
-         <div className='hidden md:flex flex-col items-center justify-between gap-12 space-y-9'>
-         <AnimatePresence>
-            <motion.div
-              key="robot-div"
-              initial={{ y: ontoggle ? 0 : 10 }}
-              animate={{ y: ontoggle ? 10 : 0 }}
-              transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
-              className='flex flex-col items-center justify-center'
-            >
-              <Image
-                src='/assests/astronaut.svg'
-                alt="space"
-                width={500}
-                height={500}
-                className="w-1/2 hidden dark:block"
-              />
-              <Image
-                src='/assests/robot.png'
-                alt="space"
-                width={500}
-                height={500}
-                quality={100}
-                className="w-1/2 dark:hidden rounded-full bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200"
-              />
-           
-            </motion.div>
-          </AnimatePresence>
-          <Header underlineColor="#ff9400" emoji='✨' className="text-xl font-bold text-gray-900 dark:text-gray-100 uppercase">let&apos;s work together</Header>
-         </div>
+    <div className="flex items-center justify-between h-full  max-w-6xl mx-auto relative w-full md:p-8 md:rounded-xl bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:bg-gradient-to-r dark:from-blue-600 dark:via-purple-600 dark:to-pink-600 overflow-hidden md:my-6 ">
+        <div className="absolute inset-0 bg-white opacity-70 dark:bg-black dark:opacity-70 pointer-events-none"></div>
       <motion.form
         onSubmit={handleSubmit}
-        className="relative max-w-lg w-full p-8 md:rounded-xl md:shadow-lg bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 dark:bg-gradient-to-r dark:from-blue-600 dark:via-purple-600 dark:to-pink-600 overflow-hidden pb-28 md:pb-8"
+        className="relative max-w-lg w-full p-8 md:px-8 md:pt-2 md:rounded-xl overflow-hidden pb-28 md:pb-4 "
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
       >
-        <div className="absolute inset-0 bg-white opacity-70 dark:bg-black dark:opacity-70 pointer-events-none"></div>
+      
         
         <motion.h2
           className="relative text-2xl font-bold text-neutral-800 dark:text-neutral-200 mb-6 text-center"
@@ -158,7 +130,35 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
         <img src="/assests/cat.png" alt="" className='absolute left-4 -bottom-10 w-40 md:hidden z-50 ' />
       </div>
       </motion.form>
-
+      <div className='hidden md:flex flex-col items-center justify-between gap-12 space-y-9 relative'>
+         <AnimatePresence>
+            <motion.div
+              key="robot-div"
+              initial={{ y: ontoggle ? 0 : 10 }}
+              animate={{ y: ontoggle ? 10 : 0 }}
+              transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
+              className='flex flex-col items-center justify-center'
+            >
+              <Image
+                src='/assests/astronaut.svg'
+                alt="space"
+                width={500}
+                height={500}
+                className="w-1/2 hidden dark:block"
+              />
+              <Image
+                src='/assests/robot.png'
+                alt="space"
+                width={500}
+                height={500}
+                quality={100}
+                className="w-1/2 dark:hidden rounded-full bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300"
+              />
+           
+            </motion.div>
+          </AnimatePresence>
+          <Header underlineColor="#ff9400" emoji='✨' className="text-xl font-bold text-gray-900 dark:text-gray-100 uppercase">let&apos;s work together</Header>
+         </div>
     </div>
   );
 };

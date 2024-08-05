@@ -4,14 +4,14 @@ import Link from 'next/link';
 import { FaGithub } from 'react-icons/fa';
 import { AiTwotoneThunderbolt, AiOutlineContacts } from 'react-icons/ai';
 import { BiChevronDown } from 'react-icons/bi';
-import { BsBook} from 'react-icons/bs';
+import { BsBook } from 'react-icons/bs';
 import { ModeToggle } from './Toggle';
 import { usePathname } from 'next/navigation';
 import HomeMobileNav from './MobileNav';
 
 const webLinks = [
-  { name: "About", path: "/about" },
-  { name: "Blog", path: "/blog" }
+  { name: "Home", path: "/" },
+  { name: "About", path: "/about" }
 ];
 
 const TopNav = () => {
@@ -35,7 +35,7 @@ const TopNav = () => {
   }, []);
 
   return (
-    <nav className="bg-white shadow-lg dark:bg-gray-700 px-4 py-2 border-b">
+    <nav className="bg-white shadow dark:bg-gray-700 px-4 py-2 border-b">
       <div className="flex items-center justify-between max-w-screen-lg mx-auto">
         <div className="flex items-center justify-between w-full">
           <div className='md:hidden'>
