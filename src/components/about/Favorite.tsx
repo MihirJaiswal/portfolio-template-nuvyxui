@@ -160,7 +160,7 @@ export function Favourite() {
             </div>
             <motion.button
               layoutId={`button-${card.title}-${id}`}
-              className="px-4 py-2 text-sm rounded-full font-bold bg-pink-500 dark:bg-green-500 hover:bg-pink-600 dark:hover:bg-green-600 hover:text-white text-white mt-4 md:mt-0"
+              className="px-4 py-2 text-sm rounded-full font-bold bg-pink-500 dark:bg-cyan-500 hover:bg-pink-600 dark:hover:bg-cyan-600 hover:text-white text-white mt-4 md:mt-0"
             >
               {card.ctaText}
             </motion.button>

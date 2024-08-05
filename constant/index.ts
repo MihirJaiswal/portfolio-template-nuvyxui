@@ -272,6 +272,13 @@ export const skills = [
   }
 ];
 
+export const aboutImages = [
+  "/assests/writing.webp",
+  "/assests/pfp.webp",
+  "/assests/reading.webp",
+  "/assests/food.webp",
+];
+
 //questions
 export const PREDEFINED_QA = [
   { question: "What is your name?", answer: "My name is Mihir." },

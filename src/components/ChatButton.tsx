@@ -38,7 +38,7 @@ const ChatButton: React.FC = () => {
         aria-label={isOpen ? "Close Chat" : "Open Chat"}
       >
         {isOpen ? (
-          <FaTimes className="h-4 w-4" />
+          <FaTimes className="h-6 w-6" />
         ) : (
           <FaCommentDots className="h-6 w-6" />
         )}

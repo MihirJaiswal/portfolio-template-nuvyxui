@@ -8,6 +8,7 @@ import { BsBook } from 'react-icons/bs';
 import { ModeToggle } from './Toggle';
 import { usePathname } from 'next/navigation';
 import HomeMobileNav from './MobileNav';
+import Image from 'next/image';
 
 const webLinks = [
   { name: "Home", path: "/" },
@@ -43,7 +44,7 @@ const TopNav = () => {
           </div>
           <Link href="/" passHref>
             <div className="flex items-center justify-center ">
-              <img src='/assests/pfp.webp' alt="User Icon" className="w-10 h-10 rounded-full object-cover" />
+              <Image src='/assests/pfp.webp' alt="User Icon" width={100} height={100} loading='lazy' className="w-10 h-10 rounded-full object-cover" />
             </div>
           </Link>
           <div className="hidden md:flex items-center space-x-4">

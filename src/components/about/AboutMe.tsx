@@ -6,15 +6,9 @@ import Header from '../Header';
 import { ScatteredLine, ScatteredLine2 } from './ScatteredGrid';
 import GitHubContributionGraph from './GitHubContributionGraph';
 import { Favourite } from './Favorite';
+import { aboutImages } from '../../../constant';
 
 const AboutMe: React.FC = () => {
-  const images = [
-    "https://thepaperkind.com/wp-content/uploads/2023/10/8219b-sketchbook-handwriting.webp",
-    "/assests/pfp.webp",
-    "https://images.pexels.com/photos/3640930/pexels-photo-3640930.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    "https://wallpapers.com/images/hd/aesthetic-food-pictures-907-x-900-fv9mjo37wrkjzjda.jpg",
-  ];
-
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -32,10 +26,10 @@ const AboutMe: React.FC = () => {
       </div>
       <div className=''>
         <div className="hidden md:block">
-          <ScatteredLine images={images} />
+          <ScatteredLine images={aboutImages} />
         </div>
         <div className="md:hidden">
-          <ScatteredLine2 images={images} />
+          <ScatteredLine2 images={aboutImages} />
         </div>
       </div>
       <span className="block md:inline md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto ">
@@ -51,7 +45,7 @@ const AboutMe: React.FC = () => {
         <a
           href="/assests/resume.pdf" 
           download
-          className="bg-pink-500 dark:bg-green-500 text-white py-2 px-4 rounded-lg text-center hover:bg-pink-600 dark:hover:bg-teal-700 flex items-center justify-center space-x-2"
+          className="bg-pink-500 dark:bg-cyan-500 text-white py-2 px-4 rounded-lg text-center hover:bg-pink-600 dark:hover:bg-cyan-600 flex items-center justify-center space-x-2"
         >
           <FaDownload size={16} />
           <span>Download My Resume</span>

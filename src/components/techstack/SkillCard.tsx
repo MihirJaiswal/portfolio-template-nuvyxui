@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { usePalette } from 'react-palette';
+import Image from 'next/image';
 
 interface SkillCardProps {
   name: string;
@@ -37,7 +38,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ name, image, link, description, p
               {loading ? (
                 <div className="w-10 h-10 bg-gray-200 rounded-md animate-pulse"></div>
               ) : (
-                <img src={image} alt={name} className="w-10 h-10 rounded-md" />
+                <Image src={image} alt={name} height={100} width={100} loading='lazy' className="w-10 h-10 rounded-md" />
               )}
             </div>
             <div className="ml-4 flex flex-col justify-center">

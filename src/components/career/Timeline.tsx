@@ -2,6 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../Header';
+import Image from 'next/image';
 
 const TURQUOISE = "#06b6d4";
 
@@ -33,9 +34,12 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ title, role, skills, period
     whileHover={{ y: -5 }}
     className="flex  gap-8 items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-md p-4 w-full"
   >
-    <img
+    <Image
       src={logo}
       alt={title}
+      width={100}
+      height={100}
+      loading='lazy'
       className="w-16 h-16 object-contain"
     />
     <div className="flex flex-col md:flex-row justify-between items-center w-full">
