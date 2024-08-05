@@ -36,7 +36,7 @@ export const projectsList = [
   {
     id: 1,
     title: "Windows-95 Portfolio",
-    description: "Website containing a pokedex, a type calculator, a team builder, and a card generator.",
+    description: "A portfolio website in windows 95 theme.",
     logo: "/projects/portfolio.png",
     link: "https://mihirjaiswalportfolio-wmtn.vercel.app/",
     github: "https://github.com/MihirJaiswal/windows-95-theme-portfolio",

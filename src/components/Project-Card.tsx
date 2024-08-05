@@ -48,13 +48,21 @@ const getTagColor = (tech: string): string => {
   }
 };
 
+const truncateText = (text:string, wordLimit:number): string => {
+  const words = text.split(' ');
+  if (words.length > wordLimit) {
+    return words.slice(0, wordLimit).join(' ') + '...';
+  }
+  return text;
+};
+
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, alertImage, alertDescription, github, link, technologies, youtube }) => {
   const ORANGE = "#ff9400";
   return (
     <motion.div layout className="cursor-pointer w-full">
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <div className="flex items-start p-4 bg-white dark:bg-[#1E2533] rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div className="flex items-center md:items-start p-4 bg-white dark:bg-[#1E2533] rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg transition-shadow duration-300">
             <Image src={logo} alt={`${title} logo`} width={40} height={40} className="w-8 h-8 rounded-md" quality={100} loading="lazy" />
             <div className="flex flex-col ml-4 w-full">
               <div className="flex flex-col md:flex-row justify-between w-full">
@@ -64,15 +72,16 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, ale
                     <FaGithub className="text-gray-900 dark:text-gray-200" />
                   </a>
                 </div>
-                <div className="flex space-x-2 mt-2 md:mt-0">
+                <div className="flex space-x-2">
                   {technologies.map((tech, index) => (
-                    <span key={index} className={`text-xs font-semibold px-2 py-1 rounded ${getTagColor(tech)}`}>
+                    <span key={index} className={`text-xs font-semibold px-2 py-1 hidden md:block rounded ${getTagColor(tech)}`}>
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
-              <p className="text-sm text-gray-500 dark:text-gray-200 mt-2">{description}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-200 md:hidden">{truncateText(description, 4)}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-200 mt-2 hidden md:block">{description}</p>
             </div>
           </div>
         </AlertDialogTrigger>
@@ -94,7 +103,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, ale
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <div className="flex flex-wrap justify-between items-center w-full">
+            <div className="flex flex-col md:flex-row justify-between md:items-center w-full">
               <div className="flex gap-2">
                 {technologies.map((tech, index) => (
                   <span key={index} className={`text-xs font-semibold px-2 py-1 rounded ${getTagColor(tech)}`}>
