@@ -3,7 +3,7 @@ import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 import { motion } from 'framer-motion';
 import UnderlinedText from '../UnderlineText';
 import Image from 'next/image';
-import { AppleCardsCarouselDemo } from './Image';
+import { CardsCarousel } from './CardsCarousel';
 
 type ContactFormProps = {
   onSubmit: (data: ContactFormData) => void;
@@ -166,7 +166,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
         </div>
       </motion.form>
       <div className='hidden xl:block'>
-        <AppleCardsCarouselDemo/>
+        <CardsCarousel/>
       </div>
     </div>
   );
