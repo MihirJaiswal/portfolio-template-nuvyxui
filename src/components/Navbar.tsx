@@ -36,7 +36,7 @@ const TopNav = () => {
   }, []);
 
   return (
-    <nav className="bg-white shadow-lg dark:bg-gray-700 px-4 py-2 border-b  mx-auto">
+    <nav className="bg-white dark:bg-gray-700 px-4 py-2 border-b z-50 mx-auto">
       <div className="flex items-center justify-center max-w-4xl mx-auto">
         <div className="flex items-center justify-between w-full">
           <div className='md:hidden'>
@@ -67,7 +67,7 @@ const TopNav = () => {
                 <BiChevronDown size={18} className="ml-2" />
               </button>
               {isLinksOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-md z-10 border border-gray-300 dark:border-gray-600">
+                <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-md z-50 border border-gray-300 dark:border-gray-600">
                   <Link href="/tech-stack" passHref>
                     <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/tech-stack' ? 'bg-gray-100 dark:bg-gray-700 border-blue-500 border-2' : ''}`}>
                       <AiTwotoneThunderbolt size={18} className="mr-2 text-blue-500" />

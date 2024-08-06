@@ -56,8 +56,9 @@ const config = {
       backgroundImage: {
         "bg1": "linear-gradient(to left bottom, #ffffff, #fcf8ff, #fbf1ff, #fce9ff, #ffe1ff);",
         "bg2": "linear-gradient(to right bottom, #171923, #171923, #171923, #171923, #171923);",
-        "bg3": "linear-gradient(to right bottom, #17b2e8, #41a2ef, #748eeb, #a175d8, #c457b6, #cd4dac, #d542a1, #dc3594, #d942aa, #d350bf, #c95ed4, #bb6ce8);",
-        "bg4": "linear-gradient(to right bottom, #0c1d46, #111b47, #171a47, #1c1747, #211547, #291244, #2f1041, #340d3d, #390b36, #3d0a30, #3f0a2a, #400c25);",
+        "bg3": "linear-gradient(to right, #fdeeff, #f0e5ff, #dedeff, #c6d8ff, #a8d3ff, #a0cefe, #97c9fe, #8fc4fd, #a6bcfb, #bdb2f3, #d2a9e6, #e3a0d5);",
+        "bg4": "linear-gradient(to right, #171923, #161a29, #151b30, #131b36, #111c3d, #181b3f, #1e1a40, #251840, #30143a, #381033, #3d0d2c, #400c24);",
+        "bg5": "linear-gradient(to left, #ffffff, #fcf8ff, #fbf1ff, #fce9ff, #ffe1ff);",
       },
       borderRadius: {
         lg: "var(--radius)",

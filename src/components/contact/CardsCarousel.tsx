@@ -9,8 +9,8 @@ export function CardsCarousel() {
   ));
 
   return (
-    <div className="w-full max-w-3xl h-screen flex items-center bg-bg3 dark:bg-bg4">
-       <div className="absolute inset-0 bg-white opacity-50 dark:opacity-0"></div>
+    <div className="w-full max-w-3xl h-screen flex items-center bg-bg3 dark:bg-bg4 z-0">
+       <div className="absolute inset-0 bg-white opacity-20 dark:opacity-0 z-0"></div>
       <Carousel items={cards} />
     </div>
   );
@@ -47,5 +47,15 @@ const data = [
     category: "",
     title: "",
     src: "/contact/inkscroll.webp",
+  },
+  {
+    category: "",
+    title: "",
+    src: "/contact/citronics.webp",
+  },
+  {
+    category: "",
+    title: "",
+    src: "/contact/equi.webp",
   },
 ];
