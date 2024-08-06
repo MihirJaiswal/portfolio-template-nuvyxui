@@ -80,7 +80,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           transition={{ delay: 0.2 }}
         >
           <div className="relative flex items-center bg-white/80 dark:bg-gray-900/80 backdrop-blur-md px-4 py-2 rounded-lg shadow-inner border border-gray-300 dark:border-gray-600">
-            <svg className="w-5 h-5 text-gray-400 dark:text-gray-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-gray-500 dark:text-gray-300 mr-2" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
             </svg>
             <input
@@ -90,7 +90,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="block w-full bg-transparent border-none focus:outline-none text-neutral-800 dark:text-neutral-300 placeholder-neutral-500 dark:placeholder-neutral-500"
+              className="block w-full bg-transparent border-none focus:outline-none text-neutral-800 dark:text-gray-300 placeholder-neutral-500 dark:placeholder-neutral-400"
               placeholder="Name"
             />
           </div>
@@ -104,7 +104,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           transition={{ delay: 0.3 }}
         >
           <div className="relative flex items-center bg-white/80 dark:bg-gray-900/80 backdrop-blur-md px-4 py-2 rounded-lg shadow-inner border border-gray-300 dark:border-gray-600">
-            <svg className="w-5 h-5 text-gray-400 dark:text-gray-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-gray-500 dark:text-gray-300 mr-2" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4V8l8 5 8-5v10z"/>
             </svg>
             <input
@@ -114,7 +114,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="block w-full bg-transparent border-none focus:outline-none text-neutral-800 dark:text-neutral-300 placeholder-neutral-500 dark:placeholder-neutral-500"
+              className="block w-full bg-transparent border-none focus:outline-none text-neutral-800 dark:text-gray-300 placeholder-neutral-500 dark:placeholder-neutral-400"
               placeholder="Email"
             />
           </div>
@@ -128,7 +128,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           transition={{ delay: 0.4 }}
         >
           <div className="relative flex items-start bg-white/80 dark:bg-gray-900/80 backdrop-blur-md px-4 py-2 rounded-lg shadow-inner border border-gray-300 dark:border-gray-600">
-            <svg className="w-5 h-5 text-gray-400 dark:text-gray-500 mt-1 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 text-gray-500 dark:text-gray-300 mt-1 mr-2" fill="currentColor" viewBox="0 0 24 24">
               <path d="M4 4h16v2H4V4zm0 4h10v2H4V8zm0 4h6v2H4v-2zm10 2l4 4v-8z"/>
             </svg>
             <textarea
@@ -137,7 +137,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
               value={formData.message}
               onChange={handleChange}
               required
-              className="block w-full bg-transparent border-none focus:outline-none text-neutral-800 dark:text-neutral-300 placeholder-neutral-500 dark:placeholder-neutral-500"
+              className="block w-full bg-transparent border-none focus:outline-none text-neutral-800 dark:text-gray-300 placeholder-neutral-500 dark:placeholder-neutral-400"
               placeholder="Message"
               rows={4}
             />
@@ -165,7 +165,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           />
         </div>
       </motion.form>
-      <div className='hidden xl:block'>
+      <div className='hidden xl:block z-0'>
         <CardsCarousel/>
       </div>
     </div>

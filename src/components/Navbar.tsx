@@ -36,13 +36,14 @@ const TopNav = () => {
   }, []);
 
   return (
-    <nav className="bg-white shadow dark:bg-gray-700 px-4 py-2 border-b">
-      <div className="flex items-center justify-between max-w-screen-lg mx-auto">
+    <nav className="bg-white shadow-lg dark:bg-gray-700 px-4 py-2 border-b  mx-auto">
+      <div className="flex items-center justify-center max-w-4xl mx-auto">
         <div className="flex items-center justify-between w-full">
           <div className='md:hidden'>
             <HomeMobileNav />
           </div>
-          <Link href="/" passHref>
+         <div className='flex items-center justify-between gap-12'>
+         <Link href="/" passHref>
             <div className="flex items-center justify-center ">
               <Image src='/assests/pfp.webp' alt="User Icon" width={100} height={100} loading='lazy' className="w-10 h-10 rounded-full object-cover" />
             </div>
@@ -50,7 +51,7 @@ const TopNav = () => {
           <div className="hidden md:flex items-center space-x-4">
             {webLinks.map((link) => (
               <Link key={link.path} href={link.path} passHref>
-                <p className={`px-3 py-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors ${pathname === link.path ? 'bg-gray-200 dark:bg-gray-800  border-blue-500 border-2' : ''}`}>
+                <p className={`px-3 py-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors ${pathname === link.path ? 'bg-gray-200 dark:bg-gray-800 dark:text-blue-400 text-blue-500 border-2' : ''}`}>
                   {link.name}
                 </p>
               </Link>
@@ -58,13 +59,15 @@ const TopNav = () => {
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={toggleLinks}
-                className="flex items-center px-3 py-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors"
+                className={`flex items-center px-3 py-1 rounded-md transition-colors ${
+                  isLinksOpen ? 'bg-gray-200 dark:bg-gray-800 border-2 border-blue-500 dark:text-blue-400 text-blue-500' : 'text-black dark:text-white'
+                } hover:bg-gray-200 dark:hover:bg-gray-800`}
               >
                 Links
                 <BiChevronDown size={18} className="ml-2" />
               </button>
               {isLinksOpen && (
-                <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-md z-10">
+                <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-md z-10 border border-gray-300 dark:border-gray-600">
                   <Link href="/tech-stack" passHref>
                     <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/tech-stack' ? 'bg-gray-100 dark:bg-gray-700 border-blue-500 border-2' : ''}`}>
                       <AiTwotoneThunderbolt size={18} className="mr-2 text-blue-500" />
@@ -72,13 +75,13 @@ const TopNav = () => {
                     </p>
                   </Link>
                   <Link href="/career" passHref>
-                    <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/education' ? 'bg-gray-100 dark:bg-gray-700' : ''}`}>
+                    <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/career' ? 'bg-gray-100 dark:bg-gray-700 border-blue-500 border-2' : ''}`}>
                       <BsBook size={18} className="mr-2 text-blue-500" />
                         Career
                     </p>
                   </Link>
                   <Link href="/contact" passHref>
-                    <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/story-timeline' ? 'bg-gray-100 dark:bg-gray-700' : ''}`}>
+                    <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/contact' ? 'bg-gray-100 dark:bg-gray-700 border-blue-500 border-2' : ''}`}>
                       <AiOutlineContacts size={18} className="mr-2 text-blue-500" />
                       Contact
                     </p>
@@ -87,6 +90,7 @@ const TopNav = () => {
               )}
             </div>
           </div>
+         </div>
 
           <div className="flex items-center space-x-4">
             <Link href="https://github.com/MihirJaiswal" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100">
