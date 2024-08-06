@@ -53,14 +53,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           <div className="flex items-center z-10 relative">
             <p className="leading-snug text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 dark:from-cyan-400 dark:to-blue-500 md:mb-4">
               <UnderlinedText color='#e04d28'>
-                <span className='text-black dark:text-white hidden md:block'>
+                <span className='text-black dark:text-white hidden xl:block'>
                   See my work 👉
                 </span>
               </UnderlinedText>
             </p>
             <p className="leading-snug text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 dark:from-cyan-400 dark:to-blue-500 md:mb-4">
               <UnderlinedText color='#e04d28'>
-                <span className='text-black dark:text-white md:hidden'>
+                <span className='text-black dark:text-white xl:hidden'>
                   Let's work together!
                 </span>
               </UnderlinedText>
@@ -165,7 +165,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           />
         </div>
       </motion.form>
-      <div className='hidden md:block'>
+      <div className='hidden xl:block'>
         <AppleCardsCarouselDemo/>
       </div>
     </div>
