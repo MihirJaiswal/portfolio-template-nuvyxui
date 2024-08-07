@@ -35,10 +35,10 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   };
 
   return (
-    <div className="flex items-center justify-around md:h-[93vh] relative w-full md:p-8 overflow-hidden">
+    <div className="flex items-center justify-around md:h-[93vh] relative w-full  overflow-hidden">
       <motion.form
         onSubmit={handleSubmit}
-        className="relative z-10 max-w-lg w-full p-8 pt-4 md:px-10 md:pt-6 md:rounded-xl overflow-hidden pb-24 md:pb-10 md:mb-12  bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 dark:bg-gradient-to-r dark:from-blue-600 dark:via-purple-600 dark:to-pink-600 "
+        className="relative z-10 max-w-lg xl:h-screen flex flex-col justify-center w-full p-8 pt-4 md:px-10 md:pt-6 md:rounded-l-2xl overflow-hidden pb-24 md:pb-10 md:mb-12  bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200 dark:bg-gradient-to-r dark:from-pink-800 xl:dark:from-[#4b5172] dark:via-purple-800 xl:dark:via-purple-800 dark:to-[#4b5172] xl:dark:to-[#4b5172] "
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
@@ -79,7 +79,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
         >
-          <div className="relative flex items-center bg-white/80 dark:bg-gray-900/80 backdrop-blur-md px-4 py-2 rounded-lg shadow-inner border border-gray-300 dark:border-gray-600">
+          <div className="relative flex items-center bg-white/80 dark:bg-gray-900 backdrop-blur-md px-4 py-2 rounded-lg shadow-inner border border-gray-300 dark:border-gray-600">
             <svg className="w-5 h-5 text-gray-500 dark:text-gray-300 mr-2" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
             </svg>
@@ -90,7 +90,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
               value={formData.name}
               onChange={handleChange}
               required
-              className="block w-full bg-transparent border-none focus:outline-none text-neutral-800 dark:text-gray-300 placeholder-neutral-500 dark:placeholder-neutral-400"
+              className="block w-full bg-transparent border-none focus:outline-none text-neutral-800 dark:text-gray-300 placeholder-neutral-500 dark:placeholder-neutral-200"
               placeholder="Name"
             />
           </div>
@@ -103,7 +103,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <div className="relative flex items-center bg-white/80 dark:bg-gray-900/80 backdrop-blur-md px-4 py-2 rounded-lg shadow-inner border border-gray-300 dark:border-gray-600">
+          <div className="relative flex items-center bg-white/80 dark:bg-gray-900 backdrop-blur-md px-4 py-2 rounded-lg shadow-inner border border-gray-300 dark:border-gray-600">
             <svg className="w-5 h-5 text-gray-500 dark:text-gray-300 mr-2" fill="currentColor" viewBox="0 0 24 24">
               <path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4V8l8 5 8-5v10z"/>
             </svg>
@@ -114,7 +114,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="block w-full bg-transparent border-none focus:outline-none text-neutral-800 dark:text-gray-300 placeholder-neutral-500 dark:placeholder-neutral-400"
+              className="block w-full bg-transparent border-none focus:outline-none text-neutral-800 dark:text-gray-300 placeholder-neutral-500 dark:placeholder-neutral-200"
               placeholder="Email"
             />
           </div>
@@ -127,7 +127,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.4 }}
         >
-          <div className="relative flex items-start bg-white/80 dark:bg-gray-900/80 backdrop-blur-md px-4 py-2 rounded-lg shadow-inner border border-gray-300 dark:border-gray-600">
+          <div className="relative flex items-start bg-white/80 dark:bg-gray-900 backdrop-blur-md px-4 py-2 rounded-lg shadow-inner border border-gray-300 dark:border-gray-600">
             <svg className="w-5 h-5 text-gray-500 dark:text-gray-300 mt-1 mr-2" fill="currentColor" viewBox="0 0 24 24">
               <path d="M4 4h16v2H4V4zm0 4h10v2H4V8zm0 4h6v2H4v-2zm10 2l4 4v-8z"/>
             </svg>
@@ -137,7 +137,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
               value={formData.message}
               onChange={handleChange}
               required
-              className="block w-full bg-transparent border-none focus:outline-none text-neutral-800 dark:text-gray-300 placeholder-neutral-500 dark:placeholder-neutral-400"
+              className="block w-full bg-transparent border-none focus:outline-none text-neutral-800 dark:text-gray-300 placeholder-neutral-500 dark:placeholder-neutral-200"
               placeholder="Message"
               rows={4}
             />

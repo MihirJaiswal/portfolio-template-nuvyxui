@@ -10,12 +10,14 @@ const page = () => {
         // Here you can handle the form submission, like sending data to a server
       };
   return (
-    <div className="bg-bg5 dark:bg-bg2">
+    <div className="bg-bg1 xl:bg-bg5 dark:bg-bg2">
         <TopNav/>
          <div className='min-h-[83vh] overflow-hidden'>
          <ContactForm onSubmit={handleFormSubmit} />
          </div>
+         <div className='bg-pink-100 dark:bg-gray-900'>
          <Footer/>
+         </div>
     </div>
   )
 }
