@@ -281,6 +281,94 @@ export const aboutImages = [
   "/assests/food.webp",
 ];
 
+//career
+export const educationData = [
+  {
+    title: "Chameli Devi Group of Institutions",
+    role: "B.Tech in AI and DS",
+    skills: [],
+    period: "2021-2025",
+    logo: "/education/cdgi.png",
+  },
+  {
+    title: "K.K. Convent Hr. Sec. School",
+    role: "",
+    skills: ["Physics", "Chemistry", "Maths"],
+    period: "2018-2020",
+    logo: "/education/kk.png",
+  },
+  {
+    title: "St Jude's Higher Secondary School",
+    role: "",
+    skills: [],
+    period: "2005-2017",
+    logo: "/education/sjs.png",
+  },
+];
+
+export const workExperienceData = [
+  {
+    title: "Freelancer",
+    role: "Web developer",
+    skills: ["Next.js", "React", "Node.js"],
+    period: "2023-Present",
+    logo: "/work/freelance.png",
+  },
+];
+
+//contact 
+export const data = [
+  {
+    category: "",
+    title: "",
+    src: "/contact/hero.webp",
+  },
+  {
+    category: "",
+    title: "",
+    src: "/contact/ghibli.webp",
+  },
+  {
+    category: "",
+    title: "",
+    src: "/contact/cybersphere.webp",
+  },
+  {
+    category: "",
+    title: "",
+    src: "/contact/gdsc.webp",
+  },
+  
+  {
+    category: "",
+    title: "",
+    src: "/contact/monsterpedia.webp",
+  },
+  {
+    category: "",
+    title: "",
+    src: "/contact/inkscroll.webp",
+  },
+  {
+    category: "",
+    title: "",
+    src: "/contact/citronics.webp",
+  },
+  {
+    category: "",
+    title: "",
+    src: "/contact/dreammist.webp",
+  },
+  {
+    category: "",
+    title: "",
+    src: "/contact/equi.webp",
+  },
+];
+
+
+
+
 //questions
 export const PREDEFINED_QA = [
   { question: "What is your name?", answer: "My name is Mihir." },

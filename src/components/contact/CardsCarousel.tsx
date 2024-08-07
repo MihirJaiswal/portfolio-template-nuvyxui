@@ -1,7 +1,7 @@
 "use client";
-import Image from "next/image";
 import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
+import { data } from "../../../constant";
 
 export function CardsCarousel() {
   const cards = data.map((card, index) => (
@@ -16,51 +16,3 @@ export function CardsCarousel() {
   );
 }
 
-const data = [
-  {
-    category: "",
-    title: "",
-    src: "/contact/hero.webp",
-  },
-  {
-    category: "",
-    title: "",
-    src: "/contact/ghibli.webp",
-  },
-  {
-    category: "",
-    title: "",
-    src: "/contact/cybersphere.webp",
-  },
-  {
-    category: "",
-    title: "",
-    src: "/contact/gdsc.webp",
-  },
-  
-  {
-    category: "",
-    title: "",
-    src: "/contact/monsterpedia.webp",
-  },
-  {
-    category: "",
-    title: "",
-    src: "/contact/inkscroll.webp",
-  },
-  {
-    category: "",
-    title: "",
-    src: "/contact/citronics.webp",
-  },
-  {
-    category: "",
-    title: "",
-    src: "/contact/dreammist.webp",
-  },
-  {
-    category: "",
-    title: "",
-    src: "/contact/equi.webp",
-  },
-];
