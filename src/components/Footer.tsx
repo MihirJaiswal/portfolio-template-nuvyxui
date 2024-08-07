@@ -1,5 +1,5 @@
 import * as React from "react";
-import siteConfig from "../../constant/site-config";
+import {siteConfig,  } from "../../constant/Constant";
 import Link from "next/link";
 
 const getIconColorClass = (type: string) => {
