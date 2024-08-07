@@ -23,7 +23,6 @@ const ChatBox: React.FC = () => {
       } else {
         setMessages([...messages, { type: 'user', text: userInput }, { type: 'bot', text: "Sorry, I don't have an answer for that." }]);
       }
-      
       setUserInput('');
     }
   };

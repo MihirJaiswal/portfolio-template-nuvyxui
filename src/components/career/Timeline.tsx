@@ -4,8 +4,6 @@ import { motion } from 'framer-motion';
 import Header from '../Header';
 import Image from 'next/image';
 
-const TURQUOISE = "#06b6d4";
-
 type TimelineItem = {
   title: string;
   role: string;
@@ -82,7 +80,6 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({ data, title, underlin
         {title}
       </Header>
     </div>
-
     <div className="w-full flex flex-col md:flex-row flex-wrap items-center justify-center gap-4">
       {data.map((item, index) => (
         <TimelineCard

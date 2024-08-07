@@ -5,7 +5,6 @@ interface Props {
   h?: string;
   zIndex?: number;
 }
-
 const UnderlinedText = (props: PropsWithChildren<Props>) => (
   <span className="relative inline-block">
     {props.children}

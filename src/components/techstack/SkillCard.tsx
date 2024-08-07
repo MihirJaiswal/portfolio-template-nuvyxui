@@ -10,7 +10,6 @@ interface SkillCardProps {
   description: string;
   platform?: string; 
 }
-
 const SkillCard: React.FC<SkillCardProps> = ({ name, image, link, description, platform }) => {
   const { data, loading } = usePalette(image);
 
@@ -18,7 +17,6 @@ const SkillCard: React.FC<SkillCardProps> = ({ name, image, link, description, p
     hidden: { opacity: 0, scale: 0.9 },
     visible: { opacity: 1, scale: 1 },
   };
-
   return (
     <motion.div
       initial="hidden"

@@ -91,7 +91,6 @@ const TopNav = () => {
             </div>
           </div>
          </div>
-
           <div className="flex items-center space-x-4">
             <Link href="https://github.com/MihirJaiswal" target="_blank" rel="noopener noreferrer" className="text-gray-500 dark:text-gray-300 hover:text-gray-700 dark:hover:text-gray-100">
               <FaGithub size={24} className='text-gray-900 dark:text-gray-100' />

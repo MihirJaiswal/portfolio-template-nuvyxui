@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -23,80 +23,71 @@ const shakeVariants = {
   },
 };
 
-
 const Hero = () => {
   return (
     <div className="flex flex-col items-center justify-center px-4 md:px-16 max-w-full">
       <div className="flex flex-col md:flex-row items-center md:gap-8 justify-center space-y-8 md:space-y-0 md:space-x-8">
-  <motion.div
-    initial={{ translateX: -150, opacity: 0 }}
-    animate={{ translateX: 0, opacity: 1, transition: { duration: ANIMATION_DURATION } }}
-    className="flex items-center justify-center mt-12"
-  >
-    <Image
-      src='/assests/pfp.webp'
-      alt="Mihir's photo"
-      width={220}
-      height={220}
-      loading="lazy"
-      className="rounded-full w-36 h-36 object-cover"
-    />
-  </motion.div>
-  <motion.div
-    initial={{ translateX: 150, opacity: 0 }}
-    animate={{ translateX: 0, opacity: 1, transition: { duration: ANIMATION_DURATION } }}
-    className="max-w-2xl "
-  >
-    <motion.div
-  animate="shake"
-  variants={shakeVariants}
->
-  <Header underlineColor={ORANGE} emoji="👋" className="face px-4 md:px-2">
-    Hey!
-  </Header>
-</motion.div>
-    <h2 className="md:text-2xl font-normal md:leading-10 font-sans tracking-wide px-4 md:px-2">
-  My name is <strong className="font-semibold ">Mihir</strong> and I'm a{" "}
-  <span className="whitespace-nowrap ">Full Stack Developer and</span>{" "}
-  <span className="whitespace-nowrap ">an UI/UX designer&nbsp;</span>
-  from <span className="whitespace-nowrap">India</span>
-</h2>
-<h2 className="md:text-2xl font-normal mt-4 leading-relaxed font-sans tracking-wide px-4 md:px-2">
-  <span className="">This is my portfolio, where I showcase my projects and share the skills I've mastered along the way. 🚀</span>
-</h2>
-
-
-
-  </motion.div>
-</div>
-
-
+        <motion.div
+          initial={{ translateX: -150, opacity: 0 }}
+          animate={{ translateX: 0, opacity: 1, transition: { duration: ANIMATION_DURATION } }}
+          className="flex items-center justify-center mt-12"
+        >
+          <Image
+            src='/assests/pfp.webp'
+            alt="Mihir's photo"
+            width={220}
+            height={220}
+            loading="lazy"
+            className="rounded-full w-36 h-36 object-cover"
+          />
+        </motion.div>
+        <motion.div
+          initial={{ translateX: 150, opacity: 0 }}
+          animate={{ translateX: 0, opacity: 1, transition: { duration: ANIMATION_DURATION } }}
+          className="max-w-2xl"
+        >
+          <motion.div animate="shake" variants={shakeVariants}>
+            <Header underlineColor={ORANGE} emoji="👋" className="face px-4 md:px-2">
+              Hey!
+            </Header>
+          </motion.div>
+          <h2 className="md:text-2xl font-normal md:leading-10 font-sans tracking-wide px-4 md:px-2">
+            My name is <strong className="font-semibold">Mihir</strong> and I'm a{" "}
+            <span className="whitespace-nowrap">Full Stack Developer and</span>{" "}
+            <span className="whitespace-nowrap">an UI/UX designer&nbsp;</span>
+            from <span className="whitespace-nowrap">India</span>
+          </h2>
+          <h2 className="md:text-2xl font-normal mt-4 leading-relaxed font-sans tracking-wide px-4 md:px-2">
+            <span>This is my portfolio, where I showcase my projects and share the skills I've mastered along the way. 🚀</span>
+          </h2>
+        </motion.div>
+      </div>
       <motion.div
         initial={{ translateY: 80, opacity: 0 }}
         animate={{ translateY: 0, opacity: 1, transition: { delay: ANIMATION_DURATION - 0.1, duration: ANIMATION_DURATION } }}
         className="w-full mt-8 max-w-4xl"
       >
-         <div className="max-w-3xl mx-auto">
-      <div className="mt-8 p-3 border-l-4 border-teal-500 bg-gray-100 dark:bg-[#1E2533] rounded-sm font-medium ">
-        <p className="text-teal-500 font-bold">Highlights</p>
-        <ul className="text-left pl-4 list-disc mt-2 font-normal">
-          {HIGHLIGHTS.map((highlight, index) => (
-            <li key={index} className="mb-1">
-              <Link href={highlight.href}>
-                <div className="text-green-600">
-                  {highlight.title}
-                  {highlight.isNew && (
-                    <span className="ml-1 inline-block bg-green-200 text-green-800 text-xs px-2 py-1 rounded">
-                      New
-                    </span>
-                  )}
-                </div>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
+        <div className="max-w-3xl mx-auto">
+          <div className="mt-8 p-3 border-l-4 border-teal-500 bg-gray-100 dark:bg-[#1E2533] rounded-sm font-medium">
+            <p className="text-teal-500 font-bold">Highlights</p>
+            <ul className="text-left pl-4 list-disc mt-2 font-normal">
+              {HIGHLIGHTS.map((highlight, index) => (
+                <li key={index} className="mb-1">
+                  <Link href={highlight.href}>
+                    <div className="text-green-600">
+                      {highlight.title}
+                      {highlight.isNew && (
+                        <span className="ml-1 inline-block bg-green-200 text-green-800 text-xs px-2 py-1 rounded">
+                          New
+                        </span>
+                      )}
+                    </div>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
         <div className="mt-6 mb-12">
           <Projects />
         </div>

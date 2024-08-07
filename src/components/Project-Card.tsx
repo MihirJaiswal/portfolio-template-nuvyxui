@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub, FaTimes, FaYoutube } from "react-icons/fa";
-import Image from "next/image"; // Import Next.js Image component
+import Image from "next/image";
 import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, AlertDialogTitle, AlertDialogDescription, AlertDialogCancel, AlertDialogAction } from "../components/ui/alert-dialog";
 import UnderlinedText from "./UnderlineText";
 
