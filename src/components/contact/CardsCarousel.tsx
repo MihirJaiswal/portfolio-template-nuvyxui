@@ -56,6 +56,11 @@ const data = [
   {
     category: "",
     title: "",
+    src: "/contact/dreammist.webp",
+  },
+  {
+    category: "",
+    title: "",
     src: "/contact/equi.webp",
   },
 ];
