@@ -25,7 +25,7 @@ const shakeVariants = {
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-4 md:px-16 max-w-full">
+    <div className="flex flex-col items-center justify-center px-4 md:px-20 max-w-full">
       <div className="flex flex-col md:flex-row items-center md:gap-8 justify-center space-y-8 md:space-y-0 md:space-x-8">
         <motion.div
           initial={{ translateX: -150, opacity: 0 }}
@@ -68,13 +68,13 @@ const Hero = () => {
         className="w-full mt-8 max-w-4xl"
       >
         <div className="max-w-3xl mx-auto">
-          <div className="mt-8 p-3 border-l-4 border-teal-500 bg-gray-100 dark:bg-[#1E2533] rounded-sm font-medium">
-            <p className="text-teal-500 font-bold">Highlights</p>
+          <div className="mt-8 p-3 border-l-4 border-teal-500 bg-[#e6f6fc] dark:bg-[#1E2533] rounded-sm font-medium">
+            <p className="text-teal-600 dark:text-teal-500 font-bold">Highlights</p>
             <ul className="text-left pl-4 list-disc mt-2 font-normal">
               {HIGHLIGHTS.map((highlight, index) => (
                 <li key={index} className="mb-1">
                   <Link href={highlight.href}>
-                    <div className="text-green-600">
+                    <div className="text-green-950 dark:text-green-50">
                       {highlight.title}
                       {highlight.isNew && (
                         <span className="ml-1 inline-block bg-green-200 text-green-800 text-xs px-2 py-1 rounded">

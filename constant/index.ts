@@ -64,7 +64,7 @@ export const projectsList = [
     logo: "/projects/portfolio.png",
     link: "https://mihirjaiswalportfolio-wmtn.vercel.app/",
     github: "https://github.com/MihirJaiswal/windows-95-theme-portfolio",
-    technologies: ["HTML", "CSS", "Javascript"],
+    technologies: ["HTML", "CSS", "JavaScript"],
     alertDescription: "A portfolio website in windows 95 theme, This project is a nostalgic journey back to the era of Windows 95, with a modern twist. Explore my work, play games, view my drawings, and much more!, also there is an easter egg in the website if you find it do let me know.",
     alertImage: '/projects/details/portfolio.webp',
   },

@@ -1,9 +1,10 @@
 'use client';
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaTimes, FaYoutube } from "react-icons/fa";
+import { FaGithub, FaTimes, FaYoutube, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare } from "react-icons/fa";
+import { SiNextdotjs, SiTailwindcss, SiMongodb, SiExpress, SiTypescript, SiSass } from "react-icons/si";
 import Image from "next/image";
-import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, AlertDialogTitle, AlertDialogDescription, AlertDialogCancel, AlertDialogAction } from "../components/ui/alert-dialog";
+import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, AlertDialogTitle, AlertDialogDescription, AlertDialogCancel } from "../components/ui/alert-dialog";
 import UnderlinedText from "./UnderlineText";
 
 interface ProjectCardProps {
@@ -19,32 +20,32 @@ interface ProjectCardProps {
   youtube?: string;
 }
 
-const getTagColor = (tech: string): string => {
+const getTagIcon = (tech: string) => {
   switch (tech) {
     case "React":
-      return "bg-blue-600 text-white";
+      return <FaReact className="text-blue-600" />;
     case "Next.js":
-      return "bg-black text-white";
+      return <SiNextdotjs className="text-black dark:text-white" />;
     case "Tailwind":
-      return "bg-teal-500 text-white";
+      return <SiTailwindcss className="text-teal-500" />;
     case "Node.js":
-      return "bg-green-700 text-white";
+      return <FaNodeJs className="text-green-700" />;
     case "Express":
-      return "bg-gray-800 text-white";
+      return <SiExpress className="text-gray-800 dark:text-white" />;
     case "MongoDB":
-      return "bg-green-600 text-white";
+      return <SiMongodb className="text-green-600" />;
     case "HTML":
-      return "bg-orange-500 text-white";
+      return <FaHtml5 className="text-orange-500" />;
     case "CSS":
-      return "bg-blue-400 text-white";
+      return <FaCss3Alt className="text-blue-400" />;
     case "JavaScript":
-      return "bg-yellow-500 text-black";
+      return <FaJsSquare className="text-yellow-500" />;
     case "TypeScript":
-      return "bg-blue-500 text-white";
+      return <SiTypescript className="text-blue-500" />;
     case "SCSS":
-      return "bg-pink-500 text-white";
+      return <SiSass className="text-pink-500" />;
     default:
-      return "bg-gray-600 text-white";
+      return null;
   }
 };
 
@@ -65,18 +66,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, ale
           <div className="flex items-center md:items-start p-4 bg-white dark:bg-[#1E2533] rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg transition-shadow duration-300">
             <Image src={logo} alt={`${title} logo`} width={40} height={40} className="w-8 h-8 rounded-md" quality={100} loading="lazy" />
             <div className="flex flex-col ml-4 w-full">
-              <div className="flex flex-col md:flex-row justify-between w-full">
+              <div className="flex justify-between w-full">
                 <div className="flex items-center space-x-2">
                   <span className="font-bold text-lg">{title}</span>
                   <a href={github} target="_blank" rel="noopener noreferrer">
                     <FaGithub className="text-gray-900 dark:text-gray-200" />
                   </a>
                 </div>
-                <div className="flex space-x-2">
+                <div className="md:flex space-x-2 hidden">
                   {technologies.map((tech, index) => (
-                    <span key={index} className={`text-xs font-semibold px-2 py-1 hidden md:block rounded ${getTagColor(tech)}`}>
-                      {tech}
-                    </span>
+                    <div key={index} className="text-2xl">
+                      {getTagIcon(tech)}
+                    </div>
                   ))}
                 </div>
               </div>
@@ -103,15 +104,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, ale
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <div className="flex flex-col md:flex-row justify-between md:items-center w-full">
+            <div className="flex justify-between md:items-center w-full">
               <div className="flex gap-2">
                 {technologies.map((tech, index) => (
-                  <span key={index} className={`text-xs font-semibold px-2 py-1 rounded ${getTagColor(tech)}`}>
-                    {tech}
-                  </span>
+                  <div key={index} className="text-2xl">
+                    {getTagIcon(tech)}
+                  </div>
                 ))}
               </div>
-              <div className="flex items-center gap-4 mt-4 md:mt-0">
+              <div className="flex items-center gap-4">
                 {link && (
                   <a href={link} target="_blank" rel="noopener noreferrer" className="md:px-4 py-2 text-sm rounded-lg font-bold text-black dark:text-white underline decoration-double">
                     Live Demo
