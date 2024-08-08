@@ -1,18 +1,18 @@
-import { cn } from "@/lib/utils";
 import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import {
   IconClipboardCopy,
   IconFileBroken,
   IconSignature,
-  IconTableColumn,
 } from "@tabler/icons-react";
 import GitHubContributionGraph from "./GitHubContributionGraph";
-import Resume from "./Resume";
+import Image from "next/image";
+import image from '../../../public/assests/pfp.webp'
+import { MarqueeCard } from "./Marquee";
 
 export function Grid() {
   return (
-    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[15rem] ">
+    <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[12rem] ">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -24,6 +24,7 @@ export function Grid() {
           component={item.component}
           formobile={item.formobile}
           padding={item.padding}
+          image={item.image}
           lightBackgroundColor={item.lightBackgroundColor}
           darkBackgroundColor={item.darkBackgroundColor}
         />
@@ -45,6 +46,7 @@ const items: Array<{
   component?: React.ReactNode;
   formobile?: "yes" | "no";
   padding?: string;
+  image?: string;
   lightBackgroundColor?: string;
   darkBackgroundColor?: string;
 }> = [
@@ -52,34 +54,26 @@ const items: Array<{
     title: "The Dawn of Innovation",
     description: "Explore the birth of groundbreaking ideas and inventions.",
     header: <Skeleton />,
-    className: "md:col-span-2",
+    className: "md:row-span-2 row-span-1",
     icon: <IconClipboardCopy className="h-4 w-4 text-neutral-500" />,
+    component: <Image src={image} alt="mihir" loading="lazy" quality={100} placeholder="blur" className="md:object-cover md:h-screen rounded-lg" />,
+    padding:"p-1",
   },
   {
     title: "The Digital Revolution",
     description: "Dive into the transformative power of technology.",
     header: <Skeleton />,
-    className: "md:col-span-1",
+    className: "md:col-span-2",
     icon: <IconFileBroken className="h-4 w-4 text-neutral-500" />,
+    component: <MarqueeCard/>,
+    padding: "p-1",
   },
   {
     title: "The Art of Design",
     description: "Discover the beauty of thoughtful and functional design.",
     header: <Skeleton />,
-    className: "md:col-span-1",
-    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
-    component: <Resume />,
-    formobile: "no",
-    padding: "p-1",
-    lightBackgroundColor: "bg-bg6",
-    darkBackgroundColor:"dark:bg-bg4"
-  },
-  {
-    title: "The Power of Communication",
-    description: "Understand the impact of effective communication in our lives.",
-    header: <Skeleton />,
     className: "md:col-span-2",
-    icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
+    icon: <IconSignature className="h-4 w-4 text-neutral-500" />,
     component: <GitHubContributionGraph />,
     formobile: "yes", 
     lightBackgroundColor: "bg-bg1",

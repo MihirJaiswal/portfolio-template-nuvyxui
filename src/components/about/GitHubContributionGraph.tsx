@@ -16,8 +16,8 @@ const GitHubContributionGraph: React.FC = () => {
       <div className="dark:hidden block github">
         <GitHubCalendar 
           username="MihirJaiswal" 
-          blockSize={15} 
-          blockMargin={5} 
+          blockSize={13} 
+          blockMargin={3} 
           colorScheme="light"
           theme={explicitTheme}
           hideColorLegend
@@ -26,8 +26,8 @@ const GitHubContributionGraph: React.FC = () => {
       <div className="hidden dark:block github">
         <GitHubCalendar 
           username="MihirJaiswal" 
-          blockSize={15} 
-          blockMargin={5} 
+          blockSize={13} 
+          blockMargin={2} 
           colorScheme="dark"
           hideColorLegend
         />

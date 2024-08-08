@@ -13,7 +13,7 @@ const AboutMe: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="flex flex-col items-center space-y-7 px-6 pb-6 overflow-x-hidden"
+      className="flex flex-col items-center space-y-10 px-7 pb-6 overflow-x-hidden"
     >
       <MotionDiv
         initial={{ translateY: 20, opacity: 0 }}
@@ -23,11 +23,12 @@ const AboutMe: React.FC = () => {
         <Header underlineColor="#ff9400" emoji='❤️' className="text-3xl font-bold text-gray-900 dark:text-gray-100">
           About Me
         </Header>
-        <p className="md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-          <span className="block md:inline mb-2">Since I was young, I've loved computers.</span> 
-          <span className="block md:inline mb-2">I've also been pretty creative, spending my free time drawing and painting.</span> 
-          <span className="block md:inline">This creativity helps me express myself more in web applications.</span>
-        </p> 
+        <h2 className="md:text-xl text-gray-700 font-sans dark:text-gray-300 leading-relaxed tracking-wide ">
+          <span className="block md:inline text-justify">Since I was young, I've loved computers.</span> 
+          <span className="block md:inline text-justify">I've also been pretty <strong className='font-semibold'>creative</strong> ,</span> 
+          <span>spending my free time drawing and painting.</span> {" "}
+          <span className="block md:inline text-justify">This creativity helps me express myself more in web applications. 🎨</span>
+        </h2> 
       </MotionDiv>
       <MotionDiv
         initial={{ translateY: 20, opacity: 0 }}
@@ -38,7 +39,7 @@ const AboutMe: React.FC = () => {
       <MotionDiv
         initial={{ translateY: 20, opacity: 0 }}
         animate={{ translateY: 0, opacity: 1, transition: { duration: ANIMATION_DURATION, delay: 0.4 } }}
-        className="mt-8 md:hidden"
+        className=""
       >
         <Resume />
       </MotionDiv>
@@ -50,12 +51,12 @@ const AboutMe: React.FC = () => {
         <MotionDiv
           initial={{ translateY: 20, opacity: 0 }}
           animate={{ translateY: 0, opacity: 1, transition: { duration: ANIMATION_DURATION, delay: 0.2 } }}
-          className="block md:inline md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto"
+          className="block md:inline font-sans md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto"
         >
           <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100">
             Hobbies
           </Header>
-          <p className="mb-10 tracking-wide md:tracking-normal">
+          <p className="mb-10 tracking-wide">
             Beyond software development, I enjoy anime, drawing, cooking, reading books, and writing stories. ✨
           </p>
         </MotionDiv>

@@ -42,7 +42,7 @@ export function ModeToggle() {
             exit={{ rotate: 90, scale: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <Sun className="h-[1.2rem] w-[1.2rem] text-yellow-500" />
+            <Sun className="h-[1.2rem] w-[1.2rem] text-pink-500" />
           </motion.span>
         )}
       </AnimatePresence>

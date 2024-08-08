@@ -28,6 +28,7 @@ export const BentoGridItem = ({
   component,
   formobile = "yes", 
   padding = "p-4",
+  image,
   lightBackgroundColor = "bg-white",
   darkBackgroundColor = "dark:bg-black", 
 }: {
@@ -39,13 +40,14 @@ export const BentoGridItem = ({
   component?: React.ReactNode;
   formobile?: "yes" | "no"; 
   padding?: string; 
+  image?: string; // URL for the image
   lightBackgroundColor?: string;
   darkBackgroundColor?: string;
 }) => {
   return (
     <div
       className={cn(
-        "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none border border-gray-200 dark:border-gray-700 justify-between flex flex-col space-y-4 hover:animate-heartbeat",
+        "row-span-1 rounded-xl group/bento transition duration-200 shadow-none border border-gray-200 dark:border-gray-700 justify-between flex flex-col overflow-hidden space-y-4 hover:animate-heartbeat",
         padding, 
         lightBackgroundColor, 
         darkBackgroundColor, 
@@ -53,6 +55,15 @@ export const BentoGridItem = ({
         className
       )}
     >
+      {image && (
+        <div className="absolute inset-0 overflow-hidden rounded-xl">
+          <img
+            src={image}
+            alt="BentoGridItem"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      )}
       {component || (
         <>
           {header}

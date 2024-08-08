@@ -67,7 +67,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, ale
               <div className="flex justify-between w-full">
                 <div className="flex items-center space-x-2">
                   <span className="font-bold text-lg">{title}</span>
-                  <a href={github} target="_blank" rel="noopener noreferrer">
+                  <a href={github} target="_blank" rel="noopener noreferrer" className="hidden md:block">
                     <FaGithub className="text-gray-900 dark:text-gray-200" />
                   </a>
                 </div>

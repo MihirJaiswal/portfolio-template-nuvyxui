@@ -3,7 +3,7 @@ import { FaDownload } from 'react-icons/fa';
 
 const Resume = () => {
   return (
-    <div className='flex items-center justify-center h-full bg-bg6 dark:bg-bg4'>
+    <div className='flex items-center justify-center h-full mt-2'>
         <a
           href="/assests/resume.pdf" 
           download

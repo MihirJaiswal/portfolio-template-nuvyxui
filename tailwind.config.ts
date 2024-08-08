@@ -67,11 +67,19 @@ const config = {
         sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
         heartbeat: {
           '0%, 100%': { transform: 'scale(1)', width: '100%' },
-          '25%': { transform: 'scale(1.1)', width: '90%' },
+          '25%': { transform: 'scale(1.04)', width: '96%' },
           '50%': { transform: 'scale(1)', width: '100%' },
-          '75%': { transform: 'scale(1.06)', width: '95%' },
+          '75%': { transform: 'scale(1.02)', width: '98%' },
         },
         "accordion-down": {
           from: { height: "0" },
@@ -83,6 +91,8 @@ const config = {
         },
       },
       animation: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
         heartbeat: 'heartbeat 0.8s ease-in-out',
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
