@@ -1,8 +1,8 @@
-'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../Header';
 import Image from 'next/image';
+import { MotionDiv } from '../MotiionDiv';
 
 type TimelineItem = {
   title: string;
@@ -28,7 +28,7 @@ type TimelineSectionProps = {
 };
 
 const TimelineCard: React.FC<TimelineCardProps> = ({ title, role, skills, period, logo }) => (
-  <motion.div
+  <MotionDiv
     whileHover={{ y: -5 }}
     className="flex  gap-8 items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-md p-4 w-full"
   >
@@ -65,11 +65,11 @@ const TimelineCard: React.FC<TimelineCardProps> = ({ title, role, skills, period
         {period}
       </p>
     </div>
-  </motion.div>
+  </MotionDiv>
 );
 
 const TimelineSection: React.FC<TimelineSectionProps> = ({ data, title, underlineColor, emoji }) => (
-  <motion.div
+  <MotionDiv
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     exit={{ opacity: 0 }}
@@ -92,7 +92,7 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({ data, title, underlin
         />
       ))}
     </div>
-  </motion.div>
+  </MotionDiv>
 );
 
 export default TimelineSection;

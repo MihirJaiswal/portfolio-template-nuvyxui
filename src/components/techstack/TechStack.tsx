@@ -1,12 +1,12 @@
-'use client';
+'use client'
 import React, { useState, useEffect } from 'react';
 import { FaBolt, FaCloud, FaDesktop, FaSpider, } from 'react-icons/fa';
 import { CiCloudOn, CiCloudOff  } from "react-icons/ci";
 import Header from '../Header';
 import SkillCard from './SkillCard';
 import { skills } from '../../../constant/index';
-import { motion } from 'framer-motion';
 import { IconClouds } from './IconCloud';
+import { MotionDiv } from '../MotiionDiv';
 
 interface Skill {
   name: string;
@@ -36,7 +36,7 @@ const TechStack: React.FC = () => {
   };
 
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -101,7 +101,7 @@ const TechStack: React.FC = () => {
          <IconClouds/>
         </div>
       )}
-    </motion.div>
+    </MotionDiv>
   );
 };
 

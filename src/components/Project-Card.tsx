@@ -1,11 +1,9 @@
-'use client';
-import React from "react";
-import { motion } from "framer-motion";
 import { FaGithub, FaTimes, FaYoutube, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiMongodb, SiExpress, SiTypescript, SiSass } from "react-icons/si";
 import Image from "next/image";
 import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, AlertDialogTitle, AlertDialogDescription, AlertDialogCancel } from "../components/ui/alert-dialog";
 import UnderlinedText from "./UnderlineText";
+import { MotionDiv } from "./MotiionDiv";
 
 interface ProjectCardProps {
   title: string;
@@ -60,7 +58,7 @@ const truncateText = (text:string, wordLimit:number): string => {
 const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, alertImage, alertDescription, github, link, technologies, youtube }) => {
   const ORANGE = "#ff9400";
   return (
-    <motion.div layout className="cursor-pointer w-full">
+    <MotionDiv layout className="cursor-pointer w-full">
       <AlertDialog>
         <AlertDialogTrigger asChild>
           <div className="flex items-center md:items-start p-4 bg-white dark:bg-[#1E2533] rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg transition-shadow duration-300">
@@ -131,7 +129,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, ale
           </AlertDialogCancel>
         </AlertDialogContent>
       </AlertDialog>
-    </motion.div>
+    </MotionDiv>
   );
 };
 

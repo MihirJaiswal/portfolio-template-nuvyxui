@@ -1,16 +1,15 @@
-'use client';
 import React from 'react';
-import { motion } from 'framer-motion';
 import { FaDownload } from 'react-icons/fa'; 
 import Header from '../Header';
 import { ScatteredLine, ScatteredLine2 } from './ScatteredGrid';
 import GitHubContributionGraph from './GitHubContributionGraph';
 import { Favourite } from './Favorite';
 import { aboutImages } from '../../../constant';
+import { MotionDiv } from '../MotiionDiv';
 
 const AboutMe: React.FC = () => {
   return (
-    <motion.div
+    <MotionDiv
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -56,7 +55,7 @@ const AboutMe: React.FC = () => {
         <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100 pb-3">Hobbies</Header>
         <Favourite/>
         </div>
-    </motion.div>
+    </MotionDiv>
   );
 };
 

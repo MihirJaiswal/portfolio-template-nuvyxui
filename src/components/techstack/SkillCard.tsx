@@ -1,7 +1,7 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { usePalette } from 'react-palette';
 import Image from 'next/image';
+import { MotionDiv } from '../MotiionDiv';
 
 interface SkillCardProps {
   name: string;
@@ -18,14 +18,14 @@ const SkillCard: React.FC<SkillCardProps> = ({ name, image, link, description, p
     visible: { opacity: 1, scale: 1 },
   };
   return (
-    <motion.div
+    <MotionDiv
       initial="hidden"
       animate="visible"
       variants={item}
       transition={{ duration: 0.3 }}
       className="w-72 md:w-80" 
     >
-      <motion.div whileHover={{ y: -5 }}>
+      <MotionDiv whileHover={{ y: -5 }}>
         <a href={link} target="_blank" rel="noopener noreferrer" className="block">
           <div className="flex p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 w-full text-left hover:shadow-md transition-shadow">
             <div className="relative rounded-lg p-2 overflow-hidden flex-shrink-0">
@@ -46,8 +46,8 @@ const SkillCard: React.FC<SkillCardProps> = ({ name, image, link, description, p
             </div>
           </div>
         </a>
-      </motion.div>
-    </motion.div>
+      </MotionDiv>
+    </MotionDiv>
   );
 };
 

@@ -1,11 +1,10 @@
-'use client';
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import Link from "next/link";
 import Header from "./Header"; 
 import Projects from "./Project";
 import { HIGHLIGHTS } from '../../constant/index';
+import { MotionDiv } from "./MotiionDiv";
 
 const ANIMATION_DURATION = 0.5;
 const ORANGE = "#ff9400";
@@ -27,7 +26,7 @@ const Hero = () => {
   return (
     <div className="flex flex-col items-center justify-center px-4 md:px-20 max-w-full">
       <div className="flex flex-col md:flex-row items-center md:gap-8 justify-center space-y-8 md:space-y-0 md:space-x-8">
-        <motion.div
+        <MotionDiv
           initial={{ translateX: -150, opacity: 0 }}
           animate={{ translateX: 0, opacity: 1, transition: { duration: ANIMATION_DURATION } }}
           className="flex items-center justify-center mt-12"
@@ -40,17 +39,17 @@ const Hero = () => {
             loading="lazy"
             className="rounded-full w-36 h-36 object-cover"
           />
-        </motion.div>
-        <motion.div
+        </MotionDiv>
+        <MotionDiv
           initial={{ translateX: 150, opacity: 0 }}
           animate={{ translateX: 0, opacity: 1, transition: { duration: ANIMATION_DURATION } }}
           className="max-w-2xl"
         >
-          <motion.div animate="shake" variants={shakeVariants}>
+          <MotionDiv animate="shake" variants={shakeVariants}>
             <Header underlineColor={ORANGE} emoji="👋" className="face px-4 md:px-2">
               Hey!
             </Header>
-          </motion.div>
+          </MotionDiv>
           <h2 className="md:text-2xl font-normal md:leading-10 font-sans tracking-wide px-4 md:px-2">
             My name is <strong className="font-semibold">Mihir</strong> and I'm a{" "}
             <span className="whitespace-nowrap">Full Stack Developer and</span>{" "}
@@ -60,9 +59,9 @@ const Hero = () => {
           <h2 className="md:text-2xl font-normal mt-4 leading-relaxed font-sans tracking-wide px-4 md:px-2">
             <span>This is my portfolio, where I showcase my projects and share the skills I've mastered along the way. 🚀</span>
           </h2>
-        </motion.div>
+        </MotionDiv>
       </div>
-      <motion.div
+      <MotionDiv
         initial={{ translateY: 80, opacity: 0 }}
         animate={{ translateY: 0, opacity: 1, transition: { delay: ANIMATION_DURATION - 0.1, duration: ANIMATION_DURATION } }}
         className="w-full mt-8 max-w-4xl"
@@ -91,7 +90,7 @@ const Hero = () => {
         <div className="mt-6 mb-12">
           <Projects />
         </div>
-      </motion.div>
+      </MotionDiv>
     </div>
   );
 };

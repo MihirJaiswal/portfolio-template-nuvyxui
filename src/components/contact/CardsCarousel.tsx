@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import { data } from "../../../constant";
