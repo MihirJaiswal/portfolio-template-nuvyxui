@@ -105,7 +105,7 @@ export function Favourite() {
                     layoutId={`button-${active.title}-${id}`}
                     href={active.ctaLink}
                     target="_blank"
-                    className="md:px-4 py-3 text-sm rounded-full font-bold md:bg-pink-500 md:dark:bg-cyan-500 text-pink-500 dark:text-white underline md:no-underline decoration-double"
+                    className="md:px-4 py-3 text-sm rounded-full font-bold md:bg-pink-500 md:dark:bg-cyan-500 text-pink-500 md:text-white dark:text-white underline md:no-underline decoration-double"
                   >
                     {active.ctaText}
                   </motion.a>
