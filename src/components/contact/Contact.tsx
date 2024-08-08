@@ -35,15 +35,15 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   };
 
   return (
-    <div className="flex items-center justify-around md:h-[93vh] relative w-full  overflow-hidden">
+    <div className="flex items-center justify-center gap-20 md:h-[93vh] relative w-full  overflow-hidden  bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200 dark:bg-gradient-to-r dark:from-pink-800 xl:dark:from-[#4b5172] dark:via-purple-800 xl:dark:via-purple-800 dark:to-[#4b5172] xl:dark:to-[#4b5172] ">
+      <div className="absolute inset-0 bg-white opacity-70 dark:bg-black dark:opacity-70 pointer-events-none"></div>
       <motion.form
         onSubmit={handleSubmit}
-        className="relative z-10 max-w-lg xl:h-screen flex flex-col justify-center w-full p-8 pt-4 md:px-10 md:pt-6 md:rounded-l-2xl overflow-hidden pb-24 md:pb-10 md:mb-12  bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200 dark:bg-gradient-to-r dark:from-pink-800 xl:dark:from-[#4b5172] dark:via-purple-800 xl:dark:via-purple-800 dark:to-[#4b5172] xl:dark:to-[#4b5172] "
+        className="relative z-10 max-w-lg xl:h-screen flex flex-col justify-center w-full p-8 pt-4 md:px-10 md:pt-6 md:rounded-l-2xl overflow-hidden pb-24 md:pb-10 md:mb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
       >
-         <div className="absolute inset-0 bg-white opacity-70 dark:bg-black dark:opacity-70 pointer-events-none"></div>
         <motion.h2
           className="relative mb-8 pt-8 md:pt-0"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -155,7 +155,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
 
         <div className='z-50'>
           <Image
-            src="/assests/cat.png"
+            src="/assests/cat.webp"
             alt=""
             width={500}
             height={500}
