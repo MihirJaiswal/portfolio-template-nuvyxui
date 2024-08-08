@@ -4,13 +4,12 @@ import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
 import ChatButton from "@/components/ChatButton";
 
-
 const roboto = Roboto({
   weight: ['400', '700'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
-})
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -25,15 +24,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-      <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
         </ThemeProvider>
-      <ChatButton/>
+        <ChatButton />
       </body>
     </html>
   );

@@ -1,6 +1,6 @@
 import { FaGithub, FaTimes, FaYoutube, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiMongodb, SiExpress, SiTypescript, SiSass } from "react-icons/si";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, AlertDialogTitle, AlertDialogDescription, AlertDialogCancel } from "../components/ui/alert-dialog";
 import UnderlinedText from "./UnderlineText";
 import { MotionDiv } from "./MotiionDiv";
@@ -9,7 +9,7 @@ interface ProjectCardProps {
   title: string;
   description: string;
   logo: string;
-  alertImage?: string;
+  alertImage?: StaticImageData;
   alertDescription?: string;
   blurHash?: string;
   link?: string;
@@ -96,7 +96,15 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, ale
             </div>
             <AlertDialogDescription className="text-gray-500 dark:text-gray-300">
               {alertImage && (
-                <Image src={alertImage} alt={`${title} detailed`} width={800} height={400} className="w-full h-auto max-h-64 object-contain rounded-lg mb-4" loading="lazy" />
+                <Image 
+                src={alertImage} 
+                alt={`${title} detailed`} 
+                width={800} 
+                height={400} 
+                className="w-full h-auto max-h-64 object-contain rounded-lg mb-4" 
+                loading="lazy"
+                placeholder="blur"
+                 />
               )}
               <p className="text-sm md:text-base text-gray-900 dark:text-gray-400 text-justify">{alertDescription}</p>
             </AlertDialogDescription>

@@ -5,6 +5,7 @@ import Header from "./Header";
 import Projects from "./Project";
 import { HIGHLIGHTS } from '../../constant/index';
 import { MotionDiv } from "./MotiionDiv";
+import pfp from '../../public/assests/pfp.webp'
 
 const ANIMATION_DURATION = 0.5;
 const ORANGE = "#ff9400";
@@ -32,11 +33,12 @@ const Hero = () => {
           className="flex items-center justify-center mt-12"
         >
           <Image
-            src='/assests/pfp.webp'
+            src={pfp}
             alt="Mihir's photo"
             width={220}
             height={220}
             loading="lazy"
+            placeholder="blur"
             className="rounded-full w-36 h-36 object-cover"
           />
         </MotionDiv>

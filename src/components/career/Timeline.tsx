@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import Header from '../Header';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { MotionDiv } from '../MotiionDiv';
 
 type TimelineItem = {
@@ -9,7 +9,7 @@ type TimelineItem = {
   role: string;
   skills?: string[];
   period: string;
-  logo: string;
+  logo: StaticImageData// Assuming logo is a URL string
 };
 
 type TimelineCardProps = {
@@ -17,7 +17,7 @@ type TimelineCardProps = {
   role: string;
   skills?: string[];
   period: string;
-  logo: string;
+  logo: StaticImageData // Assuming logo is a URL string
 };
 
 type TimelineSectionProps = {
@@ -30,24 +30,22 @@ type TimelineSectionProps = {
 const TimelineCard: React.FC<TimelineCardProps> = ({ title, role, skills, period, logo }) => (
   <MotionDiv
     whileHover={{ y: -5 }}
-    className="flex  gap-8 items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-md p-4 w-full"
+    className="flex gap-8 items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-md p-4 w-full"
   >
     <Image
       src={logo}
       alt={title}
       width={100}
       height={100}
-      loading='lazy'
+      loading="lazy"
+      quality={100}
+      placeholder='blur'
       className="w-16 h-16 object-contain"
     />
     <div className="flex flex-col md:flex-row justify-between items-center w-full">
       <div className="flex flex-col">
-        <h3 className="text-lg font-bold text-gray-900 dark:text-white">
-          {title}
-        </h3>
-        <p className="text-sm text-gray-600 dark:text-gray-300">
-          {role}
-        </p>
+        <h3 className="text-lg font-bold text-gray-900 dark:text-white">{title}</h3>
+        <p className="text-sm text-gray-600 dark:text-gray-300">{role}</p>
         {skills && skills.length > 0 && (
           <div className="flex space-x-2 mt-2">
             {skills.map((skill, index) => (
@@ -88,7 +86,7 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({ data, title, underlin
           role={item.role}
           skills={item.skills}
           period={item.period}
-          logo={item.logo}
+          logo={item.logo} // Ensure this is a URL string or appropriately handled
         />
       ))}
     </div>

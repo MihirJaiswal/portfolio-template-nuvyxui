@@ -79,6 +79,7 @@ export function Favourite() {
                   alt={active.title}
                   loading="lazy"
                   quality={100}
+                  placeholder="blur"
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
               </motion.div>
@@ -145,6 +146,7 @@ export function Favourite() {
                   src={card.src1}
                   alt={card.title}
                   loading="lazy"
+                  placeholder="blur"
                   className="h-14 w-14 rounded-lg object-cover object-top"
                 />
               </motion.div>

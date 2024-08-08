@@ -31,7 +31,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     onSubmit(formData);
-    // Handle form submission
   };
 
   return (

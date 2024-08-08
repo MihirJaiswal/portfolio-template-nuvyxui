@@ -59,6 +59,7 @@ const config = {
         "bg3": "linear-gradient(to right, #fdeeff, #f0e5ff, #dedeff, #c6d8ff, #a8d3ff, #a0cefe, #97c9fe, #8fc4fd, #a6bcfb, #bdb2f3, #d2a9e6, #e3a0d5);",
         "bg4": "linear-gradient(to right, #171923, #161a29, #151b30, #131b36, #111c3d, #181b3f, #1e1a40, #251840, #30143a, #381033, #3d0d2c, #400c24);",
         "bg5": "linear-gradient(to left,  #e880d5, #a6c6ff);",
+        "bg6": "linear-gradient(to right, #fbf7f9, #f9f3f8, #f6eff9, #f1ecfa, #e9eafb, #e7e9fc, #e4e7fd, #e2e6fe, #e8e5ff, #eee4ff, #f5e3fd, #fce2fb);",
       },
       borderRadius: {
         lg: "var(--radius)",
