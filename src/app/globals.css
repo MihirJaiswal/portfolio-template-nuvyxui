@@ -146,3 +146,14 @@
     display: none;
   }
 }
+
+html {
+  font-size: 92%; 
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  html {
+    font-size: 100%; 
+  }
+}

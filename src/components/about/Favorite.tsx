@@ -84,7 +84,7 @@ export function Favourite() {
               </motion.div>
 
               <div>
-                <div className="flex justify-between items-start p-4">
+                <div className="flex flex-col md:flex-row justify-between items-start p-4">
                   <div className="">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}`}
@@ -105,7 +105,7 @@ export function Favourite() {
                     layoutId={`button-${active.title}-${id}`}
                     href={active.ctaLink}
                     target="_blank"
-                    className="px-4 py-3 text-sm rounded-full font-bold bg-pink-500 dark:bg-cyan-500 text-white"
+                    className="md:px-4 py-3 text-sm rounded-full font-bold md:bg-pink-500 md:dark:bg-cyan-500 text-pink-500 dark:text-white underline md:no-underline decoration-double"
                   >
                     {active.ctaText}
                   </motion.a>
