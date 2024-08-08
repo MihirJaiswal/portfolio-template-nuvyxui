@@ -43,15 +43,6 @@ const AboutMe: React.FC = () => {
           </div>
         </div>
       </MotionDiv>
-
-      <MotionDiv
-        initial={{ translateY: 20, opacity: 0 }}
-        animate={{ translateY: 0, opacity: 1, transition: { duration: ANIMATION_DURATION, delay: 0.2 } }}
-        className="block md:inline md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto"
-      >
-        Beyond software development, I enjoy anime, drawing, cooking, reading books and writing stories. ✨
-      </MotionDiv>
-
       <MotionDiv
         initial={{ translateY: 20, opacity: 0 }}
         animate={{ translateY: 0, opacity: 1, transition: { duration: ANIMATION_DURATION, delay: 0.3 } }}
@@ -83,7 +74,15 @@ const AboutMe: React.FC = () => {
         animate={{ translateY: 0, opacity: 1, transition: { duration: ANIMATION_DURATION, delay: 0.5 } }}
         className='w-full max-w-4xl'
       >
-        <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100 pb-3">Hobbies</Header>
+        
+        <MotionDiv
+        initial={{ translateY: 20, opacity: 0 }}
+        animate={{ translateY: 0, opacity: 1, transition: { duration: ANIMATION_DURATION, delay: 0.2 } }}
+        className="block md:inline md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auton"
+      >
+         <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100">Hobbies</Header>
+        <p className='mb-10 tracking-wide md:tracking-normal'>Beyond software development, I enjoy anime, drawing, cooking, reading books and writing stories. ✨</p>
+      </MotionDiv>
         <Favourite />
       </MotionDiv>
     </MotionDiv>
