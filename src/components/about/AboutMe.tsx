@@ -48,8 +48,9 @@ const AboutMe: React.FC = () => {
         animate={{ translateY: 0, opacity: 1, transition: { duration: ANIMATION_DURATION, delay: 0.3 } }}
         className='max-w-4xl mx-auto'
       >
-        <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100 pb-6">Days I code</Header>
-        <div className='md:w-full w-80'>
+        <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100">Days I code</Header>
+        <p className='pb-10 tracking-wide md:tracking-normal block md:inline md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto'>My Github contribution chart.⚡</p>
+        <div className='md:w-full w-80 md:pt-12'>
           <GitHubContributionGraph />
         </div>
       </MotionDiv>
@@ -78,7 +79,7 @@ const AboutMe: React.FC = () => {
         <MotionDiv
         initial={{ translateY: 20, opacity: 0 }}
         animate={{ translateY: 0, opacity: 1, transition: { duration: ANIMATION_DURATION, delay: 0.2 } }}
-        className="block md:inline md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auton"
+        className="block md:inline md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto"
       >
          <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100">Hobbies</Header>
         <p className='mb-10 tracking-wide md:tracking-normal'>Beyond software development, I enjoy anime, drawing, cooking, reading books and writing stories. ✨</p>
