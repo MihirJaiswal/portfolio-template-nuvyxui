@@ -24,26 +24,28 @@ export function ModeToggle() {
   return (
     <Button variant="outline" size="icon" onClick={toggleTheme}>
       <AnimatePresence mode="wait" initial={false}>
-        {theme === "dark" ? (
-          <motion.span
-            key="moon"
-            initial={{ rotate: 90, scale: 0 }}
-            animate={{ rotate: 0, scale: 1 }}
-            exit={{ rotate: -90, scale: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <Moon className="h-[1.2rem] w-[1.2rem] text-purple-400" />
-          </motion.span>
-        ) : (
-          <motion.span
-            key="sun"
-            initial={{ rotate: -90, scale: 0 }}
-            animate={{ rotate: 0, scale: 1 }}
-            exit={{ rotate: 90, scale: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <Sun className="h-[1.2rem] w-[1.2rem] text-teal-600" />
-          </motion.span>
+        {mounted && theme && ( // Check if the component is mounted and theme is available
+          theme === "dark" ? (
+            <motion.span
+              key="moon"
+              initial={{ rotate: 90, scale: 0 }}
+              animate={{ rotate: 0, scale: 1 }}
+              exit={{ rotate: -90, scale: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Moon className="h-[1.2rem] w-[1.2rem] text-purple-400" />
+            </motion.span>
+          ) : (
+            <motion.span
+              key="sun"
+              initial={{ rotate: -90, scale: 0 }}
+              animate={{ rotate: 0, scale: 1 }}
+              exit={{ rotate: 90, scale: 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Sun className="h-[1.2rem] w-[1.2rem] text-teal-600" />
+            </motion.span>
+          )
         )}
       </AnimatePresence>
       <span className="sr-only">Toggle theme</span>
