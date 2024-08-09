@@ -4,7 +4,7 @@ import Link from "next/link";
 import Header from "./Header"; 
 import Projects from "./Project";
 import { HIGHLIGHTS } from '../../constant/index';
-import { MotionDiv } from "./MotiionDiv";
+import { MotionDiv } from "./MotiionDiv";  // Corrected import statement
 import pfp from '../../public/assests/pfp.webp'
 
 const ANIMATION_DURATION = 0.5;
@@ -53,13 +53,13 @@ const Hero = () => {
             </Header>
           </MotionDiv>
           <h2 className="md:text-2xl font-normal md:leading-10 font-sans tracking-wide px-4 md:px-2">
-            My name is <strong className="font-semibold">Mihir</strong> and I'm a{" "}
+            My name is <strong className="font-semibold">Mihir</strong> and I&apos;m a{" "}  
             <span className="whitespace-nowrap">Full Stack Developer and</span>{" "}
             <span className="whitespace-nowrap">an UI/UX designer&nbsp;</span>
             from <span className="whitespace-nowrap">India</span>
           </h2>
           <h2 className="md:text-2xl font-normal mt-4 leading-relaxed font-sans tracking-wide px-4 md:px-2">
-            <span>This is my portfolio, where I showcase my projects and share the skills I've mastered along the way. 🚀</span>
+            <span>This is my portfolio, where I showcase my projects and share the skills I&apos;ve mastered along the way. 🚀</span> 
           </h2>
         </MotionDiv>
       </div>

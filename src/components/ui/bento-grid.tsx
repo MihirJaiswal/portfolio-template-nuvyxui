@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 export const BentoGrid = ({
   className,
@@ -57,7 +58,7 @@ export const BentoGridItem = ({
     >
       {image && (
         <div className="absolute inset-0 overflow-hidden rounded-xl">
-          <img
+          <Image
             src={image}
             alt="BentoGridItem"
             className="w-full h-full object-cover"

@@ -53,7 +53,7 @@ const ContactForm: React.FC = () => {
             <p className="leading-snug text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500 dark:from-cyan-400 dark:to-blue-500 md:mb-4">
               <UnderlinedText color='#e04d28'>
                 <span className='text-black dark:text-white xl:hidden'>
-                  Let's work together!
+                  Let&apos;s work together!
                 </span>
               </UnderlinedText>
             </p>
