@@ -357,7 +357,7 @@ export const data = [
   {
     category: "",
     title: "",
-    src: "/contact/inkscroll.webp",
+    src: "/contact/riya.webp",
   },
   {
     category: "",
@@ -373,6 +373,11 @@ export const data = [
     category: "",
     title: "",
     src: "/contact/equi.webp",
+  },
+  {
+    category: "",
+    title: "",
+    src: "/contact/inkscroll.webp",
   },
 ];
 

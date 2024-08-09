@@ -69,8 +69,8 @@ const Hero = () => {
         className="w-full mt-8 max-w-4xl"
       >
         <div className="max-w-3xl mx-auto">
-          <div className="mt-8 p-3 border-l-4 border-teal-500 bg-[#e6f6fc] dark:bg-[#1E2533] rounded-sm font-medium">
-            <p className="text-teal-600 dark:text-teal-500 font-bold">Highlights</p>
+          <div className="mt-8 p-3 border-l-4 border-teal-500 dark:border-purple-500 bg-[#e6f6fc] dark:bg-[#1E2533] rounded-sm font-medium">
+            <p className="text-teal-600 dark:text-purple-400 font-bold">Highlights</p>
             <ul className="text-left pl-4 list-disc mt-2 font-normal">
               {HIGHLIGHTS.map((highlight, index) => (
                 <li key={index} className="mb-1">
@@ -78,7 +78,7 @@ const Hero = () => {
                     <div className="text-green-950 dark:text-green-50">
                       {highlight.title}
                       {highlight.isNew && (
-                        <span className="ml-1 inline-block bg-green-200 text-green-800 text-xs px-2 py-1 rounded">
+                        <span className="ml-1 inline-block bg-green-200 dark:bg-purple-200 text-green-800 dark:text-purple-800 text-xs px-2 py-1 rounded">
                           New
                         </span>
                       )}

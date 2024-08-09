@@ -6,14 +6,12 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className="bg-bg1 xl:bg-bg5 dark:bg-bg2">
+    <div className="bg-bg1 dark:bg-bg8 md:dark:bg-bg7">
         <TopNav/>
          <div className='min-h-[83vh] overflow-hidden'>
           <Submit/>
          </div>
-         <div className='bg-pink-100 dark:bg-gray-900'>
          <Footer/>
-         </div>
     </div>
   )
 }

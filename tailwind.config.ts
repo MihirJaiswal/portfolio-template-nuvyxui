@@ -60,6 +60,8 @@ const config = {
         "bg4": "linear-gradient(to right, #171923, #161a29, #151b30, #131b36, #111c3d, #181b3f, #1e1a40, #251840, #30143a, #381033, #3d0d2c, #400c24);",
         "bg5": "linear-gradient(to left,  #e880d5, #a6c6ff);",
         "bg6": "linear-gradient(to right, #fbf7f9, #f9f3f8, #f6eff9, #f1ecfa, #e9eafb, #e7e9fc, #e4e7fd, #e2e6fe, #e8e5ff, #eee4ff, #f5e3fd, #fce2fb);",
+        "bg7": "linear-gradient(to right, #050627, #050523, #04041f, #03031b, #020217, #030218, #050219, #06021a, #0c0320, #100426, #15042b, #190430);",
+        "bg8": "linear-gradient(to right, #020316, #010316, #010217, #000217, #000117, #010118, #03011a, #05011b, #09021e, #0e0221, #110324, #150327);"
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -51,7 +51,7 @@ const TopNav = () => {
           <div className="hidden md:flex items-center space-x-4">
             {webLinks.map((link) => (
               <Link key={link.path} href={link.path} passHref>
-                <p className={`px-3 py-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors ${pathname === link.path ? 'bg-gray-200 dark:bg-gray-800 dark:text-blue-400 text-blue-500 border-2' : ''}`}>
+                <p className={`px-3 py-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors ${pathname === link.path ? 'bg-gray-200 dark:bg-gray-800 dark:text-purple-400 text-blue-500 border-2' : ''}`}>
                   {link.name}
                 </p>
               </Link>
@@ -60,7 +60,7 @@ const TopNav = () => {
               <button
                 onClick={toggleLinks}
                 className={`flex items-center px-3 py-1 rounded-md transition-colors ${
-                  isLinksOpen ? 'bg-gray-200 dark:bg-gray-800 border-2 border-blue-500 dark:text-blue-400 text-blue-500' : 'text-black dark:text-white'
+                  isLinksOpen ? 'bg-gray-200 dark:bg-gray-800 border-2 border-blue-500 dark:border-purple-500 dark:text-purple-400 text-blue-500' : 'text-black dark:text-white'
                 } hover:bg-gray-200 dark:hover:bg-gray-800`}
               >
                 Links
@@ -70,19 +70,19 @@ const TopNav = () => {
                 <div className="absolute right-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-lg rounded-md z-50 border border-gray-300 dark:border-gray-600">
                   <Link href="/tech-stack" passHref>
                     <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/tech-stack' ? 'bg-gray-100 dark:bg-gray-700 border-blue-500 border-2' : ''}`}>
-                      <AiTwotoneThunderbolt size={18} className="mr-2 text-blue-500" />
+                      <AiTwotoneThunderbolt size={18} className="mr-2 text-blue-500 dark:text-purple-500" />
                       Tech Stack
                     </p>
                   </Link>
                   <Link href="/career" passHref>
                     <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/career' ? 'bg-gray-100 dark:bg-gray-700 border-blue-500 border-2' : ''}`}>
-                      <BsBook size={18} className="mr-2 text-blue-500" />
+                      <BsBook size={18} className="mr-2 text-blue-500 dark:text-purple-500" />
                         Career
                     </p>
                   </Link>
                   <Link href="/contact" passHref>
                     <p className={`flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 ${pathname === '/contact' ? 'bg-gray-100 dark:bg-gray-700 border-blue-500 border-2' : ''}`}>
-                      <AiOutlineContacts size={18} className="mr-2 text-blue-500" />
+                      <AiOutlineContacts size={18} className="mr-2 text-blue-500 dark:text-purple-500" />
                       Contact
                     </p>
                   </Link>

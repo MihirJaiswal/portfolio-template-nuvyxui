@@ -62,7 +62,7 @@ const TechStack: React.FC = () => {
                 key={category}
                 className={`flex items-center px-4 py-2 rounded-full text-sm font-medium ${
                   selectedCategory === category
-                    ? 'bg-green-200 text-green-800 border-2 border-blue-400'
+                    ? 'bg-green-200 dark:bg-purple-200 text-green-800 dark:text-purple-800 border-2 border-blue-400 dark:border-purple-500'
                     : 'bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700'
                 }`}
                 onClick={() => filterSkills(category)}

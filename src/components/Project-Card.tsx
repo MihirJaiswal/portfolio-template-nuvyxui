@@ -84,7 +84,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, ale
             </div>
           </div>
         </AlertDialogTrigger>
-        <AlertDialogContent className="max-w-3xl p-6 bg-bg1 dark:bg-bg2 flex flex-col justify-center gap-8 md:max-w-lg mx-auto">
+        <AlertDialogContent className="max-w-3xl p-6 bg-pink-200 dark:bg-gray-900 flex flex-col justify-center gap-8 md:max-w-lg mx-auto">
           <AlertDialogHeader className="relative">
             <div className="flex items-center gap-4">
               <AlertDialogTitle className="text-2xl font-bold mb-4 uppercase"> <UnderlinedText color={ORANGE}>{title}</UnderlinedText> </AlertDialogTitle>
@@ -106,7 +106,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, ale
                 placeholder="blur"
                  />
               )}
-              <p className="text-sm md:text-base text-gray-900 dark:text-gray-400 text-justify">{alertDescription}</p>
+              <p className="text-sm md:text-base text-gray-900 dark:text-gray-300 px-1 text-justify after:inline-block ">{alertDescription}</p>
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>

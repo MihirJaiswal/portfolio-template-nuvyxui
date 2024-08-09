@@ -77,6 +77,6 @@ const items: Array<{
     component: <GitHubContributionGraph />,
     formobile: "yes", 
     lightBackgroundColor: "bg-bg1",
-    darkBackgroundColor:"dark:bg-bg2"
+    darkBackgroundColor:"dark:bg-bg8"
   },
 ];

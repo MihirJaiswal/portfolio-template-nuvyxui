@@ -7,7 +7,7 @@ type ThemeInput = {
 
 const GitHubContributionGraph: React.FC = () => {
   const explicitTheme: ThemeInput = {
-    light: ['#baeef5', '#80deea', '#4dd0e1', '#00acc1', '#029db0'],
+    light: ['#dcf7fa', '#80deea', '#4dd0e1', '#00acc1', '#029db0'],
 
   };
 

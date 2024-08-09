@@ -5,9 +5,6 @@ import UnderlinedText from '../UnderlineText';
 import Image from 'next/image';
 import { CardsCarousel } from './CardsCarousel';
 
-type ContactFormProps = {
-  onSubmit: (data: ContactFormData) => void;
-};
 
 type ContactFormData = {
   name: string;
@@ -15,7 +12,7 @@ type ContactFormData = {
   message: string;
 };
 
-const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
+const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({ name: '', email: '', message: '' });
   const [allFieldsFilled, setAllFieldsFilled] = useState<boolean>(false);
 
@@ -28,16 +25,12 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    onSubmit(formData);
-  };
-
   return (
-    <div className="flex items-center justify-center gap-20 md:h-[93vh] relative w-full  overflow-hidden  bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200 dark:bg-gradient-to-r dark:from-purple-800 xl:dark:from-blue-900 dark:via-gray-800 xl:dark:via-gray-600 dark:to-[#4b5172] xl:dark:to-[#4b5172] ">
-      <div className="absolute inset-0 bg-white opacity-70 dark:bg-black dark:opacity-70 pointer-events-none"></div>
+    <div className="flex items-center justify-center gap-20 md:h-[93vh] relative w-full  overflow-hidden">
       <motion.form
-        onSubmit={handleSubmit}
+        action="https://formsubmit.co/jaiswalmihir.business@gmail.com"
+        method="post"
+        target="_blank"
         className="relative z-10 max-w-lg xl:h-screen flex flex-col justify-center w-full p-8 pt-4 md:px-10 md:pt-6 md:rounded-l-2xl overflow-hidden pb-24 md:pb-10 md:mb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -69,9 +62,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
             {allFieldsFilled ? "You are ready to go!" : " Let's start a project together!"}
           </p>
         </motion.h2>
-
-        {/* Form Fields */}
-        {/* Name Field */}
         <motion.div
           className="relative z-10 mb-6"
           initial={{ opacity: 0, x: -20 }}
@@ -118,8 +108,6 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
             />
           </div>
         </motion.div>
-
-        {/* Message Field */}
         <motion.div
           className="relative z-10 mb-8"
           initial={{ opacity: 0, x: -20 }}
@@ -142,10 +130,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
             />
           </div>
         </motion.div>
-
         <motion.button
           type="submit"
-          className="relative z-10 w-full py-3 px-6 bg-gradient-to-r text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:bg-gradient-to-r from-pink-600 to-purple-600 dark:hover:bg-gradient-to-r dark:from-cyan-600 dark:to-teal-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-transform duration-300"
+          className="relative z-10 w-full py-3 px-6 bg-gradient-to-r text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:bg-gradient-to-r from-pink-600 to-purple-600 dark:hover:bg-gradient-to-r dark:from-purple-800 dark:via-purple-600 dark:to-pink-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-transform duration-300"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
