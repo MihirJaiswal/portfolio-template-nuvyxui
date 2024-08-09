@@ -61,7 +61,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, ale
     <MotionDiv layout className="cursor-pointer w-full">
       <AlertDialog>
         <AlertDialogTrigger asChild>
-          <div className="flex items-center md:items-start p-4 bg-white dark:bg-[#1E2533] rounded-xl border border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-lg transition-shadow duration-300">
+          <div className="flex items-center md:items-start p-4 bg-white dark:bg-[#1E2533] rounded-xl border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-shadow duration-300">
             <Image src={logo} alt={`${title} logo`} width={40} height={40} className="w-8 h-8 rounded-md" quality={100} loading="lazy" />
             <div className="flex flex-col ml-4 w-full">
               <div className="flex justify-between w-full">
@@ -84,7 +84,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, logo, ale
             </div>
           </div>
         </AlertDialogTrigger>
-        <AlertDialogContent className="max-w-3xl p-6 bg-pink-200 dark:bg-gray-900 flex flex-col justify-center gap-8 md:max-w-lg mx-auto">
+        <AlertDialogContent className="max-w-3xl p-6 bg-gray-50 dark:bg-gray-900 flex flex-col justify-center gap-8 md:max-w-lg mx-auto">
           <AlertDialogHeader className="relative">
             <div className="flex items-center gap-4">
               <AlertDialogTitle className="text-2xl font-bold mb-4 uppercase"> <UnderlinedText color={ORANGE}>{title}</UnderlinedText> </AlertDialogTitle>

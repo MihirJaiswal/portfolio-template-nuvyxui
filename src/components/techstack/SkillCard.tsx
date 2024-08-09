@@ -27,7 +27,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ name, image, link, description, p
     >
       <MotionDiv whileHover={{ y: -5 }}>
         <a href={link} target="_blank" rel="noopener noreferrer" className="block">
-          <div className="flex p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-100 dark:border-gray-700 w-full text-left hover:shadow-md transition-shadow">
+          <div className="flex p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 w-full text-left hover:shadow-md transition-shadow">
             <div className="relative rounded-lg p-2 overflow-hidden flex-shrink-0">
               <div
                 className="absolute inset-0"

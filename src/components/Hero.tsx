@@ -34,7 +34,7 @@ const Hero = () => {
         >
           <Image
             src={pfp}
-            alt="Mihir's photo"
+            alt="photo"
             width={220}
             height={220}
             loading="lazy"
@@ -48,7 +48,7 @@ const Hero = () => {
           className="max-w-2xl"
         >
           <MotionDiv animate="shake" variants={shakeVariants}>
-            <Header underlineColor={ORANGE} emoji="👋" className="face px-4 md:px-2">
+            <Header underlineColor={ORANGE} emoji="👋" className="px-4 md:px-2 mt-10 mb-6">
               Hey!
             </Header>
           </MotionDiv>

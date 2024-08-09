@@ -16,7 +16,7 @@ const Projects: React.FC = () => {
 
   return (
     <div className="flex flex-col items-start space-y-8">
-      <Header underlineColor={ORANGE} className="mt-0 mb-0">
+      <Header underlineColor={ORANGE} className="mt-10 mb-0">
         Projects
       </Header>
       <LayoutGroup>
@@ -41,7 +41,7 @@ const Projects: React.FC = () => {
           <div className="flex justify-center items-center w-full">
             <button
               onClick={handleLoadMore}
-              className=" p-2 bg-pink-500 dark:bg-purple-500 text-white rounded hover:bg-pink-600 dark:hover:bg-purple-700 transition-colors duration-300"
+              className=" p-2 bg-teal-500 dark:bg-purple-500 text-white rounded hover:bg-pink-600 dark:hover:bg-purple-700 transition-colors duration-300"
             >
               Load More
             </button>

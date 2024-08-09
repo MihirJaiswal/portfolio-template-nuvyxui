@@ -54,7 +54,7 @@ const config = {
         },
       },
       backgroundImage: {
-        "bg1": "linear-gradient(to right, #fdf2ff, #fdf2ff, #fcf7ff, #fdf2ff, #fdf2ff);",
+        "bg1": "linear-gradient(to right, #f7fafc, #f7fafc);",
         "bg2": "linear-gradient(to right bottom, #171923, #171923, #171923, #171923, #171923);",
         "bg3": "linear-gradient(to right, #fdeeff, #f0e5ff, #dedeff, #c6d8ff, #a8d3ff, #a0cefe, #97c9fe, #8fc4fd, #a6bcfb, #bdb2f3, #d2a9e6, #e3a0d5);",
         "bg4": "linear-gradient(to right, #171923, #161a29, #151b30, #131b36, #111c3d, #181b3f, #1e1a40, #251840, #30143a, #381033, #3d0d2c, #400c24);",

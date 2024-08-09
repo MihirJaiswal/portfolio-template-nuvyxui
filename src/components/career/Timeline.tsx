@@ -73,7 +73,7 @@ const TimelineSection: React.FC<TimelineSectionProps> = ({ data, title, underlin
     exit={{ opacity: 0 }}
     className="flex flex-col space-y-4 px-6 max-w-4xl mx-auto"
   >
-    <div className="max-w-4xl">
+    <div className="max-w-4xl mt-10 mb-4">
       <Header underlineColor={underlineColor} emoji={emoji}>
         {title}
       </Header>

@@ -5,16 +5,16 @@ import user from "../../../public/assests/usericon.webp"
 
 const reviews = [
   {
-    body: "you make awesome UI",
+    body: "you make awesome UI 🙌",
   },
   {
     body: "Amazing frontend",
   },
   {
-    body: "Love your work!!!",
+    body: "Love your work!!! 🤗",
   },
   {
-    body: "UI is amazing",
+    body: "UI is amazing 👌",
   },
   {
     body: "keep up the awesome work!",
@@ -51,7 +51,7 @@ const ReviewCard = ({
 
 export function MarqueeCard() {
   return (
-    <div className="relative flex py-4 md:h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-pink-200 dark:bg-bg7">
+    <div className="relative flex py-4 md:h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg border bg-teal-50 dark:bg-bg7">
       <Marquee pauseOnHover className="[--duration:20s]">
         {firstRow.map((review) => (
           <ReviewCard key={review.body} {...review} />

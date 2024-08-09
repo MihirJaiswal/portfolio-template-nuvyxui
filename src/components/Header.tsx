@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Header = ({ children, underlineColor, emoji, className }: PropsWithChildren<Props>) => (
-  <h1 className={`mt-10 mb-6 text-3xl leading-snug font-bold text-left ${className}`}>
+  <h1 className={`text-3xl leading-snug font-bold text-left ${className}`}>
     <UnderlinedText color={underlineColor}>{children}</UnderlinedText>
     {emoji ? ` ${emoji}` : ''}
   </h1>

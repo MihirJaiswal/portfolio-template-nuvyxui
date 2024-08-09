@@ -8,7 +8,7 @@ export function CardsCarousel() {
   ));
 
   return (
-    <div className="w-full max-w-3xl h-screen flex items-center z-0">
+    <div className="w-full max-w-lg h-screen flex items-center z-0">
        <div className="absolute inset-0 bg-white opacity-20 dark:opacity-0 z-0"></div>
       <Carousel items={cards} />
     </div>

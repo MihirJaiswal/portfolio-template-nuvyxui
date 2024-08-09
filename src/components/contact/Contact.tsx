@@ -26,12 +26,12 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center gap-20 md:h-[93vh] relative w-full  overflow-hidden">
+    <div className="flex items-center justify-center h-content xl:h-[93vh] relative w-full  overflow-hidden max-w-4xl mx-auto">
       <motion.form
         action="https://formsubmit.co/jaiswalmihir.business@gmail.com"
         method="post"
         target="_blank"
-        className="relative z-10 max-w-lg xl:h-screen flex flex-col justify-center w-full p-8 pt-4 md:px-10 md:pt-6 md:rounded-l-2xl overflow-hidden pb-24 md:pb-10 md:mb-12"
+        className="relative z-10 max-w-lg xl:h-screen flex flex-col justify-center w-full p-8 md:pl-0 md:pr-8 pt-4 md:pt-6 md:rounded-l-2xl overflow-hidden pb-24 md:pb-10 md:mb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
@@ -132,7 +132,7 @@ const ContactForm: React.FC = () => {
         </motion.div>
         <motion.button
           type="submit"
-          className="relative z-10 w-full py-3 px-6 bg-gradient-to-r text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:bg-gradient-to-r from-pink-600 to-purple-600 dark:hover:bg-gradient-to-r dark:from-purple-800 dark:via-purple-600 dark:to-pink-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-transform duration-300"
+          className="relative z-10 w-full py-3 px-6 bg-gradient-to-r text-white font-semibold rounded-full shadow-md hover:shadow-lg hover:bg-gradient-to-r from-teal-600 to-cyan-600 dark:hover:bg-gradient-to-r dark:from-purple-800 dark:via-purple-600 dark:to-pink-600 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:focus:ring-blue-400 transition-transform duration-300"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
@@ -151,7 +151,7 @@ const ContactForm: React.FC = () => {
           />
         </div>
       </motion.form>
-      <div className='hidden xl:block z-0'>
+      <div className='hidden md:block z-0'>
         <CardsCarousel/>
       </div>
     </div>
