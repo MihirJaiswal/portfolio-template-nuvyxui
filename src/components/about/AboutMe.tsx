@@ -57,7 +57,7 @@ const AboutMe: React.FC = () => {
             Hobbies
           </Header>
           <p className="mb-10 tracking-wide">
-            Beyond software development, I enjoy anime, drawing, cooking, reading books, and writing stories. ✨
+            Beyond software development, I enjoy drawing, cooking, reading books, and writing stories. ✨
           </p>
         </MotionDiv>
         <Favourite />

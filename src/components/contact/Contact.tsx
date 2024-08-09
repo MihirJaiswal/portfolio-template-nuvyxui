@@ -34,7 +34,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
   };
 
   return (
-    <div className="flex items-center justify-center gap-20 md:h-[93vh] relative w-full  overflow-hidden  bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200 dark:bg-gradient-to-r dark:from-pink-800 xl:dark:from-blue-900 dark:via-gray-800 xl:dark:via-gray-600 dark:to-[#4b5172] xl:dark:to-[#4b5172] ">
+    <div className="flex items-center justify-center gap-20 md:h-[93vh] relative w-full  overflow-hidden  bg-gradient-to-r from-blue-500 via-purple-500 to-pink-200 dark:bg-gradient-to-r dark:from-purple-800 xl:dark:from-blue-900 dark:via-gray-800 xl:dark:via-gray-600 dark:to-[#4b5172] xl:dark:to-[#4b5172] ">
       <div className="absolute inset-0 bg-white opacity-70 dark:bg-black dark:opacity-70 pointer-events-none"></div>
       <motion.form
         onSubmit={handleSubmit}
