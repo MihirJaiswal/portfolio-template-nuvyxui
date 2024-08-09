@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 
 export function ModeToggle() {
-  const { setTheme, theme } = useTheme();
+  const { setTheme, theme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
 
   React.useEffect(() => {
@@ -14,41 +14,40 @@ export function ModeToggle() {
   }, []);
 
   if (!mounted) {
-    return null;
+    return null; // Prevent rendering until mounted
   }
 
   const toggleTheme = () => {
-    setTheme(theme === "dark" ? "light" : "dark");
+    setTheme(theme === "dark" || resolvedTheme === "dark" ? "light" : "dark");
   };
 
   return (
     <Button variant="outline" size="icon" onClick={toggleTheme}>
       <AnimatePresence mode="wait" initial={false}>
-        {mounted && theme && ( // Check if the component is mounted and theme is available
-          theme === "dark" ? (
-            <motion.span
-              key="moon"
-              initial={{ rotate: 90, scale: 0 }}
-              animate={{ rotate: 0, scale: 1 }}
-              exit={{ rotate: -90, scale: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Moon className="h-[1.2rem] w-[1.2rem] text-purple-400" />
-            </motion.span>
-          ) : (
-            <motion.span
-              key="sun"
-              initial={{ rotate: -90, scale: 0 }}
-              animate={{ rotate: 0, scale: 1 }}
-              exit={{ rotate: 90, scale: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Sun className="h-[1.2rem] w-[1.2rem] text-teal-600" />
-            </motion.span>
-          )
+        {resolvedTheme === "dark" ? (
+          <motion.span
+            key="moon"
+            initial={{ rotate: 90, scale: 0 }}
+            animate={{ rotate: 0, scale: 1 }}
+            exit={{ rotate: -90, scale: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Moon className="h-[1.2rem] w-[1.2rem] text-purple-400" />
+          </motion.span>
+        ) : (
+          <motion.span
+            key="sun"
+            initial={{ rotate: -90, scale: 0 }}
+            animate={{ rotate: 0, scale: 1 }}
+            exit={{ rotate: 90, scale: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <Sun className="h-[1.2rem] w-[1.2rem] text-teal-600" />
+          </motion.span>
         )}
       </AnimatePresence>
       <span className="sr-only">Toggle theme</span>
     </Button>
   );
 }
+
