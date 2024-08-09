@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import UnderlinedText from '../UnderlineText';
 import Image from 'next/image';
 import { CardsCarousel } from './CardsCarousel';
+import cat from '../../../public/assests/cat.webp'
 
 
 type ContactFormData = {
@@ -141,12 +142,13 @@ const ContactForm: React.FC = () => {
 
         <div className='z-50'>
           <Image
-            src="/assests/cat.webp"
-            alt=""
+            src={cat}
+            alt="cat"
             width={500}
             height={500}
             quality={100}
             loading='lazy'
+            placeholder='blur'
             className='absolute left-2 -bottom-9 z-10 w-36 md:hidden'
           />
         </div>
