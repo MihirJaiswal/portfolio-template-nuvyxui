@@ -3,7 +3,8 @@ import Header from '../Header';
 import { Favourite } from './Favorite';
 import { MotionDiv } from '../MotiionDiv'; 
 import { Grid } from './Grid';
-import Resume from './Resume';
+import { HiDownload } from "react-icons/hi";
+import Intro from './Intro';
 
 const ANIMATION_DURATION = 0.5;
 
@@ -13,35 +14,40 @@ const AboutMe: React.FC = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="flex flex-col items-center space-y-8 px-7 pb-6 overflow-x-hidden"
+      className="flex flex-col space-y-8 px-7 pb-6 overflow-x-hidden max-w-4xl mx-auto"
     >
       <MotionDiv
         initial={{ translateY: 20, opacity: 0 }}
         animate={{ translateY: 0, opacity: 1, transition: { duration: ANIMATION_DURATION } }}
-        className="max-w-4xl space-y-6"
+        className=" space-y-6"
       >
-        <Header underlineColor="#ff9400" emoji='' className="text-3xl font-bold text-gray-900 dark:text-gray-100 mt-8">
-          About Me
-        </Header>
-        <h2 className="md:text-xl font-sans leading-relaxed tracking-wide ">
-          <span className="block md:inline">Since I was young, I've loved computers.</span> 
-          <span>I've also been pretty <strong className='font-semibold'>creative</strong>, </span> 
-          <span>spending my free time drawing and painting.</span> 
-          <span className="hidden md:inline">This creativity helps me express myself more in web applications. 🎨</span>
-        </h2> 
       </MotionDiv>
       <MotionDiv
         initial={{ translateY: 20, opacity: 0 }}
         animate={{ translateY: 0, opacity: 1, transition: { duration: ANIMATION_DURATION, delay: 0.1 } }}
       >
-        <Grid />
+        <Intro/>
       </MotionDiv>
+      
       <MotionDiv
         initial={{ translateY: 20, opacity: 0 }}
         animate={{ translateY: 0, opacity: 1, transition: { duration: ANIMATION_DURATION, delay: 0.4 } }}
-        className=""
+        className="flex items-center gap-2 text-lg font-medium"
       >
-        <Resume />
+        <a
+          className="group bg-white px-5 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 border border-gray-400 dark:border-gray-600 transition cursor-pointer borderBlack dark:bg-white/10"
+          href="/CV.pdf"
+          download
+        >
+          Download CV{" "}
+          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+        </a>
+      </MotionDiv>
+      <MotionDiv
+        initial={{ translateY: 20, opacity: 0 }}
+        animate={{ translateY: 0, opacity: 1, transition: { duration: ANIMATION_DURATION, delay: 0.1 } }}
+      >
+        <Grid/>
       </MotionDiv>
       <MotionDiv
         initial={{ translateY: 20, opacity: 0 }}
@@ -56,9 +62,6 @@ const AboutMe: React.FC = () => {
           <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100 mt-3 mb-6">
             Hobbies
           </Header>
-          <p className="mb-10 tracking-wide">
-            Beyond software development, I enjoy drawing, cooking, reading books, and writing stories. ✨
-          </p>
         </MotionDiv>
         <Favourite />
       </MotionDiv>

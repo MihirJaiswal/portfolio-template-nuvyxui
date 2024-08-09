@@ -2,7 +2,7 @@ import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import GitHubContributionGraph from "./GitHubContributionGraph";
 import Image from "next/image";
-import image from '../../../public/assests/pfp.webp'
+import image from '../../../public/assests/code.webp'
 import { MarqueeCard } from "./Marquee";
 
 export function Grid() {
@@ -43,13 +43,30 @@ const items: Array<{
 }> = [
   {
     className: "md:row-span-2",
-    component: <Image src={image} alt="mihir" loading="lazy" quality={100} placeholder="blur" className="object-cover md:h-screen rounded-lg" />,
+    component: <div className="max-w-sm ">
+    <a href="#">
+      <Image 
+        className="rounded-t-lg" 
+        src={image} 
+        alt="Noteworthy technology acquisitions 2021" 
+        width={400}
+        height={300}
+        layout="responsive"
+        loading="lazy"
+        quality={100}
+        placeholder="blur"
+      />
+    </a>
+    <div className="p-5">
+    <h5 className="mb-4 text-xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 transition-colors duration-300">
+    Currently building my own<span className="text-teal-600 dark:text-purple-400 hover:underline"> UI library</span>
+</h5>
+
+    </div>
+  </div>,
     padding:"p-1",
-  },
-  {
-    className: "md:col-span-2",
-    component: <MarqueeCard/>,
-    padding: "p-1",
+    lightBackgroundColor: "bg-teal-50",
+    darkBackgroundColor:"dark:bg-bg8",
   },
   {
     className: "md:col-span-2",
@@ -57,5 +74,10 @@ const items: Array<{
     lightBackgroundColor: "bg-bg1",
     darkBackgroundColor:"dark:bg-bg8",
     component: <GitHubContributionGraph/>
+  },
+  {
+    className: "md:col-span-2",
+    component: <MarqueeCard/>,
+    padding: "p-1",
   },
 ];
