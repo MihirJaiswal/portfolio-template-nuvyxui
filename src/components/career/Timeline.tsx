@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import Header from '../Header';
 import Image, { StaticImageData } from 'next/image';
 import { MotionDiv } from '../MotiionDiv';

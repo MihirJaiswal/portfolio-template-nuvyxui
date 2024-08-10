@@ -14,7 +14,7 @@ export function ModeToggle() {
   }, []);
 
   if (!mounted) {
-    return null; // Prevent rendering until mounted
+    return null; 
   }
 
   const toggleTheme = () => {

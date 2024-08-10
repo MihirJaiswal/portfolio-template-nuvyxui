@@ -4,7 +4,7 @@ import Link from "next/link";
 import Header from "./Header"; 
 import Projects from "./Project";
 import { HIGHLIGHTS } from '../../constant/index';
-import { MotionDiv } from "./MotiionDiv";  // Corrected import statement
+import { MotionDiv } from "./MotiionDiv";  
 import pfp from '../../public/assests/pfp.webp'
 
 const ANIMATION_DURATION = 0.5;

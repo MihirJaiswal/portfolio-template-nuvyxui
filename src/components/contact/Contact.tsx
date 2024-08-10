@@ -1,5 +1,5 @@
 'use client'
-import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
+import React, { useState, useEffect, ChangeEvent } from 'react';
 import { motion } from 'framer-motion';
 import UnderlinedText from '../UnderlineText';
 import Image from 'next/image';
