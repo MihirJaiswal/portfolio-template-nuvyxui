@@ -110,6 +110,17 @@ export const projectsList = [
     alertImage: cybersphereImage,
   },
   {
+    id: 10,
+    title: "Certificate Generator",
+    description: "A certificate generator where you can generate and customize certificates for free.",
+    logo: "/projects/certi.webp",
+    link: "https://certificate-generator-rust.vercel.app/",
+    github: "https://github.com/MihirJaiswal/certificate-generator",
+    technologies: ["React", "SCSS", "Material-UI"],
+    alertDescription: "From customizable templates to automated name insertion, our tool makes certificate generation simple and efficient, perfect for events, and more.",
+    alertImage: certificategeneratorImage,
+  },
+  {
     id: 6,
     title: "GDSC CDGI Website",
     description: "The official website of GDSC CDGI.",
@@ -140,17 +151,7 @@ export const projectsList = [
     alertDescription: "Citronics is an annual techno-management fest of CDGI, Indore. The website is made using HTML, Tailwind, and JavaScript. The website is designed and developed by Mihir Jaiswal.",
     alertImage: citronicsImage,
   },
-  {
-    id: 10,
-    title: "GCSJ Certificate Generator",
-    description: "A certificate generator for participants who successfully completed the Google Cloud Study Jams tasks.",
-    logo: "/projects/gdsc.svg",
-    link: "https://certificate-generator-chi.vercel.app/",
-    github: "https://github.com/MihirJaiswal/certificate-generator",
-    technologies: ["React", "SCSS", "Material-UI"],
-    alertDescription: "A certificate generator for the participants who successfully completed the Google cloud study jams all the task, It contains a name and a QR code generator that generates the QR for validating the certificates.",
-    alertImage: certificategeneratorImage,
-  },
+  
   {
     id: 11,
     title: "Dream Mist",
@@ -342,6 +343,11 @@ export const data = [
     category: "",
     title: "",
     src: "/contact/cybersphere.webp",
+  },
+  {
+    category: "",
+    title: "",
+    src: "/contact/certigen.webp",
   },
   {
     category: "",
