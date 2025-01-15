@@ -16,6 +16,7 @@ import cdgiLogo from '/public/education/cdgi.webp';
 import kkLogo from '/public/education/kk.webp';
 import sjsLogo from '/public/education/sjs.webp';
 import freelanceLogo from '/public/work/freelance.webp';
+import hotwaxLogo from '/public/work/hotwax.webp';
 
 // highlights
 export const HIGHLIGHTS = [
@@ -322,8 +323,15 @@ export const workExperienceData = [
     title: "Freelancer",
     role: "Web developer",
     skills: ["Next.js", "React", "Node.js"],
-    period: "2023-Present",
+    period: "2023-2024",
     logo: freelanceLogo,
+  },
+  {
+    title: "Frontend Intern",
+    role: "Hotwax Commerce",
+    skills: ["Vue.js", "Moqui"],
+    period: "2025-Present",
+    logo: hotwaxLogo,
   },
 ];
 
