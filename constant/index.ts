@@ -327,9 +327,9 @@ export const workExperienceData = [
     logo: freelanceLogo,
   },
   {
-    title: "Frontend Intern",
-    role: "Hotwax Commerce",
-    skills: ["Vue.js", "Moqui"],
+    title: "Software Developer Intern",
+    role: "HotWax Systems",
+    skills: ["Vue.js", "Moqui", "MySQL"],
     period: "2025-Present",
     logo: hotwaxLogo,
   },
