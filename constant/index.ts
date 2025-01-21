@@ -10,6 +10,7 @@ import citronicsImage from '../public/projects/details/citronics.webp';
 import certificategeneratorImage from '../public/projects/details/certificategenerator.webp';
 import dreammistImage from '../public/projects/details/dreammist.webp';
 import cosmicImage from '../public/projects/details/cosmic.webp';
+import storyweaverImage from '../public/projects/details/storyweaverAI.webp';
 
 //career
 import cdgiLogo from '/public/education/cdgi.webp';
@@ -42,7 +43,19 @@ export const HIGHLIGHTS = [
 //projects
 export const projectsList = [
   {
-    id: 0,
+    id: 13,
+    title: "StoryWeaver AI",
+    description: "A web application that generates story scenes, dialogs, and images based on user input plot.",
+    logo: "/projects/story.webp",
+    link: "https://story-weaver-ai.vercel.app/",
+    github: "https://github.com/MihirJaiswal/StoryWeaver-AI",
+    technologies: ["Next.js", "Tailwind", "TypeScript"],
+    alertDescription: "StoryWeaver AI is a web application that generates story scenes, dialogs, and images based on user input plot. The project uses Qwen/QwQ-32B-Preview model for generating story scenes and dialogs, and OpenAI's DALL-E for generating images. The application is built using Next.js, Tailwind CSS, and Framer Motion to deliver an engaging and visually appealing user experience.",
+    alertImage: storyweaverImage,
+    youtube: 'https://youtu.be/zoQiy0SFk-o',
+  },
+  {
+    id: 12,
     title: "Monster Pedia",
     description: "Website containing a pokedex, a type calculator, a team builder, and a card generator.",
     logo: "/projects/monsterpedia.webp",
@@ -54,7 +67,7 @@ export const projectsList = [
     youtube: 'https://www.youtube.com/watch?v=hi3fNjSSy4c&t=38s',
   },
   {
-    id: 1,
+    id: 11,
     title: "HERO-HQ",
     description: "Web application where users can explore details about various superheroes and compare.",
     logo: "/projects/herohq.webp",
@@ -66,7 +79,7 @@ export const projectsList = [
     youtube: 'https://www.youtube.com/watch?v=w3m6HlIUoLw&t=46s',
   },
   {
-    id: 2,
+    id: 10,
     title: "Ink Scroll",
     description: "Manga Hosting website where users can upload and read mangas.",
     logo: "/projects/inkscroll.webp",
@@ -77,7 +90,7 @@ export const projectsList = [
     youtube: 'https://www.youtube.com/watch?v=uP-OGbNdiZI&t=3s',
   },
   {
-    id: 3,
+    id: 9,
     title: "Windows-95 Portfolio",
     description: "A portfolio website in windows 95 theme.",
     logo: "/projects/portfolio.webp",
@@ -88,7 +101,7 @@ export const projectsList = [
     alertImage: portfolioImage,
   },
   {
-    id: 4,
+    id: 8,
     title: "Ghibli Verse",
     description: "A comprehensive web application dedicated to exploring the enchanting world of Studio Ghibli.",
     logo: "/projects/ghibli.webp",
@@ -100,7 +113,7 @@ export const projectsList = [
     youtube: 'https://www.youtube.com/watch?v=QrFH8RzUTiw&list=LL&index=3',
   },
   {
-    id: 5,
+    id: 7,
     title: "CyberSphere",
     description: "CyberSphere is a browser extension and website designed to detect phishing attacks.",
     logo: "/projects/cybersphere.webp",
@@ -111,7 +124,7 @@ export const projectsList = [
     alertImage: cybersphereImage,
   },
   {
-    id: 10,
+    id: 6,
     title: "Certificate Generator",
     description: "A certificate generator where you can generate and customize certificates for free.",
     logo: "/projects/certi.webp",
@@ -122,7 +135,7 @@ export const projectsList = [
     alertImage: certificategeneratorImage,
   },
   {
-    id: 6,
+    id: 5,
     title: "GDSC CDGI Website",
     description: "The official website of GDSC CDGI.",
     logo: "/projects/gdsc.svg",
@@ -132,7 +145,7 @@ export const projectsList = [
     alertImage: gdscImage,
   },
   {
-    id: 7,
+    id: 4,
     title: "Toy Sandook",
     description: "Toy Sandook is a website that I made for a client.",
     logo: "/projects/toy.webp",
@@ -142,7 +155,7 @@ export const projectsList = [
     alertImage: toyImage,
   },
   {
-    id: 9,
+    id: 3,
     title: "Citronics Website",
     description: "Citronics is an annual techno-management fest of CDGI, Indore.",
     logo: "/projects/citro.webp",
@@ -154,7 +167,7 @@ export const projectsList = [
   },
   
   {
-    id: 11,
+    id: 2,
     title: "Dream Mist",
     description: "Dream Mist is a Pokémon game made using HTML canvas.",
     logo: "/projects/dreammist.jpg",
@@ -165,7 +178,7 @@ export const projectsList = [
     alertImage: dreammistImage,
   },
   {
-    id: 12,
+    id: 1,
     title: "Cosmic Onslaught",
     description: "Cosmic Onslaught is a classic space invader game brought to life with HTML, CSS, and JavaScript.",
     logo: "/projects/cosmic.webp",
@@ -392,6 +405,11 @@ export const data = [
     category: "",
     title: "",
     src: "/contact/inkscroll.webp",
+  },
+  {
+    category: "",
+    title: "",
+    src: "/contact/story.webp",
   },
 ];
 
