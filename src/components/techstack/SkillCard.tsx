@@ -23,7 +23,7 @@ const SkillCard: React.FC<SkillCardProps> = ({ name, image, link, description, p
       animate="visible"
       variants={item}
       transition={{ duration: 0.3 }}
-      className="w-72 md:w-80" 
+      className="w-80 px-1" 
     >
       <MotionDiv whileHover={{ y: -5 }}>
         <a href={link} target="_blank" rel="noopener noreferrer" className="block">

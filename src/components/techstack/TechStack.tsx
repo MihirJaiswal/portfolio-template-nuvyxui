@@ -44,20 +44,20 @@ const TechStack: React.FC = () => {
       id='tech-stack'
     >
       <div className="text-center mb-8 flex flex-col items-center justify-center">
-        <div className="flex items-center space-x-4">
-          <Header underlineColor="#ff9400" className='mt-8 mb-6'>Tech Stack</Header>
+        <div className="flex items-center justify-center space-x-4">
+          <Header underlineColor="#ff9400" className='mb-0 md:mb-6'>Tech Stack</Header>
           <button onClick={toggleSections} className="text-4xl mt-3">
             {showSectionOne ? <CiCloudOff /> : <CiCloudOn />}
           </button>
         </div>
-        <p className="text-xl text-gray-500 dark:text-gray-200 max-w-lg mx-auto">
+        <p className="text-xl text-gray-500 dark:text-gray-200 max-w-lg mx-auto hidden md:block">
           A list of my favorite tools and technologies that I use.
         </p>
       </div>
 
       {showSectionOne ? (
         <div className='section1'>
-          <div className="flex flex-wrap justify-center space-x-2 space-y-2 mb-8">
+          <div className="flex flex-wrap justify-center gap-2 mb-8 px-4">
             {['', 'development', 'design', 'devops'].map((category) => (
               <button
                 key={category}
@@ -72,13 +72,13 @@ const TechStack: React.FC = () => {
                 {category === 'development' && <FaDesktop className="mr-1" />}
                 {category === 'design' && <FaSpider className="mr-1" />}
                 {category === 'devops' && <FaCloud className="mr-1" />}
-                <span>
+                <span className="whitespace-nowrap">
                   {category === ''
                     ? 'All'
                     : category === 'development'
-                    ? 'Web Development'
+                    ? 'Web'
                     : category === 'design'
-                    ? 'Web Design'
+                    ? 'Design'
                     : 'Devops'}
                 </span>
               </button>

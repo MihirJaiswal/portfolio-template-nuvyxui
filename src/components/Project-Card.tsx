@@ -1,5 +1,5 @@
 import { FaGithub, FaTimes, FaYoutube, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare } from "react-icons/fa";
-import { SiNextdotjs, SiTailwindcss, SiMongodb, SiExpress, SiTypescript, SiSass } from "react-icons/si";
+import { SiNextdotjs, SiTailwindcss, SiMongodb, SiExpress, SiTypescript, SiSass, SiMysql } from "react-icons/si";
 import Image, { StaticImageData } from "next/image";
 import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, AlertDialogTitle, AlertDialogDescription, AlertDialogCancel } from "../components/ui/alert-dialog";
 import UnderlinedText from "./UnderlineText";
@@ -42,6 +42,8 @@ const getTagIcon = (tech: string) => {
       return <SiTypescript className="text-blue-500" />;
     case "SCSS":
       return <SiSass className="text-pink-500" />;
+    case "MySQL":
+      return <SiMysql className="text-blue-700" />;
     default:
       return null;
   }

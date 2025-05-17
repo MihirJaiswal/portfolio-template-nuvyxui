@@ -1,4 +1,4 @@
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 import Marquee from "../ui/marquee";
 import Image from "next/image";
 import user from "../../../public/assests/usericon.webp"

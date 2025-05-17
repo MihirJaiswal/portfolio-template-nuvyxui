@@ -11,6 +11,7 @@ import certificategeneratorImage from '../public/projects/details/certificategen
 import dreammistImage from '../public/projects/details/dreammist.webp';
 import cosmicImage from '../public/projects/details/cosmic.webp';
 import storyweaverImage from '../public/projects/details/storyweaverAI.webp';
+import digibazaarImage from '../public/projects/details/digibazaar.webp';
 
 //career
 import cdgiLogo from '/public/education/cdgi.webp';
@@ -42,6 +43,17 @@ export const HIGHLIGHTS = [
 
 //projects
 export const projectsList = [
+  {
+    id: 14,
+    title: "Digi Bazaar",
+    description: "The Ultimate eCommerce & Warehouse Management Solution.",
+    logo: "/projects/digi.webp",
+    github: "https://github.com/MihirJaiswal/digibazaar-frontend",
+    technologies: ["Next.js", "Tailwind", "TypeScript", "Node.js", "MySQL", "Express"],
+    alertDescription: "DigiBazaar is a revolutionary platform that merges eCommerce, Warehouse Management, Wholesale, and Community into a single powerful ecosystem. DigiBazaar transcends traditional eCommerce platforms by offering a full-featured business ecosystem.",
+    alertImage: digibazaarImage,
+    youtube: 'https://www.youtube.com/watch?v=KVnkONXLbXg&list=LL',
+  },
   {
     id: 13,
     title: "StoryWeaver AI",

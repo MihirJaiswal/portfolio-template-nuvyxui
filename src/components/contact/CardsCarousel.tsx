@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel, Card } from "@/components/ui/cards-carousel";
+import { Carousel, Card } from "../ui/cards-carousel";
 import { data } from "../../../constant";
 
 export function CardsCarousel() {

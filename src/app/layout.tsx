@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
-import ChatButton from "@/components/ChatButton";
+import ChatButton from "../components/ChatButton";
 
 const roboto = Roboto({
   weight: ['400', '700'],
