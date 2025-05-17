@@ -41,6 +41,7 @@ const TechStack: React.FC = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       className="flex flex-col items-center min-h-screen"
+      id='tech-stack'
     >
       <div className="text-center mb-8 flex flex-col items-center justify-center">
         <div className="flex items-center space-x-4">

@@ -25,7 +25,7 @@ const shakeVariants = {
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-center px-4 md:px-20 max-w-full">
+    <div className="flex flex-col items-center justify-center px-4 md:px-20 max-w-full" id="home">
       <div className="flex flex-col md:flex-row items-center md:gap-8 justify-center space-y-8 md:space-y-0 md:space-x-8">
         <MotionDiv
           initial={{ translateX: -150, opacity: 0 }}

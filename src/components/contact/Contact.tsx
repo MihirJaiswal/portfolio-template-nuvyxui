@@ -5,6 +5,7 @@ import UnderlinedText from '../UnderlineText';
 import Image from 'next/image';
 import { CardsCarousel } from './CardsCarousel';
 import cat from '../../../public/assests/cat.webp'
+import Header from '../Header';
 
 
 type ContactFormData = {
@@ -12,6 +13,8 @@ type ContactFormData = {
   email: string;
   message: string;
 };
+
+const ORANGE = "#ff9400";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({ name: '', email: '', message: '' });
@@ -27,12 +30,16 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className="flex items-center justify-center h-content xl:h-[93vh] relative w-full  overflow-hidden max-w-4xl mx-auto">
+    <div className='px-6 max-w-4xl mx-auto mb-12' id='contact'>
+       <Header underlineColor={ORANGE} emoji="📧" className='mt-12 mb-8'>
+        Contact
+      </Header>
+      <div className="flex items-center justify-center h-content lg:h-full relative w-full  overflow-hidden  bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 md:pl-8 rounded-md">
       <motion.form
         action="https://formsubmit.co/jaiswalmihir.business@gmail.com"
         method="post"
         target="_blank"
-        className="relative z-10 max-w-lg xl:h-screen flex flex-col justify-center w-full p-8 md:pl-0 md:pr-8 pt-4 md:pt-6 md:rounded-l-2xl overflow-hidden pb-24 md:pb-10 md:mb-12"
+        className="relative z-10 max-w-lg flex flex-col justify-center w-full p-8 md:pl-0 md:pr-8 pt-4 md:pt-6 md:rounded-l-2xl overflow-hidden pb-24 md:pb-10 md:mb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
@@ -153,9 +160,10 @@ const ContactForm: React.FC = () => {
           />
         </div>
       </motion.form>
-      <div className='hidden md:block z-0'>
+      <div className='hidden md:block z-0 w-[28rem]'>
         <CardsCarousel/>
       </div>
+    </div>
     </div>
   );
 };

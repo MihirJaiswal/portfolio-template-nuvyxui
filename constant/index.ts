@@ -22,8 +22,8 @@ import hotwaxLogo from '/public/work/hotwax.webp';
 // highlights
 export const HIGHLIGHTS = [
   {
-    title: "Hero-Headquater",
-    href: "https://hero-hq-five.vercel.app/",
+    title: "Nuvyx ui",
+    href: "https://nuvyxui.vercel.app/",
     isNew: true,
   },
   {

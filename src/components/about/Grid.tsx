@@ -4,6 +4,7 @@ import GitHubContributionGraph from "./GitHubContributionGraph";
 import Image from "next/image";
 import image from '../../../public/assests/code.webp'
 import { MarqueeCard } from "./Marquee";
+import Link from "next/link";
 
 export function Grid() {
   return (
@@ -59,8 +60,10 @@ const items: Array<{
     </a>
     <div className="p-5">
     <h5 className="mb-4 text-xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 transition-colors duration-300">
-    Currently building my own<span className="text-teal-600 dark:text-purple-400 hover:underline"> UI library</span>
-</h5>
+    I have my own<span className="text-teal-600 dark:text-purple-400 hover:underline"> UI library</span>
+    <Link href="https://nuvyxui.vercel.app/">
+    <span className="block text-sm font-normal text-gray-700 dark:text-gray-300 mt-4 underline">Check it out</span></Link>
+    </h5>
 
     </div>
   </div>,

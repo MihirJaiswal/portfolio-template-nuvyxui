@@ -3,13 +3,13 @@ import TimelineSection from './Timeline'
 import { educationData } from '../../../constant';
 
 const Education = () => {
-const TURQUOISE = "#06b6d4";
+const ORANGE = "#ff9400";
   return (
-    <div>
+    <div >
         <TimelineSection 
         data={educationData}
         title="Education"
-        underlineColor={TURQUOISE}
+        underlineColor={ORANGE}
         emoji='🎓'
         />
     </div>

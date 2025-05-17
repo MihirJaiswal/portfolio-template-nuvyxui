@@ -1,15 +1,14 @@
-import React from 'react'
 import TimelineSection from './Timeline'
 import { workExperienceData } from '../../../constant';
 
 const Work = () => {
-const TURQUOISE = "#06b6d4";
+const ORANGE = "#ff9400";
   return (
-    <div>
+    <div id='career'>
         <TimelineSection 
         data={workExperienceData}
         title="Experience"
-        underlineColor={TURQUOISE}
+        underlineColor={ORANGE}
         emoji='💼'
         />
     </div>
