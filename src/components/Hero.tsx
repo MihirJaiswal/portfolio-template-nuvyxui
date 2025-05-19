@@ -52,13 +52,13 @@ const Hero = () => {
               Hey!
             </Header>
           </MotionDiv>
-          <h2 className="md:text-2xl font-normal md:leading-10 font-sans tracking-wide px-4 md:px-2">
+          <h2 className="md:text-2xl font-normal md:leading-10 font-sans tracking-wide px-2.5">
             My name is <strong className="font-semibold">Mihir</strong> and I&apos;m a{" "}  
             <span className="whitespace-nowrap">Full Stack Developer and</span>{" "}
             <span className="whitespace-nowrap">an UI/UX designer&nbsp;</span>
             from <span className="whitespace-nowrap">India</span>
           </h2>
-          <h2 className="md:text-2xl font-normal mt-4 leading-relaxed font-sans tracking-wide px-4 md:px-2">
+          <h2 className="md:text-2xl font-normal mt-4 leading-relaxed font-sans tracking-wide px-2.5">
             <span>This is my portfolio, where I showcase my projects and share the skills I&apos;ve mastered along the way. 🚀</span> 
           </h2>
         </MotionDiv>
@@ -66,7 +66,7 @@ const Hero = () => {
       <MotionDiv
         initial={{ translateY: 80, opacity: 0 }}
         animate={{ translateY: 0, opacity: 1, transition: { delay: ANIMATION_DURATION - 0.1, duration: ANIMATION_DURATION } }}
-        className="w-full mt-8 max-w-4xl"
+        className="w-full mt-2 md:mt-8 max-w-4xl"
       >
         <div className="mx-auto px-2 md:px-8">
           <div className="mt-8 p-3 border-l-4 border-teal-500 dark:border-purple-500 bg-[#e6f6fc] dark:bg-[#1E2533] rounded-xl font-medium">

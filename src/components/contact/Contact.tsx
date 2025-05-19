@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import UnderlinedText from '../UnderlineText';
 import Image from 'next/image';
 import { CardsCarousel } from './CardsCarousel';
-import cat from '../../../public/assests/cat.webp'
 import Header from '../Header';
 
 
@@ -39,7 +38,7 @@ const ContactForm: React.FC = () => {
         action="https://formsubmit.co/jaiswalmihir.business@gmail.com"
         method="post"
         target="_blank"
-        className="relative z-10 max-w-lg flex flex-col justify-center w-full p-6 md:pl-0 md:pr-8 pt-4 md:pt-6 md:rounded-l-2xl overflow-hidden pb-24 md:pb-10 md:mb-12"
+        className="relative z-10 max-w-lg flex flex-col justify-center w-full p-1 md:pl-0 md:pr-8 md:pt-6 md:rounded-l-2xl overflow-hidden pb-24 md:pb-10 md:mb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
@@ -149,13 +148,12 @@ const ContactForm: React.FC = () => {
 
         <div className='z-50'>
           <Image
-            src={cat}
+            src='/assests/cat.webp'
             alt="cat"
             width={500}
             height={500}
             quality={100}
             loading='lazy'
-            placeholder='blur'
             className='absolute left-2 -bottom-9 z-10 w-36 md:hidden'
           />
         </div>
