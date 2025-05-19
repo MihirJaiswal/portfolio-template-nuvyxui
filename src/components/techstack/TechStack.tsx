@@ -85,7 +85,7 @@ const TechStack: React.FC = () => {
             ))}
           </div>
 
-          <div className="flex flex-col items-center justify-center md:grid md:grid-cols-2 gap-4 mb-8 mt-4 mx-auto">
+          <div className="flex flex-wrap items-center justify-center md:grid md:grid-cols-2 gap-4 mb-8 mt-4 mx-auto">
             {skillsList.map((tool, index) => (
               <SkillCard
                 key={index}

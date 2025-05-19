@@ -30,11 +30,11 @@ const ContactForm: React.FC = () => {
   };
 
   return (
-    <div className='px-6 max-w-4xl mx-auto mb-12' id='contact'>
+    <div className='px-7 max-w-4xl mx-auto mb-12' id='contact'>
        <Header underlineColor={ORANGE} emoji="📧" className='mt-12 mb-8'>
         Contact
       </Header>
-      <div className="flex items-center justify-center h-content lg:h-full relative w-full  overflow-hidden  bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 md:pl-6 rounded-xl">
+      <div className="flex items-center justify-center h-content lg:h-full relative w-full px-4 overflow-hidden  bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 md:pl-6 rounded-xl">
       <motion.form
         action="https://formsubmit.co/jaiswalmihir.business@gmail.com"
         method="post"

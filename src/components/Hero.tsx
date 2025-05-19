@@ -26,11 +26,11 @@ const shakeVariants = {
 const Hero = () => {
   return (
     <div className="flex flex-col items-center justify-center px-4 md:px-20 max-w-full" id="home">
-      <div className="flex flex-col md:flex-row items-center md:gap-8 justify-center space-y-8 md:space-y-0 md:space-x-8">
+      <div className="flex flex-col lg:flex-row items-start lg:items-center md:gap-8 justify-start lg:justify-center space-y-8 md:space-y-0 md:space-x-8">
         <MotionDiv
           initial={{ translateX: -150, opacity: 0 }}
           animate={{ translateX: 0, opacity: 1, transition: { duration: ANIMATION_DURATION } }}
-          className="flex items-center justify-center mt-12"
+          className="flex items-center justify-center mt-12 ml-3 md:ml-8"
         >
           <Image
             src={pfp}
@@ -39,16 +39,16 @@ const Hero = () => {
             height={220}
             loading="lazy"
             placeholder="blur"
-            className="rounded-full w-36 h-36 object-cover"
+            className="rounded-full w-24 h-24 md:w-36 md:h-36 object-cover"
           />
         </MotionDiv>
         <MotionDiv
           initial={{ translateX: 150, opacity: 0 }}
           animate={{ translateX: 0, opacity: 1, transition: { duration: ANIMATION_DURATION } }}
-          className="max-w-2xl"
+          className="lg:max-w-2xl"
         >
           <MotionDiv animate="shake" variants={shakeVariants}>
-            <Header underlineColor={ORANGE} emoji="👋" className="px-4 md:px-2 mt-10 mb-6">
+            <Header underlineColor={ORANGE} emoji="👋" className="px-4 md:px-2 lg:mt-10 mb-6">
               Hey!
             </Header>
           </MotionDiv>
@@ -68,8 +68,8 @@ const Hero = () => {
         animate={{ translateY: 0, opacity: 1, transition: { delay: ANIMATION_DURATION - 0.1, duration: ANIMATION_DURATION } }}
         className="w-full mt-8 max-w-4xl"
       >
-        <div className="max-w-3xl mx-auto">
-          <div className="mt-8 p-3 border-l-4 border-teal-500 dark:border-purple-500 bg-[#e6f6fc] dark:bg-[#1E2533] rounded-sm font-medium">
+        <div className="mx-auto px-2 md:px-8">
+          <div className="mt-8 p-3 border-l-4 border-teal-500 dark:border-purple-500 bg-[#e6f6fc] dark:bg-[#1E2533] rounded-xl font-medium">
             <p className="text-teal-600 dark:text-purple-400 font-bold">Highlights</p>
             <ul className="text-left pl-4 list-disc mt-2 font-normal">
               {HIGHLIGHTS.map((highlight, index) => (

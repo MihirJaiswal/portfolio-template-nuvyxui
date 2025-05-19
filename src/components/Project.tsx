@@ -6,16 +6,22 @@ import { LayoutGroup, motion } from "framer-motion";
 import { projectsList } from "../../constant/index";
 
 const ORANGE = "#ff9400";
+const INITIAL_VISIBLE_COUNT = 5;
 
 const Projects: React.FC = () => {
-  const [visibleProjects, setVisibleProjects] = useState(5);
+  const [visibleProjects, setVisibleProjects] = useState(INITIAL_VISIBLE_COUNT);
+  const allProjectsShown = visibleProjects >= projectsList.length;
 
   const handleLoadMore = () => {
     setVisibleProjects((prev) => prev + 5);
   };
 
+  const handleCollapse = () => {
+    setVisibleProjects(INITIAL_VISIBLE_COUNT);
+  };
+
   return (
-    <div className="flex flex-col items-start space-y-8" id="projects">
+    <div className="flex flex-col items-start space-y-8 px-2 md:px-7" id="projects">
       <Header underlineColor={ORANGE} className="mt-10 mb-0">
         Projects
       </Header>
@@ -37,16 +43,23 @@ const Projects: React.FC = () => {
             </motion.div>
           ))}
         </div>
-        {visibleProjects < projectsList.length && (
-          <div className="flex justify-center items-center w-full">
+        <div className="flex justify-center items-center w-full mt-6">
+          {!allProjectsShown ? (
             <button
               onClick={handleLoadMore}
-              className=" p-2 bg-teal-500 dark:bg-purple-500 text-white rounded hover:bg-pink-600 dark:hover:bg-purple-700 transition-colors duration-300"
+              className="p-2 bg-teal-500 dark:bg-purple-500 text-white rounded hover:bg-pink-600 dark:hover:bg-purple-700 transition-colors duration-300"
             >
               Load More
             </button>
-          </div>
-        )}
+          ) : (
+            <button
+              onClick={handleCollapse}
+              className="p-2 bg-teal-500 dark:bg-purple-500 text-white rounded hover:bg-pink-600 dark:hover:bg-purple-700 transition-colors duration-300"
+            >
+              Collapse
+            </button>
+          )}
+        </div>
       </LayoutGroup>
     </div>
   );
