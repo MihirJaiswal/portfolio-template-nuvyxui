@@ -1,4 +1,5 @@
 import AboutMe from "../components/about/AboutMe";
+import { Favourite } from "../components/about/Favorite";
 import Education from "../components/career/Education";
 import Work from "../components/career/Work";
 import ContactForm from "../components/contact/Contact";
@@ -16,6 +17,7 @@ export default function Home() {
       <TechStack/>
       <Work/>
       <Education/>
+      <Favourite/>
       <ContactForm/>
       <Footer/>
       </div>

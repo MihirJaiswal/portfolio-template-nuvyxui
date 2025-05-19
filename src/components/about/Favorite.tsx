@@ -4,6 +4,7 @@ import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../../../hooks/use-outside-click";
 import { cards } from "../../../constant/Constant"; 
+import Header from "../Header";
 
 export function Favourite() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -31,8 +32,23 @@ export function Favourite() {
 
   useOutsideClick(ref, () => setActive(null));
 
+  const ANIMATION_DURATION = 0.5;
+
   return (
-    <>
+    <motion.div
+            initial={{ translateY: 20, opacity: 0 }}
+            animate={{ translateY: 0, opacity: 1, transition: { duration: ANIMATION_DURATION, delay: 0.5 } }}
+            className="w-full max-w-4xl mx-auto px-7 mt-12"
+          >
+     <motion.div
+          initial={{ translateY: 20, opacity: 0 }}
+          animate={{ translateY: 0, opacity: 1, transition: { duration: ANIMATION_DURATION, delay: 0.2 } }}
+          className="block md:inline font-sans md:text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto mb-8"
+        >
+          <Header underlineColor="#ff9400" className="text-3xl font-bold text-gray-900 dark:text-gray-100 mt-3 mb-6">
+            Hobbies
+          </Header>
+        </motion.div>
       <AnimatePresence>
         {active && typeof active === "object" && (
           <motion.div
@@ -168,7 +184,7 @@ export function Favourite() {
           </motion.div>
         ))}
       </ul>
-    </>
+    </motion.div>
   );
 }
 

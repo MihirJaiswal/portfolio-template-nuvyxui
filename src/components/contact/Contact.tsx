@@ -34,12 +34,12 @@ const ContactForm: React.FC = () => {
        <Header underlineColor={ORANGE} emoji="📧" className='mt-12 mb-8'>
         Contact
       </Header>
-      <div className="flex items-center justify-center h-content lg:h-full relative w-full  overflow-hidden  bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 md:pl-8 rounded-md">
+      <div className="flex items-center justify-center h-content lg:h-full relative w-full  overflow-hidden  bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 md:pl-6 rounded-md">
       <motion.form
         action="https://formsubmit.co/jaiswalmihir.business@gmail.com"
         method="post"
         target="_blank"
-        className="relative z-10 max-w-lg flex flex-col justify-center w-full p-8 md:pl-0 md:pr-8 pt-4 md:pt-6 md:rounded-l-2xl overflow-hidden pb-24 md:pb-10 md:mb-12"
+        className="relative z-10 max-w-lg flex flex-col justify-center w-full p-6 md:pl-0 md:pr-8 pt-4 md:pt-6 md:rounded-l-2xl overflow-hidden pb-24 md:pb-10 md:mb-12"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -20 }}
