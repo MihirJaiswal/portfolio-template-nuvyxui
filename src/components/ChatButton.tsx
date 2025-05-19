@@ -95,7 +95,7 @@ const ChatButton: React.FC = () => {
     <div className="fixed bottom-6 right-6 z-50">
       <motion.button
         onClick={toggleChat}
-        className="bg-blue-500 hover:bg-blue-600 text-white p-4 rounded-full shadow-lg focus:outline-none"
+        className="bg-blue-500 hover:bg-blue-600 text-white p-3 md:p-4 rounded-full shadow-lg focus:outline-none"
         aria-label={isOpen ? "Close Chat" : "Open Chat"}
         variants={buttonVariants}
         animate={isOpen ? "open" : "closed"}
@@ -107,9 +107,9 @@ const ChatButton: React.FC = () => {
           animate={isOpen ? "open" : "closed"}
         >
           {isOpen ? (
-            <FaTimes className="h-6 w-6" />
+            <FaTimes className="md:h-6 md:w-6 h-5 w-5" />
           ) : (
-            <FaCommentDots className="h-6 w-6" />
+            <FaCommentDots className="md:h-6 md:w-5 h-5 w-5" />
           )}
         </motion.div>
       </motion.button>
