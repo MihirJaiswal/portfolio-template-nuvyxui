@@ -15,7 +15,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-start space-y-8">
+    <div className="flex flex-col items-start space-y-8" id="projects">
       <Header underlineColor={ORANGE} className="mt-10 mb-0">
         Projects
       </Header>
