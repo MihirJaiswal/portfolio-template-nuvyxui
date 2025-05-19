@@ -12,6 +12,7 @@ import dreammistImage from '../public/projects/details/dreammist.webp';
 import cosmicImage from '../public/projects/details/cosmic.webp';
 import storyweaverImage from '../public/projects/details/storyweaverAI.webp';
 import digibazaarImage from '../public/projects/details/digibazaar.webp';
+import nuvyxImage from '../public/projects/details/nuvyx.webp';
 
 //career
 import cdgiLogo from '/public/education/cdgi.webp';
@@ -43,6 +44,18 @@ export const HIGHLIGHTS = [
 
 //projects
 export const projectsList = [
+  {
+    id: 15,
+    title: "Nuvyx UI",
+    description: "A modern UI component library for React.",
+    logo: "/projects/nuvyx.webp",
+    link: "https://nuvyxui.vercel.app/",
+    github: "https://github.com/MihirJaiswal/nuvyxui",
+    technologies: ["React", "Tailwind", "TypeScript", "Framer Motion"],
+    alertDescription: "Nuvyx UI is a curated library of modular components that can be easily integrated into your web applications. It offers a versatile selection of components, blocks, and templates designed to accelerate your development process.",
+    alertImage: nuvyxImage,
+    youtube: 'https://www.youtube.com/watch?v=E3R_lVYSuk8&ab_channel=MihirJaiswal',
+  },
   {
     id: 14,
     title: "Digi Bazaar",

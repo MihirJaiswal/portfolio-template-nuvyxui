@@ -46,7 +46,7 @@ const TechStack: React.FC = () => {
       <div className="text-center mb-8 flex flex-col items-center justify-center">
         <div className="flex items-center justify-center space-x-4">
           <Header underlineColor="#ff9400" className='mb-0 md:mb-6'>Tech Stack</Header>
-          <button onClick={toggleSections} className="text-4xl mt-3">
+          <button onClick={toggleSections} className="text-4xl md:mb-6">
             {showSectionOne ? <CiCloudOff /> : <CiCloudOn />}
           </button>
         </div>

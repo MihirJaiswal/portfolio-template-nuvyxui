@@ -29,7 +29,7 @@ type TimelineSectionProps = {
 const TimelineCard: React.FC<TimelineCardProps> = ({ title, role, skills, period, logo }) => (
   <MotionDiv
     whileHover={{ y: -5 }}
-    className="flex gap-8 items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-md p-4 w-full"
+    className="flex gap-8 items-center bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 rounded-xl p-4 w-full"
   >
     <Image
       src={logo}
