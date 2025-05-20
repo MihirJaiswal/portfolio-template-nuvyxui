@@ -5,7 +5,7 @@ import Header from "./Header";
 import Projects from "./Project";
 import { HIGHLIGHTS } from '../../constant/index';
 import { MotionDiv } from "./MotiionDiv";  
-import pfp from '../../public/assests/pfp.webp'
+import pfp from '../../public/assests/mihir.webp'
 
 const ANIMATION_DURATION = 0.5;
 const ORANGE = "#ff9400";

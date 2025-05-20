@@ -66,12 +66,6 @@ const TopNav = () => {
     }`}>
       <nav className="mx-auto px-3 md:px-12 lg:px-7 z-50 max-w-4xl">
         <ul className="flex items-center px-3 text-sm font-medium text-gray-800 rounded-full bg-white/90 shadow-gray-800/5 ring-1 dark:bg-gray-800/90 dark:text-gray-200 dark:ring-white/20 ring-gray-900/5 backdrop-blur-lg shadow-xl h-14">
-          <li className="hidden md:block">
-            <button onClick={() => scrollToSection('home')} className="relative px-3 py-3 flex items-center justify-center transition hover:text-primary-500 dark:hover:text-primary-400 group">
-              <Image src='/assests/pfp.webp' alt="User Icon" width={100} height={100} loading='lazy' className="w-10 h-10 rounded-full object-cover" />
-              <div className="absolute top-14 left-1/2 -translate-x-1/2 px-2 py-1 bg-gray-800 text-white text-xs rounded opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 whitespace-nowrap">Home</div>
-            </button>
-          </li>
           {sectionLinks.map((link) => (
             <li key={link.id} className="flex items-center">
               <button 
