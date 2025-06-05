@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Header from "./Header"; 
 import Projects from "./Project";
-import { HIGHLIGHTS } from '../../constant/index';
+import { HIGHLIGHTS, HERO_DATA } from '../../constant/index';
 import { MotionDiv } from "./MotiionDiv";  
 import pfp from '../../public/assests/mihir.webp'
 
@@ -49,17 +49,17 @@ const Hero = () => {
         >
           <MotionDiv animate="shake" variants={shakeVariants}>
             <Header underlineColor={ORANGE} emoji="👋" className="px-4 md:px-2 lg:mt-10 mb-6">
-              Hey!
+              {HERO_DATA.greeting}
             </Header>
           </MotionDiv>
           <h2 className="md:text-2xl font-normal md:leading-10 font-sans tracking-wide px-2.5">
-            My name is <strong className="font-semibold">Mihir</strong> and I&apos;m a{" "}  
-            <span className="whitespace-nowrap">Full Stack Developer and</span>{" "}
-            <span className="whitespace-nowrap">an UI/UX designer&nbsp;</span>
-            from <span className="whitespace-nowrap">India</span>
+            My name is <strong className="font-semibold">{HERO_DATA.name}</strong> and I&apos;m a{" "}  
+            <span className="whitespace-nowrap">{HERO_DATA.role1} and</span>{" "}
+            <span className="whitespace-nowrap">{HERO_DATA.role2}&nbsp;</span>
+            from <span className="whitespace-nowrap">{HERO_DATA.location}</span>
           </h2>
           <h2 className="md:text-2xl font-normal mt-4 leading-relaxed font-sans tracking-wide px-2.5">
-            <span>This is my portfolio, where I showcase my projects and share the skills I&apos;ve mastered along the way. 🚀</span> 
+            <span>{HERO_DATA.description}</span> 
           </h2>
         </MotionDiv>
       </div>

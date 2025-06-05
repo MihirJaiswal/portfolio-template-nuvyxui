@@ -5,6 +5,7 @@ import { CiCloudOn, CiCloudOff  } from "react-icons/ci";
 import Header from '../Header';
 import SkillCard from './SkillCard';
 import { skills } from '../../../constant/index';
+import { TECH_STACK_DATA } from '../../../constant/Constant';
 import { IconClouds } from './IconCloud';
 import { MotionDiv } from '../MotiionDiv';
 
@@ -35,6 +36,11 @@ const TechStack: React.FC = () => {
     setShowSectionOne((prev) => !prev);
   };
 
+  const getIconForCategory = (category: string) => {
+    const categoryData = TECH_STACK_DATA.categories.find(cat => cat.key === category);
+    return categoryData?.icon || <FaBolt />;
+  };
+
   return (
     <MotionDiv
       initial={{ opacity: 0 }}
@@ -45,42 +51,31 @@ const TechStack: React.FC = () => {
     >
       <div className="text-center mb-8 flex flex-col items-center justify-center">
         <div className="flex items-center justify-center space-x-4">
-          <Header underlineColor="#ff9400" className='mb-0 md:mb-6'>Tech Stack</Header>
+          <Header underlineColor="#ff9400" className='mb-0 md:mb-6'>{TECH_STACK_DATA.title}</Header>
           <button onClick={toggleSections} className="text-4xl md:mb-6">
             {showSectionOne ? <CiCloudOff /> : <CiCloudOn />}
           </button>
         </div>
         <p className="text-xl text-gray-500 dark:text-gray-200 max-w-lg mx-auto hidden md:block">
-          A list of my favorite tools and technologies that I use.
+          {TECH_STACK_DATA.description}
         </p>
       </div>
 
       {showSectionOne ? (
         <div className='section1'>
           <div className="flex flex-wrap justify-center gap-2 mb-8 px-4">
-            {['', 'development', 'design', 'devops'].map((category) => (
+            {TECH_STACK_DATA.categories.map((category) => (
               <button
-                key={category}
+                key={category.key}
                 className={`flex items-center px-4 py-2 rounded-full text-sm font-medium ${
-                  selectedCategory === category
+                  selectedCategory === category.key
                     ? 'bg-green-200 dark:bg-purple-200 text-green-800 dark:text-purple-800 border-2 border-blue-400 dark:border-purple-500'
                     : 'bg-gray-200 dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-700'
                 }`}
-                onClick={() => filterSkills(category)}
+                onClick={() => filterSkills(category.key)}
               >
-                {category === '' && <FaBolt className="mr-1" />}
-                {category === 'development' && <FaDesktop className="mr-1" />}
-                {category === 'design' && <FaSpider className="mr-1" />}
-                {category === 'devops' && <FaCloud className="mr-1" />}
-                <span className="whitespace-nowrap">
-                  {category === ''
-                    ? 'All'
-                    : category === 'development'
-                    ? 'Web'
-                    : category === 'design'
-                    ? 'Design'
-                    : 'Devops'}
-                </span>
+                <span className="mr-1">{category.icon}</span>
+                <span className="whitespace-nowrap">{category.label}</span>
               </button>
             ))}
           </div>

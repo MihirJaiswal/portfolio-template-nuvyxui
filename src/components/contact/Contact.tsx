@@ -5,6 +5,7 @@ import UnderlinedText from '../UnderlineText';
 import Image from 'next/image';
 import { CardsCarousel } from './CardsCarousel';
 import Header from '../Header';
+import { CONTACT_FORM_DATA } from '../../../constant/index';
 
 
 type ContactFormData = {
@@ -35,7 +36,7 @@ const ContactForm: React.FC = () => {
       </Header>
       <div className="flex items-center justify-center h-content lg:h-full relative w-full px-4 overflow-hidden  bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 md:pl-6 rounded-xl">
       <motion.form
-        action="https://formsubmit.co/jaiswalmihir.business@gmail.com"
+        action={CONTACT_FORM_DATA.action}
         method="post"
         target="_blank"
         className="relative z-10 max-w-lg flex flex-col justify-center w-full p-1 md:pl-0 md:pr-8 md:pt-6 md:rounded-l-2xl overflow-hidden pb-24 md:pb-10 md:mb-12"

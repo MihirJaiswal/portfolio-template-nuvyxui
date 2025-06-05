@@ -1,10 +1,8 @@
-import type { Metadata, Viewport } from "next";
-import { Roboto } from "next/font/google";
-import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
-import ChatButton from "../components/ChatButton";
-import { structuredData } from "../lib/structured-data"; 
-
+import type { Metadata } from "next";
+import "./globals.css";
+import { DATA } from "../../constant/index";
+import { Roboto } from "next/font/google";
 
 const roboto = Roboto({
   weight: ['400', '500', '700'],
@@ -14,39 +12,21 @@ const roboto = Roboto({
   variable: '--font-roboto', 
 });
 
-// Enhanced metadata for better SEO
+
 export const metadata: Metadata = {
-  metadataBase: new URL('https://yourdomain.com'), 
+  metadataBase: new URL(DATA.url),
   title: {
-    default: "Mihir Jaiswal | Web Developer & Designer",
-    template: "%s | Mihir Jaiswal",
+    default: DATA.name,
+    template: `%s | ${DATA.name}`,
   },
-  description: "I'm Mihir Jaiswal, a software engineer and web developer from Indore, India specializing in React, Next.js, and modern JavaScript applications.",
-  keywords: ["web developer", "frontend developer", "React developer", "Next.js", "JavaScript", "Indore", "India", "software engineer"],
-  authors: [{ name: "Mihir Jaiswal" }],
-  creator: "Mihir Jaiswal",
-  publisher: "Mihir Jaiswal",
-  alternates: {
-    canonical: "/",
-    languages: {
-      'en-US': '/en-US'
-    },
-  },
+  description: DATA.description,
   openGraph: {
-    type: "website",
+    title: `${DATA.name}`,
+    description: DATA.description,
+    url: DATA.url,
+    siteName: `${DATA.name}`,
     locale: "en_US",
-    url: "https://mihirjaiswal.vercel.app/", 
-    title: "Mihir Jaiswal | Web Developer & Designer",
-    description: "I'm Mihir Jaiswal, a software engineer and web developer from Indore, India specializing in React, Next.js, and modern JavaScript applications.",
-    siteName: "Mihir Jaiswal Portfolio",
-    images: [
-      {
-        url: "/assests/mihir.webp", 
-        width: 1200,
-        height: 630,
-        alt: "Mihir Jaiswal - Web Developer & Designer",
-      },
-    ],
+    type: "website",
   },
   robots: {
     index: true,
@@ -54,21 +34,19 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
     },
   },
-};
-
-export const viewport: Viewport = {
-  themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
-    { media: '(prefers-color-scheme: dark)', color: '#111111' },
-  ],
-  width: 'device-width',
-  initialScale: 1,
-  maximumScale: 5,
+  twitter: {
+    title: `${DATA.name}`,
+    card: "summary_large_image",
+  },
+  verification: {
+    google: "",
+    yandex: "",
+  },
 };
 
 export default function RootLayout({
@@ -77,32 +55,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html 
-      lang="en" 
-      className={`${roboto.variable}`}
-      suppressHydrationWarning
-    >
+    <html lang="en" className={`${roboto.variable}`} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={roboto.className}>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-        
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen flex-col">
-            {children}
-          </div>
-          <ChatButton />
+          <div className="flex min-h-screen flex-col">{children}</div>
         </ThemeProvider>
       </body>
     </html>

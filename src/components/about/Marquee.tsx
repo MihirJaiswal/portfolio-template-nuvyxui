@@ -2,27 +2,8 @@ import { cn } from "../../lib/utils";
 import Marquee from "../ui/marquee";
 import Image from "next/image";
 import user from "../../../public/assests/usericon.webp"
+import { reviews } from "../../../constant/index";
 
-const reviews = [
-  {
-    body: "you make awesome UI 🙌",
-  },
-  {
-    body: "Amazing frontend",
-  },
-  {
-    body: "Love your work!!! 🤗",
-  },
-  {
-    body: "UI is amazing 👌",
-  },
-  {
-    body: "keep up the awesome work!",
-  },
-  {
-    body: "👏👏👏",
-  },
-];
 
 const firstRow = reviews.slice(0, reviews.length / 2);
 const secondRow = reviews.slice(reviews.length / 2);

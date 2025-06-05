@@ -1,6 +1,4 @@
 import React from 'react'; 
-import Header from '../Header';
-import { Favourite } from './Favorite';
 import { MotionDiv } from '../MotiionDiv'; 
 import { Grid } from './Grid';
 import { HiDownload } from "react-icons/hi";

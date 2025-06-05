@@ -1,9 +1,10 @@
-import { FaGithub, FaTimes, FaYoutube, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare } from "react-icons/fa";
+import { FaGithub, FaTimes, FaYoutube, FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJsSquare, FaPython } from "react-icons/fa";
 import { SiNextdotjs, SiTailwindcss, SiMongodb, SiExpress, SiTypescript, SiSass, SiMysql } from "react-icons/si";
 import Image, { StaticImageData } from "next/image";
 import { AlertDialog, AlertDialogTrigger, AlertDialogContent, AlertDialogHeader, AlertDialogFooter, AlertDialogTitle, AlertDialogDescription, AlertDialogCancel } from "../components/ui/alert-dialog";
 import UnderlinedText from "./UnderlineText";
 import { MotionDiv } from "./MotiionDiv";
+import { getTagIcon } from "../../constant/Constant";
 
 interface ProjectCardProps {
   title: string;
@@ -17,37 +18,6 @@ interface ProjectCardProps {
   technologies: string[];
   youtube?: string;
 }
-
-const getTagIcon = (tech: string) => {
-  switch (tech) {
-    case "React":
-      return <FaReact className="text-blue-600" />;
-    case "Next.js":
-      return <SiNextdotjs className="text-black dark:text-white" />;
-    case "Tailwind":
-      return <SiTailwindcss className="text-teal-500" />;
-    case "Node.js":
-      return <FaNodeJs className="text-green-700" />;
-    case "Express":
-      return <SiExpress className="text-gray-800 dark:text-white" />;
-    case "MongoDB":
-      return <SiMongodb className="text-green-600" />;
-    case "HTML":
-      return <FaHtml5 className="text-orange-500" />;
-    case "CSS":
-      return <FaCss3Alt className="text-blue-400" />;
-    case "JavaScript":
-      return <FaJsSquare className="text-yellow-500" />;
-    case "TypeScript":
-      return <SiTypescript className="text-blue-500" />;
-    case "SCSS":
-      return <SiSass className="text-pink-500" />;
-    case "MySQL":
-      return <SiMysql className="text-blue-700" />;
-    default:
-      return null;
-  }
-};
 
 const truncateText = (text:string, wordLimit:number): string => {
   const words = text.split(' ');

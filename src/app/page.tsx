@@ -1,10 +1,10 @@
 import AboutMe from "../components/about/AboutMe";
-import { Favourite } from "../components/about/Favorite";
 import Education from "../components/career/Education";
 import Work from "../components/career/Work";
 import ContactForm from "../components/contact/Contact";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
+import { Hobbies } from "../components/hobbies/Hobbies";
 import TopNav from "../components/Navbar";
 import TechStack from "../components/techstack/TechStack";
 export default function Home() {
@@ -17,7 +17,7 @@ export default function Home() {
       <TechStack/>
       <Work/>
       <Education/>
-      <Favourite/>
+      <Hobbies/>
       <ContactForm/>
       <Footer/>
       </div>

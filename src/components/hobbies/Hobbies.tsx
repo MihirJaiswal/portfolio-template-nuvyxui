@@ -3,11 +3,11 @@ import Image from "next/image";
 import React, { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "../../../hooks/use-outside-click";
-import { cards } from "../../../constant/Constant"; 
+import { hobbies } from "../../../constant/Constant"; 
 import Header from "../Header";
 
-export function Favourite() {
-  const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
+export function Hobbies() {
+  const [active, setActive] = useState<(typeof hobbies)[number] | boolean | null>(
     null
   );
   const ref = useRef<HTMLDivElement>(null);
@@ -147,20 +147,20 @@ export function Favourite() {
         ) : null}
       </AnimatePresence>
       <ul className="max-w-4xl mx-auto w-full gap-4">
-        {cards.map((card, index) => (
+        {hobbies.map((hobby, index) => (
           <motion.div
-            layoutId={`card-${card.title}-${id}`}
-            key={`card-${card.title}-${id}`}
-            onClick={() => setActive(card)}
+            layoutId={`card-${hobby.title}-${id}`}
+            key={`card-${hobby.title}-${id}`}
+            onClick={() => setActive(hobby)}
             className="p-4 flex  justify-between items-center mb-6 bg-neutral-50 dark:bg-[#1E2533] border border-gray-200 dark:border-gray-700 rounded-xl cursor-pointer"
           >
             <div className="flex gap-4  ">
-              <motion.div layoutId={`image-${card.title}-${id}`}>
+              <motion.div layoutId={`image-${hobby.title}-${id}`}>
                 <Image
                   width={100}
                   height={100}
-                  src={card.src1}
-                  alt={card.title}
+                  src={hobby.src1}
+                  alt={hobby.title}
                   loading="lazy"
                   placeholder="blur"
                   className="h-14 w-14 rounded-lg object-cover object-top"
@@ -168,16 +168,16 @@ export function Favourite() {
               </motion.div>
               <div className="">
                 <motion.h3
-                  layoutId={`title-${card.title}-${id}`}
+                  layoutId={`title-${hobby.title}-${id}`}
                   className="font-medium text-neutral-800 dark:text-white text-left"
                 >
-                  {card.title}
+                  {hobby.title}
                 </motion.h3>
                 <motion.p
-                  layoutId={`description-${card.description}-${id}`}
+                  layoutId={`description-${hobby.description}-${id}`}
                   className="text-neutral-600 dark:text-gray-300 text-left"
                 >
-                  {card.description}
+                  {hobby.description}
                 </motion.p>
               </div>
             </div>

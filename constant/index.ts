@@ -1,25 +1,43 @@
 import monsterpediaImage from '../public/projects/details/monsterpedia.webp';
 import herohqImage from '../public/projects/details/herohq.webp';
 import inkscrollImage from '../public/projects/details/inkscroll.webp';
-import portfolioImage from '../public/projects/details/portfolio.webp';
 import ghibliVerseImage from '../public/projects/details/ghibliverse.webp';
-import cybersphereImage from '../public/projects/details/cybersphere.webp';
-import gdscImage from '../public/projects/details/gdsc.webp';
-import toyImage from '../public/projects/details/toy.webp';
-import citronicsImage from '../public/projects/details/citronics.webp';
 import certificategeneratorImage from '../public/projects/details/certificategenerator.webp';
-import dreammistImage from '../public/projects/details/dreammist.webp';
-import cosmicImage from '../public/projects/details/cosmic.webp';
 import storyweaverImage from '../public/projects/details/storyweaverAI.webp';
 import digibazaarImage from '../public/projects/details/digibazaar.webp';
 import nuvyxImage from '../public/projects/details/nuvyx.webp';
-
 //career
 import cdgiLogo from '/public/education/cdgi.webp';
 import kkLogo from '/public/education/kk.webp';
 import sjsLogo from '/public/education/sjs.webp';
 import freelanceLogo from '/public/work/freelance.webp';
 import hotwaxLogo from '/public/work/hotwax.webp';
+
+//site data
+export const DATA = {
+  name: "Mihir Jaiswal",
+  description: "This is my portfolio, where I showcase my projects and share the skills I've mastered along the way. 🚀",
+  url: "https://mihirjaiswal.vercel.app/",
+  email: "youremail@gmail.com",
+  author: "Mihir Jaiswal",
+  accounts: [
+    {
+      url: "https://github.com/MihirJaiswal",
+      label: "Github",
+      type: "gray",
+    }
+  ]
+};
+
+//hero data
+export const HERO_DATA = {
+  greeting: "Hey!",
+  name: "Mihir",
+  role1: "Full Stack Developer",
+  role2: "an UI/UX designer",
+  location: "India",
+  description: "This is my portfolio, where I showcase my projects and share the skills I've mastered along the way. 🚀"
+};
 
 // highlights
 export const HIGHLIGHTS = [
@@ -29,8 +47,8 @@ export const HIGHLIGHTS = [
     isNew: true,
   },
   {
-    title: "Ghibli Verse",
-    href: "https://ghibli-verse.vercel.app/",
+    title: "HeroHQ",
+    href: "https://hero-hq-five.vercel.app/",
   },
   {
     title: "MonsterPedia",
@@ -42,10 +60,57 @@ export const HIGHLIGHTS = [
   },
 ];
 
+
+//ABOUT SECTION
+
+//github username
+export const GITHUB_USERNAME = "MihirJaiswal";
+
+
+//marquee data
+export const reviews = [
+  {
+    body: "you make awesome UI 🙌",
+  },
+  {
+    body: "Amazing frontend",
+  },
+  {
+    body: "Love your work!!! 🤗",
+  },
+  {
+    body: "UI is amazing 👌",
+  },
+  {
+    body: "keep up the awesome work!",
+  },
+  {
+    body: "👏👏👏",
+  },
+];
+
+//intro data
+export const INTRO_DATA = {
+  title: "About Me",
+  paragraphs: [
+    "Since I was young, I've loved computers. I've also been pretty creative, spending my free time drawing and painting.",
+    "Beyond software development, I enjoy playing video games, drawing, cooking, and listening to music. I also love to read books, write stories and meeting new people.✨"
+  ]
+};
+
+//grid data
+export const GRID_DATA = {
+  title: "I have my own",
+  link: "https://nuvyxui.vercel.app/",
+  linkText: "UI library",
+  image: "/assests/code.webp",
+};
+
+
 //projects
 export const projectsList = [
   {
-    id: 15,
+    id: 9,
     title: "Nuvyx UI",
     description: "A modern UI component library for React.",
     logo: "/projects/nuvyx.webp",
@@ -57,7 +122,7 @@ export const projectsList = [
     youtube: 'https://www.youtube.com/watch?v=E3R_lVYSuk8&ab_channel=MihirJaiswal',
   },
   {
-    id: 14,
+    id: 8,
     title: "Digi Bazaar",
     description: "The Ultimate eCommerce & Warehouse Management Solution.",
     logo: "/projects/digi.webp",
@@ -68,7 +133,7 @@ export const projectsList = [
     youtube: 'https://www.youtube.com/watch?v=KVnkONXLbXg&list=LL',
   },
   {
-    id: 13,
+    id: 7,
     title: "StoryWeaver AI",
     description: "A web application that generates story scenes, dialogs, and images based on user input plot.",
     logo: "/projects/story.webp",
@@ -80,7 +145,7 @@ export const projectsList = [
     youtube: 'https://youtu.be/zoQiy0SFk-o',
   },
   {
-    id: 12,
+    id: 5,
     title: "Monster Pedia",
     description: "Website containing a pokedex, a type calculator, a team builder, and a card generator.",
     logo: "/projects/monsterpedia.webp",
@@ -92,7 +157,7 @@ export const projectsList = [
     youtube: 'https://www.youtube.com/watch?v=hi3fNjSSy4c&t=38s',
   },
   {
-    id: 11,
+    id: 4,
     title: "HERO-HQ",
     description: "Web application where users can explore details about various superheroes and compare.",
     logo: "/projects/herohq.webp",
@@ -104,7 +169,7 @@ export const projectsList = [
     youtube: 'https://www.youtube.com/watch?v=w3m6HlIUoLw&t=46s',
   },
   {
-    id: 10,
+    id: 3,
     title: "Ink Scroll",
     description: "Manga Hosting website where users can upload and read mangas.",
     logo: "/projects/inkscroll.webp",
@@ -115,18 +180,7 @@ export const projectsList = [
     youtube: 'https://www.youtube.com/watch?v=uP-OGbNdiZI&t=3s',
   },
   {
-    id: 9,
-    title: "Windows-95 Portfolio",
-    description: "A portfolio website in windows 95 theme.",
-    logo: "/projects/portfolio.webp",
-    link: "https://mihirjaiswalportfolio-wmtn.vercel.app/",
-    github: "https://github.com/MihirJaiswal/windows-95-theme-portfolio",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    alertDescription: "A portfolio website in windows 95 theme, This project is a nostalgic journey back to the era of Windows 95, with a modern twist. Explore my work, play games, view my drawings, and much more!, also there is an easter egg in the website if you find it do let me know.",
-    alertImage: portfolioImage,
-  },
-  {
-    id: 8,
+    id: 2,
     title: "Ghibli Verse",
     description: "A comprehensive web application dedicated to exploring the enchanting world of Studio Ghibli.",
     logo: "/projects/ghibli.webp",
@@ -138,18 +192,7 @@ export const projectsList = [
     youtube: 'https://www.youtube.com/watch?v=QrFH8RzUTiw&list=LL&index=3',
   },
   {
-    id: 7,
-    title: "CyberSphere",
-    description: "CyberSphere is a browser extension and website designed to detect phishing attacks.",
-    logo: "/projects/cybersphere.webp",
-    link: "https://cyber-sphere-minor-project.vercel.app/",
-    github: "https://github.com/MihirJaiswal/CyberSphere-Minor-Project",
-    technologies: ["React", "Tailwind", "M.L."],
-    alertDescription: "CyberSphere is a browser extension and website designed to detect phishing attacks using machine learning techniques. The machine learning model is trained using XGBoost, Random Forest, Decision Tree, and SVM algorithms.The machine learning models are trained on a dataset consisting of over 30,000 samples.It provides Browser extension for real-time phishing detection while browsing.",
-    alertImage: cybersphereImage,
-  },
-  {
-    id: 6,
+    id: 1,
     title: "Certificate Generator",
     description: "A certificate generator where you can generate and customize certificates for free.",
     logo: "/projects/certi.webp",
@@ -158,67 +201,14 @@ export const projectsList = [
     technologies: ["React", "SCSS", "Material-UI"],
     alertDescription: "From customizable templates to automated name insertion, our tool makes certificate generation simple and efficient, perfect for events, and more.",
     alertImage: certificategeneratorImage,
-  },
-  {
-    id: 5,
-    title: "GDSC CDGI Website",
-    description: "The official website of GDSC CDGI.",
-    logo: "/projects/gdsc.svg",
-    github: "https://github.com/MihirJaiswal/gdscwebsite",
-    technologies: ["Next.js", "Tailwind", "TypeScript"],
-    alertDescription: "The official website of GDSC CDGI. The website is made using Next.js, Tailwind, and TypeScript. The website is designed and developed by Mihir Jaiswal.",
-    alertImage: gdscImage,
-  },
-  {
-    id: 4,
-    title: "Toy Sandook",
-    description: "Toy Sandook is a website that I made for a client.",
-    logo: "/projects/toy.webp",
-    github: "https://github.com/MihirJaiswal/toyshopweb",
-    technologies: ["Next.js", "MongoDB", "Express"],
-    alertDescription: "Toy Sandook is a website that I made for a client. The website is made using Next.js, MongoDB, and Express. The website is designed and developed by Mihir Jaiswal.",
-    alertImage: toyImage,
-  },
-  {
-    id: 3,
-    title: "Citronics Website",
-    description: "Citronics is an annual techno-management fest of CDGI, Indore.",
-    logo: "/projects/citro.webp",
-    link: "https://mihirjaiswal.github.io/Citronics-website2024/",
-    github: "https://github.com/MihirJaiswal/Citronics-website2024",
-    technologies: ["HTML", "Tailwind", "JavaScript"],
-    alertDescription: "Citronics is an annual techno-management fest of CDGI, Indore. The website is made using HTML, Tailwind, and JavaScript. The website is designed and developed by Mihir Jaiswal.",
-    alertImage: citronicsImage,
-  },
-  
-  {
-    id: 2,
-    title: "Dream Mist",
-    description: "Dream Mist is a Pokémon game made using HTML canvas.",
-    logo: "/projects/dreammist.jpg",
-    link: "https://mihirjaiswal.github.io/DreamMist/",
-    github: "https://github.com/MihirJaiswal/DreamMist",
-    technologies: ["HTML","JavaScript", "CSS"],
-    alertDescription: "Dream Mist is an immersive Pokémon game built using HTML canvas, offering players a rich and dynamic experience.Explore vibrant towns and cities filled with shops, and hidden secrets. Dream Mist provides a captivating adventure filled with visual flair and interactive gameplay.",
-    alertImage: dreammistImage,
-  },
-  {
-    id: 1,
-    title: "Cosmic Onslaught",
-    description: "Cosmic Onslaught is a classic space invader game brought to life with HTML, CSS, and JavaScript.",
-    logo: "/projects/cosmic.webp",
-    link: "https://mihirjaiswal.github.io/Cosmic-Onslaught/",
-    github: "https://github.com/MihirJaiswal/Cosmic-Onslaught",
-    technologies: ["HTML","JavaScript", "CSS"],
-    alertDescription: "Cosmic Onslaught is a classic space invader game brought to life with HTML, CSS, and JavaScript. Get ready to defend Earth from an intergalactic invasion!",
-    alertImage: cosmicImage,
-  },
+  }
 ];
 
 //skills
 export const skills = [
   {
     name: "Next.js",
+    slug: "nextdotjs",
     description: "Web development",
     link: "https://nextjs.org/", 
     type: "development",
@@ -226,6 +216,7 @@ export const skills = [
   },
   {
     name: "React",
+    slug: "react",
     description: "Web development",
     link: "https://reactjs.org/",
     type: "development",
@@ -233,6 +224,7 @@ export const skills = [
   },
   {
     name: "Tailwind",
+    slug: "tailwindcss",
     description: "Web development",
     link: "https://tailwindcss.com/",
     type: "design",
@@ -240,6 +232,7 @@ export const skills = [
   },
   {
     name: "Sass",
+    slug: "sass",
     description: "Web development, styling",
     link: "https://sass-lang.com/",
     type: "design",
@@ -247,6 +240,7 @@ export const skills = [
   },
   {
     name: "Javascript",
+    slug: "javascript",
     description: "Web development",
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
     type: "development",
@@ -254,6 +248,7 @@ export const skills = [
   },
   {
     name: "Typescript",
+    slug: "typescript",
     description: "Web development",
     link: "https://www.typescriptlang.org/",
     type: "development",
@@ -261,6 +256,7 @@ export const skills = [
   },
   {
     name: "Html5",
+    slug: "html5",
     description: "Web layouts",
     link: "https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5",
     type: "development",
@@ -268,6 +264,7 @@ export const skills = [
   },
   {
     name: "Css3",
+    slug: "css3",
     description: "Web design",
     link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
     type: "design",
@@ -275,6 +272,7 @@ export const skills = [
   },
   {
     name: "MongoDB",
+    slug: "mongodb",
     description: "Database",
     link: "https://www.mongodb.com/",
     type: "database",
@@ -282,6 +280,7 @@ export const skills = [
   },
   {
     name: "Mysql",
+    slug: "mysql",
     description: "Database",
     link: "https://www.mysql.com/",
     type: "database",
@@ -289,6 +288,7 @@ export const skills = [
   },
   {
     name: "Vercel",
+    slug: "vercel",
     description: "Deployment platform",
     link: "https://vercel.com/",
     type: "devops",
@@ -296,6 +296,7 @@ export const skills = [
   },
   {
     name: "AWS",
+    slug: "amazonaws",
     description: "Cloud computing",
     link: "https://aws.amazon.com/",
     type: "devops",
@@ -303,6 +304,7 @@ export const skills = [
   },
   {
     name: "Express",
+    slug: "express",
     description: "Web application framework",
     link: "https://expressjs.com/",
     type: "development",
@@ -310,13 +312,15 @@ export const skills = [
   },
   {
     name: "Visual Studio Code",
+    slug: "visualstudiocode",
     description: "Code editor of choice",
     link: "https://code.visualstudio.com/",
-    type: "",
+    type: "tools",
     image: '/skills/vscode.png'
   },
   {
     name: "Canva",
+    slug: "canva",
     description: "Designing and editing",
     link: "https://www.canva.com/",
     type: "design",
@@ -324,6 +328,7 @@ export const skills = [
   },
   {
     name: "Figma",
+    slug: "figma",
     description: "Collaborative Design",
     link: "https://www.figma.com/",
     type: "design",
@@ -438,104 +443,8 @@ export const data = [
   },
 ];
 
-//questions
-export const PREDEFINED_QA = [
-  { question: "What is your name?", answer: "My name is Mihir." },
-  { question: "What do you do?", answer: "I'm a Full Stack Developer and UI/UX Designer." },
-  { question: "What are your hobbies?", answer: "I enjoy playing video games, drawing, cooking, and reading." },
-  { question: "Where are you from?", answer: "I'm from India." },
-  { question: "How old are you?", answer: "I'm in my early 20s." },
-  { question: "What is your favorite color?", answer: "My favorite color is blue." },
-  { question: "What is your favorite food?", answer: "I love pizza." },
-  { question: "Do you like to travel?", answer: "Yes, I enjoy traveling to new places." },
-  { question: "What is your favorite movie?", answer: "My favorite movie is 'Inception'." },
-  { question: "What kind of music do you like?", answer: "I enjoy listening to a variety of music genres." },
-  { question: "Do you play any musical instruments?", answer: "No, I don't play any musical instruments." },
-  { question: "What languages do you speak?", answer: "I speak English and Hindi." },
-  { question: "Do you have any pets?", answer: "No, I don't have any pets." },
-  { question: "What is your favorite book?", answer: "My favorite book is 'To Kill a Mockingbird'." },
-  { question: "What sports do you like?", answer: "I enjoy watching boxing and cricket sometimes." },
-  { question: "Do you work out?", answer: "Yes, I try to stay active." },
-  { question: "What is your favorite season?", answer: "My favorite season is winter." },
-  { question: "Do you like coffee or tea?", answer: "I prefer coffee." },
-  { question: "Are you a morning person or a night owl?", answer: "I'm more of a night owl." },
-  { question: "What is your dream job?", answer: "My dream job is to be a tech entrepreneur." },
-  { question: "Do you have any siblings?", answer: "Yes, I have siblings." },
-  { question: "What is your favorite holiday?", answer: "My favorite holiday is Diwali." },
-  { question: "What is your favorite TV show?", answer: "I enjoy watching 'Stranger Things'." },
-  { question: "Do you prefer cats or dogs?", answer: "I like cats." },
-  { question: "What is your favorite ice cream flavor?", answer: "I love chocolate ice cream." },
-  { question: "What is your favorite place to visit?", answer: "I enjoy visiting the mountains." },
-  { question: "Do you like to cook?", answer: "Yes, I enjoy cooking." },
-  { question: "What is your favorite dessert?", answer: "My favorite dessert is cheesecake." },
-  { question: "Do you play any sports?", answer: "I play badminton occasionally." },
-  { question: "What is your favorite video game?", answer: "I enjoy playing 'The Legend of Zelda' series." },
-  { question: "Do you like art?", answer: "Yes, I love art and drawing." },
-  { question: "Do you prefer movies or TV shows?", answer: "I like both, but I usually watch more TV shows." },
-  { question: "What is your favorite kind of weather?", answer: "I like cool, breezy weather." },
-  { question: "What is your favorite subject in school?", answer: "I enjoyed studying computer science." },
-  { question: "Do you like to read?", answer: "Yes, I enjoy reading." },
-  { question: "What is your favorite animal?", answer: "My favorite animal is the dolphin." },
-  { question: "Do you like to dance?", answer: "I'm not much of a dancer." },
-  { question: "Do you like to sing?", answer: "I enjoy singing occasionally, but I'm not very good at it." },
-  { question: "What is your favorite drink?", answer: "My favorite drink is coffee." },
-  { question: "What is your favorite time of day?", answer: "I enjoy the evening." },
-  { question: "Do you prefer sweet or savory foods?", answer: "I prefer savory foods." },
-  { question: "Do you like to go to the beach?", answer: "Yes, I love going to the beach." },
-  { question: "What is your favorite kind of movie?", answer: "I enjoy sci-fi and action movies." },
-  { question: "Do you like to garden?", answer: "I don't garden, but I appreciate plants." },
-  { question: "Do you like to write?", answer: "Yes, I enjoy writing stories." },
-  { question: "What is your favorite type of exercise?", answer: "I enjoy going for a run." },
-  { question: "Do you like to paint?", answer: "Yes, I enjoy painting." },
-  { question: "Do you have any allergies?", answer: "No, I don't have any allergies." },
-  { question: "What is your favorite fruit?", answer: "My favorite fruit is mango." },
-  { question: "Do you like to swim?", answer: "Yes, I enjoy swimming." },
-  { question: "What is your favorite type of cuisine?", answer: "I love Italian cuisine." },
-  { question: "Do you like to do puzzles?", answer: "Yes, I enjoy solving puzzles." },
-  { question: "Do you like to watch sports?", answer: "Yes, I like watching football." },
-  { question: "What is your favorite candy?", answer: "I love chocolate bars." },
-  { question: "Do you like to go camping?", answer: "Yes, I enjoy camping." },
-  { question: "What is your favorite holiday destination?", answer: "I love visiting the mountains." },
-  { question: "Do you like to bake?", answer: "Yes, I enjoy baking." },
-  { question: "Do you like board games?", answer: "Yes, I enjoy playing board games." },
-  { question: "What is your favorite hobby?", answer: "I enjoy drawing and coding." },
-  { question: "Do you like museums?", answer: "Yes, I enjoy visiting museums." },
-  { question: "Do you like roller coasters?", answer: "Yes, I enjoy roller coasters." },
-  { question: "What is your favorite ice cream topping?", answer: "I like chocolate chips as a topping." },
-  { question: "Do you like scary movies?", answer: "Yes, I enjoy a good horror movie now and then." },
-  { question: "What is your favorite vegetable?", answer: "My favorite vegetable is spinach." },
-  { question: "Do you like the city or countryside?", answer: "I enjoy the peace of the countryside." },
-  { question: "What is your favorite sandwich?", answer: "I love a classic grilled cheese sandwich." },
-  { question: "Do you like to shop?", answer: "Yes, I enjoy shopping occasionally." },
-  { question: "Do you prefer chocolate or vanilla?", answer: "I prefer chocolate." },
-  { question: "Do you like rain or sunshine?", answer: "I like sunshine, but I also enjoy the rain." },
-  { question: "What is your favorite quote?", answer: "My favorite quote is 'The only limit to our realization of tomorrow is our doubts of today.'" },
-  { question: "Do you like to do yoga?", answer: "Yes, I enjoy doing yoga." },
-  { question: "Do you like to play cards?", answer: "Yes, I enjoy playing cards." },
-  { question: "What is your favorite flower?", answer: "My favorite flower is the rose." },
-  { question: "Do you like to hike?", answer: "Yes, I enjoy hiking." },
-  { question: "Do you like to go to concerts?", answer: "Yes, I enjoy live music." },
-  { question: "What is your favorite snack?", answer: "I like popcorn as a snack." },
-  { question: "Do you like to go to the gym?", answer: "Yes, I try to stay active." },
-  { question: "Do you like to eat out?", answer: "Yes, I enjoy trying new restaurants." },
-  { question: "What is your favorite drink?", answer: "My favorite drink is coffee." },
-  { question: "Do you like to play video games?", answer: "Yes, I love playing video games." },
-  { question: "What is your favorite TV channel?", answer: "I usually watch Netflix or streaming services." },
-  { question: "Do you like to do crafts?", answer: "Yes, I enjoy doing DIY crafts." },
-  { question: "What is your favorite park?", answer: "I enjoy visiting national parks." },
-  { question: "Do you like to read magazines?", answer: "Yes, I occasionally read magazines." },
-  { question: "What is your favorite season?", answer: "I enjoy the winter season." },
-  { question: "Do you like to play chess?", answer: "Yes, I enjoy playing chess." },
-  { question: "What is your favorite fast food?", answer: "I love burgers." },
-  { question: "Do you like to watch cartoons?", answer: "Yes, I still enjoy watching cartoons." },
-  { question: "Do you like to fish?", answer: "Yes, I enjoy fishing." },
-  { question: "What is your favorite place to relax?", answer: "I enjoy relaxing at the beach." },
-  { question: "Do you like to go to the zoo?", answer: "Yes, I enjoy visiting the zoo." },
-  { question: "Do you like spicy food?", answer: "Yes, I enjoy spicy food." },
-  { question: "Do you like to ride bikes?", answer: "Yes, I enjoy biking." },
-  { question: "What is your favorite vacation spot?", answer: "I love visiting the mountains." },
-  { question: "Do you like to go to the movies?", answer: "Yes, I enjoy going to the movies." },
-  { question: "Do you like to eat breakfast?", answer: "Yes, breakfast is my favorite meal of the day." },
-  
-];
-
+//contact form data 
+export const CONTACT_FORM_DATA = {
+  action: "https://formsubmit.co/" + DATA.email,
+  email: DATA.email,
+};

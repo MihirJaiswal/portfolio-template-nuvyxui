@@ -2,9 +2,9 @@ import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import GitHubContributionGraph from "./GitHubContributionGraph";
 import Image from "next/image";
-import image from '../../../public/assests/code.webp'
 import { MarqueeCard } from "./Marquee";
 import Link from "next/link";
+import { GRID_DATA } from "../../../constant/index";
 
 export function Grid() {
   return (
@@ -45,24 +45,23 @@ const items: Array<{
   {
     className: "md:row-span-2",
     component: <div className="max-w-sm ">
-    <a href="#">
+    <a href={GRID_DATA.link}>
       <Image 
         className="rounded-t-lg" 
-        src={image} 
+        src={GRID_DATA.image} 
         alt="Noteworthy technology acquisitions 2021" 
         width={400}
         height={300}
         layout="responsive"
         loading="lazy"
         quality={100}
-        placeholder="blur"
       />
     </a>
     <div className="p-5">
     <h5 className="mb-4 text-xl font-extrabold tracking-tight text-gray-900 dark:text-gray-100 transition-colors duration-300">
-    I have my own<span className="text-teal-600 dark:text-purple-400 hover:underline"> UI library</span>
-    <Link href="https://nuvyxui.vercel.app/">
-    <span className="block text-sm font-normal text-gray-700 dark:text-gray-300 mt-4 underline">Check it out</span></Link>
+     {GRID_DATA.title}
+    <Link href={GRID_DATA.link}>
+    <span className="block text-sm font-normal text-gray-700 dark:text-gray-300 mt-4 underline">{GRID_DATA.linkText}</span></Link>
     </h5>
 
     </div>

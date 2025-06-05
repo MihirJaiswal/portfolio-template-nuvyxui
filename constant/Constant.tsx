@@ -3,7 +3,13 @@ import {
   FaGithub,
   FaLinkedin,
   FaInstagram,
-  FaYoutube
+  FaYoutube,
+  FaReact,
+  FaNodeJs,
+  FaHtml5,
+  FaCss3Alt,
+  FaJsSquare,
+  FaPython
 } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
 import drawingImage from '/public/hobby/drawing.webp';
@@ -14,6 +20,7 @@ import readingImage from '/public/hobby/reading.webp';
 import readingIcon from '/public/hobby/readingicon.webp';
 import writingImage from '/public/hobby/writing.webp';
 import writingIcon from '/public/hobby/writingicon.webp';
+import { SiNextdotjs, SiTailwindcss, SiMongodb, SiExpress, SiTypescript, SiSass, SiMysql } from "react-icons/si";
 
 export const siteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} Mihir Jaiswal. All Rights Reserved.`,
@@ -54,7 +61,41 @@ export const siteConfig = {
   }
 };
 
-export const cards = [
+
+export const getTagIcon = (tech: string) => {
+  switch (tech) {
+    case "React":
+      return <FaReact className="text-blue-600" />;
+    case "Next.js":
+      return <SiNextdotjs className="text-black dark:text-white" />;
+    case "Tailwind":
+      return <SiTailwindcss className="text-teal-500" />;
+    case "Node.js":
+      return <FaNodeJs className="text-green-700" />;
+    case "Express":
+      return <SiExpress className="text-gray-800 dark:text-white" />;
+    case "MongoDB":
+      return <SiMongodb className="text-green-600" />;
+    case "HTML":
+      return <FaHtml5 className="text-orange-500" />;
+    case "CSS":
+      return <FaCss3Alt className="text-blue-400" />;
+    case "JavaScript":
+      return <FaJsSquare className="text-yellow-500" />;
+    case "TypeScript":
+      return <SiTypescript className="text-blue-500" />;
+    case "SCSS":
+      return <SiSass className="text-pink-500" />;
+    case "MySQL":
+      return <SiMysql className="text-blue-700" />;
+    case "Python":
+      return <FaPython className="text-blue-500" />;
+    default:
+      return null;
+  }
+};
+
+export const hobbies = [
   {
     description: "Expressing emotions through art",
     title: "Drawing",
@@ -112,3 +153,35 @@ export const cards = [
     ),
   },
 ];
+
+//categories
+// Add this to your constant/index.js file
+import { FaBolt, FaCloud, FaDesktop, FaSpider } from 'react-icons/fa';
+
+export const TECH_STACK_DATA = {
+  title: "Tech Stack",
+  description: "A list of my favorite tools and technologies that I use.",
+  categories: [
+    {
+      key: '',
+      label: 'All',
+      icon: <FaBolt />
+    },
+    {
+      key: 'development',
+      label: 'Web',
+      icon: <FaDesktop />
+    },
+    {
+      key: 'design',
+      label: 'Design',
+      icon: <FaSpider />
+    },
+    {
+      key: 'devops',
+      label: 'Devops',
+      icon: <FaCloud />
+    }
+  ]
+};
+
