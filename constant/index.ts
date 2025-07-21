@@ -42,7 +42,7 @@ export const HERO_DATA = {
 // highlights
 export const HIGHLIGHTS = [
   {
-    title: "Nuvyx ui",
+    title: "Nyx ui",
     href: "https://nuvyxui.vercel.app/",
     isNew: true,
   },
@@ -111,13 +111,13 @@ export const GRID_DATA = {
 export const projectsList = [
   {
     id: 9,
-    title: "Nuvyx UI",
+    title: "Nyx UI",
     description: "A modern UI component library for React.",
     logo: "/projects/nuvyx.webp",
-    link: "https://nuvyxui.vercel.app/",
-    github: "https://github.com/MihirJaiswal/nuvyxui",
+    link: "https://nyxui.vercel.app/",
+    github: "https://github.com/MihirJaiswal/nyxui",
     technologies: ["React", "Tailwind", "TypeScript", "Framer Motion"],
-    alertDescription: "Nuvyx UI is a curated library of modular components that can be easily integrated into your web applications. It offers a versatile selection of components, blocks, and templates designed to accelerate your development process.",
+    alertDescription: "Nyx UI is a curated library of modular components that can be easily integrated into your web applications. It offers a versatile selection of components, blocks, and templates designed to accelerate your development process.",
     alertImage: nuvyxImage,
     youtube: 'https://www.youtube.com/watch?v=E3R_lVYSuk8&ab_channel=MihirJaiswal',
   },
